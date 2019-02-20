@@ -1,2 +1,801 @@
-
-Placeholder for document.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="description" content="Use Case Analysis for the Common Architecture">
+<meta name="keywords" content="common architecture use case analysis">
+<meta name="author" content="Richard Conway">
+<title>Use Case Analysis</title>
+<link rel="stylesheet" href="./stylesheets/telespazio.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>EOEPCA - Use Case Analysis</h1>
+<div class="details">
+<span id="author" class="author">Richard Conway</span><br>
+<span id="email" class="email">&lt;<a href="mailto:richard.conway@telespazio.com">richard.conway@telespazio.com</a>&gt;</span><br>
+<span id="revnumber">version v0.2,</span>
+<span id="revdate">15/02/2019</span>
+<br><span id="revremark">Early draft</span>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock right">
+<div class="content">
+<img src="./images/telespazio.png" alt="telespazio" width="200">
+</div>
+</div>
+<div class="paragraph">
+<div class="title"><span class="big"><strong>Technical Note</strong></span></div>
+<p>Use Case Analysis for the Common Architecture</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">COMMENTS and ISSUES</dt>
+<dd>
+<p>If you would like to raise comments or issues on this document, please do so by raising an Issue at the following URL <a href="https://github.com/EOEPCA/use-case-analysis/issues" class="bare">https://github.com/EOEPCA/use-case-analysis/issues</a>.</p>
+</dd>
+<dt class="hdlist1">COPYRIGHT</dt>
+<dd>
+<p>Copyright © 2019 Telespazio VEGA UK Ltd.</p>
+</dd>
+<dt class="hdlist1">LICENSE AGREEMENT</dt>
+<dd>
+<div class="paragraph">
+<p><span class="small">TBD.</span></p>
+</div>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_purpose_and_scope">1.1. Purpose and Scope</a></li>
+<li><a href="#_structure_of_the_document">1.2. Structure of the Document</a></li>
+<li><a href="#_reference_documents">1.3. Reference Documents</a></li>
+<li><a href="#_terminology">1.4. Terminology</a></li>
+<li><a href="#_glossary">1.5. Glossary</a></li>
+</ul>
+</li>
+<li><a href="#_use_cases">2. Use Cases</a>
+<ul class="sectlevel2">
+<li><a href="#_user_accesses_platform_services">2.1. User accesses Platform services</a></li>
+<li><a href="#_consumer_discovers_and_visualises_products">2.2. Consumer discovers and visualises products</a></li>
+<li><a href="#_consumer_uploads_data_to_their_workspace">2.3. Consumer uploads data to their workspace</a></li>
+<li><a href="#_consumer_discovers_and_executes_on_demand_processing_service">2.4. Consumer discovers and executes On-demand Processing Service</a></li>
+<li><a href="#_consumer_discovers_and_executes_interactive_applications">2.5. Consumer discovers and executes Interactive Applications</a></li>
+<li><a href="#_consumer_analyses_value_added_product">2.6. Consumer analyses value-added product</a></li>
+</ul>
+</li>
+<li><a href="#_functional_mapping">3. Functional Mapping</a></li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction">1. Introduction</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_purpose_and_scope">1.1. Purpose and Scope</h3>
+<div class="paragraph">
+<p>This document presents the use cases relevant to the Common Architecture.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_structure_of_the_document">1.2. Structure of the Document</h3>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reference_documents">1.3. Reference Documents</h3>
+<div class="paragraph">
+<p>The following is a list of Reference Documents with a direct bearing on the content of this document.</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+<a id="EP-UC"></a>[EP-UC]
+</td>
+<td class="hdlist2">
+<p>EO Exploitation Platforms - Use Cases, ESA-EOPSDP-TN-17-049, Issue 1.0, 15/12/2017</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<a id="EP-FM"></a>[EP-FM]
+</td>
+<td class="hdlist2">
+<p>Exploitation Platform - Functional Model, ESA-EOPSDP-TN-17-050, Issue 1.0, 30/11/2017</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_terminology">1.4. Terminology</h3>
+<div class="paragraph">
+<p>The following terms are used in the use case descriptions.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Term</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Platform (EP)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An on-line collection of products, services and tools for exploitation of EO data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An individual using the EP, of any type (Admin/Consumer/Expert/Guest)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Admin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User with administrative capability on the EP</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consumer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User accessing existing services/products within the EP. Consumers may be scientific/research or commercial, and may or may not be experts of the domain</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Expert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User developing and integrating added-value to the EP (Scientific Researcher or Service Developer)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scientific Researcher</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Expert user with the objective to perform scientific research. Having minimal IT knowledge with no desire to acquire it, they want the effort for the translation of their algorithm into a service/product to be minimised by the platform.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Developer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Expert user with the objective to provide a performing, stable and reliable service/product. Having deeper IT knowledge or a willingness to acquire it, they require deeper access to the platform IT functionalities for optimisation of their algorithm.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An unregistered User or an unauthenticated Consumer with limited access to the EP&#8217;s services</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Discovery</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User finds products/services of interest to them based upon search criteria.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Products</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EO data (commercial and non-commercial) and Value-added products and made available through the EP. <em>It is assumed that the Hosting Environment for the EP makes available an existing supply of EO Data</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value-added products</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Products generated from processing services of the EP (or external processing) and made available through the EP. This includes products uploaded to the EP by users and published for collaborative consumption</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processing Service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A non-interactive data processing that has a well-defined set of input data types, input parameterisation, producing <em>Processing Results</em> with a well-defined output data type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">On-demand Processing Service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A <em>Processing Service</em> whose execution is initiated directly by the user on an ad-hoc basis.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Systematic Processing Service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A <em>Processing Service</em> whose execution is initiated automatically (on behalf of a user), either according to a schedule (routine) or triggered by an event (e.g. arrival of new data).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processing Result</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <em>Products</em> produced as output of a <em>Processing Service</em> execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interactive Application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A stand-alone application provided within the exploitation platform for on-line hosted processing. Provides an interactive interface through which the user is able to conduct their analysis of the data, producing <em>Analysis Results</em> as output. Interactive Applications include at least the following types: console application, web application (rich browser interface), remote desktop to a hosted VM.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interactive Console Application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A simple <em>Interactive Application</em> for analysis in which a console interface to a platform-hosted terminal is provided to the user. The console interface can be provided through the user&#8217;s browser session or through a remote SSH connection.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interactive Web Application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Interactive Application for analysis provided as a rich user interface through the user&#8217;s web browser.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interactive Remote Desktop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Interactive Application for analysis provided as a remote desktop session to a VM hosted on the exploitation platform. The user will have access to a number of applications within the hosted OS. The remote desktop session is provided through the user&#8217;s web browser.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Analysis Result</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <em>Products</em> produced as output of an <em>Interactive Application</em> analysis session.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The act to start a <em>Processing Service</em> or an <em>Interactive Application</em>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visualisation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To obtain a visual representation of any data/products held within the platform - presented to the user within their web browser session.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A set of pre-defined activities that interact to achieve a result. For the exploitation platform, comprises on-line processing to derive data products from input data, conducted by a hosted processing service execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Algorithm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A self-contained set of operations to be performed, typically to achieve a desired data manipulation. The algorithm must be implemented (codified) for deployment and execution on the platform.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The codification of an algorithm performed with a given programming language - compiled to Software or directly executed (interpretted) within the platform.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The compilation of code into a binary program to be executed within the platform on-line computing environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Analytics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A set of activities aimed to discover, interpret and communicate meaningful patters within the data. Analytics considered here are performed manually (or in a semi-automatic way) on-line with the aid of <em>Interactive Applications</em>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Development</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The act of building new products/services/applications to be exposed within the platform and made available for users to conduct exploitation activities. Development may be performed inside or outside of the platform. If performed outside, an integration activity will be required to accommodate the developed service so that it is exposed within the platform.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A user-scoped 'container' in the EP, in which each user maintains their own links to resources (products and services) that have been collected by a user during their usage of the EP. The workspace acts as the hub for a user&#8217;s exploitation activities within the EP</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Terms &amp; Conditions (T&amp;Cs)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The obligations that the user agrees to abide by in regard of usage of products/services of the platform. T&amp;Cs are set by the provider of each product/service.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_glossary">1.5. Glossary</h3>
+<div class="paragraph">
+<p>The following acronyms and abbreviations have been used in this report.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 85.7143%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Term</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Earth Observation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exploitation Platform</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SSH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Secure Shell</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VNC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virtual Network Computing</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_cases">2. Use Cases</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each use case is presented in the following sub-sections.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="#EP-UC">[EP-UC]</a> and <a href="#EP-FM">[EP-FM]</a> for more information.</p>
+</div>
+<div class="sect2">
+<h3 id="_user_accesses_platform_services">2.1. User accesses Platform services</h3>
+<div class="paragraph">
+<p>As a User, I want to be able to access the services of the system within the context of my user profile. I want to identify myself with the same unique identifier that I use on other platforms (e.g. email address or GitHub ID etc.). I should be directed to register or login if that is required to access the requested resource.</p>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Admin logs in on the EP</p>
+</li>
+<li>
+<p>Admin configures the access policy of the EP services</p>
+</li>
+<li>
+<p>Guest successfully accesses unprotected services</p>
+</li>
+<li>
+<p>Guest is denied access to protected services</p>
+</li>
+<li>
+<p>Guest registers as a platform user with an existing (external) identity</p>
+</li>
+<li>
+<p>Unauthenticated Consumer/Expert is denied access to protected services</p>
+</li>
+<li>
+<p>Consumer/Expert logs in on the EP</p>
+</li>
+<li>
+<p>Consumer/Expert successfully accesses protected services</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_consumer_discovers_and_visualises_products">2.2. Consumer discovers and visualises products</h3>
+<div class="paragraph">
+<p>As a Consumer I want to search for Products of all types by specification of textual and faceted search criteria. I want to be able to incrementally narrow my search with more criteria clauses. For each Product in the search result I want to get more detailed information that describes the product, its usage terms and costs, and visualise the data graphically. Having discovered a product of interest I may 'save' it to my Workspace, download it, or use it as input to further exploitation activities.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_productDiscovery">Figure 1</a> illustrates discovery of EO data products using the EO Browser system.</p>
+</div>
+<div id="img_productDiscovery" class="imageblock text-center">
+<div class="content">
+<img src="./images/discover-product.png" alt="discover product" width="800">
+</div>
+<div class="title">Figure 1. Product Discovery - EO Browser (<a href="http://apps.eocloud.sentinel-hub.com/eo-browser/" class="bare">http://apps.eocloud.sentinel-hub.com/eo-browser/</a>)</div>
+</div>
+<div class="paragraph">
+<p><a href="#img_customVisualisation">Figure 2</a> shows custom visualisation of a Sentinel-2 EO data product.</p>
+</div>
+<div id="img_customVisualisation" class="imageblock text-center">
+<div class="content">
+<img src="./images/visualise-product.png" alt="visualise product" width="800">
+</div>
+<div class="title">Figure 2. Product Visualisation - EO Browser (<a href="http://apps.eocloud.sentinel-hub.com/eo-browser/" class="bare">http://apps.eocloud.sentinel-hub.com/eo-browser/</a>)</div>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Consumer logs in on the EP</p>
+</li>
+<li>
+<p>Consumer begins searching for products on the EP. The starting point is the full unfiltered product set that contains commercial/non-commercial EO data and value-added products</p>
+</li>
+<li>
+<p>Optionally, the resultset is automatically filtered to include only those collections that the Consumer has right to visualise. <em>It may be the case that the EP chooses to make these 'unavailable collections' visible to the Consumer to publicise their existence</em></p>
+</li>
+<li>
+<p>Consumer filters the resultset by any combination of textual search terms, area of interest, time of interest, selection of collection(s) and selection of product facets</p>
+</li>
+<li>
+<p>Consumer incrementally adjusts their search criteria to refine the filtered resultset</p>
+</li>
+<li>
+<p>Consumer selects a product of interest; the EP checks they are authorised to access the product</p>
+</li>
+<li>
+<p>Consumer views detailed metadata for the selected product</p>
+</li>
+<li>
+<p>Consumer views T&amp;Cs for the service and accepts terms of not already done so</p>
+</li>
+<li>
+<p>Optionally, the Consumer 'saves' (a reference to) the product to their workspace</p>
+</li>
+<li>
+<p>Consumer requests the cost for access/usage of the data</p>
+</li>
+<li>
+<p>Optionally, the Consumer visualises the product with a graphical representation. <em>The Consumer is able to parameterise the visualisation interactively, e.g. specification of layers to view etc.</em></p>
+</li>
+<li>
+<p>Optionally, the Consumer downloads the visualisation results</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The use case does not mention the Guest user. It should be taken into account that an EP may choose to allow limited access to a Guest user, such as searching/browsing catalogues, before insisting on user login for exploitation activities. <em>This approach might be typical in order to allow a potential user discover EP capabilities before signing up</em>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The use case does not consider the case where the Consumer is able to select sub-setting (spatial/temporal) of the data product itself, which might be typical of data accessible through a service such as OPeNDAP. <em>The extent to which this case should be considered for the EP is TBD</em>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_consumer_uploads_data_to_their_workspace">2.3. Consumer uploads data to their workspace</h3>
+<div class="paragraph">
+<p>As a Consumer I want to upload data into my workspace and specify the name and destination in the target EP. I would like to treat my uploaded data the same as other (existing) data available in the EP. This includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Visualise the data in the platform</p>
+</li>
+<li>
+<p>Use the data as input to analysis activities, e.g. interactively or through processing services</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally, I would like to (optionally) publish the data so that it is available to other users, discoverable through the EP catalogue.</p>
+</div>
+<div class="paragraph">
+<p>The following figures provide implementation examples from the Hydrology TEP, <a href="https://hydrology-tep.eu/" class="bare">https://hydrology-tep.eu/</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_manageMyData">Figure 3</a> demonstrates the invocation of the 'Manage My Data' application.</p>
+</div>
+<div id="img_manageMyData" class="imageblock text-center">
+<div class="content">
+<img src="./images/manage-my-data.png" alt="manage my data" width="800">
+</div>
+<div class="title">Figure 3. Manage My Data</div>
+</div>
+<div class="paragraph">
+<p><a href="#img_workspaceUpload">Figure 4</a> illustrates the invocation of the data upload capability.</p>
+</div>
+<div id="img_workspaceUpload" class="imageblock text-center">
+<div class="content">
+<img src="./images/workspace-upload.png" alt="workspace upload" width="800">
+</div>
+<div class="title">Figure 4. Workspace Upload</div>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Consumer logs in on the EP</p>
+</li>
+<li>
+<p>Consumer navigates to their Workspace to be presented with data they have previously uploaded or 'saved'</p>
+</li>
+<li>
+<p>Consumer requests to upload new data - specifying appropriate metadata including the location to which the data should be uploaded</p>
+</li>
+<li>
+<p>Platform confirms the user&#8217;s rights before accepting the request and ingesting the data into the user&#8217;s workspace</p>
+</li>
+<li>
+<p>Optionally, consumer can view the details of any data in their workspace, including that which they have uploaded</p>
+</li>
+<li>
+<p>Optionally, consumer visualises their uploaded data and is able to manipulate and parameterise the view - with the possibility to download the result of their visualisation</p>
+</li>
+<li>
+<p>Optionally, consumer publishes the uploaded data in the catalogue - specifying all necessary metadata to support discovery</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_consumer_discovers_and_executes_on_demand_processing_service">2.4. Consumer discovers and executes On-demand Processing Service</h3>
+<div class="paragraph">
+<p>As a Consumer I want to list and search for commercial and non-commercial <em>Processing Services</em>, by specification of textual and faceted search criteria. I want to be able to incrementally narrow my search with more criteria clauses. For each <em>Processing Service</em> in the search result I want to get more detailed information, including a description and access to its execution manual. If I have not already done so, then any <em>Terms &amp; Conditions</em> associated to usage of the processing service should be made clear to me, with the opportunity for me to accept the T&amp;Cs before I am authorised to execute the processing service.</p>
+</div>
+<div class="paragraph">
+<p>I want to prepare the <em>Processing Service</em> for execution by specifying input data from within and outside the platform, and define any other parameters and configuration required to fully specify the job. Based upon my inputs I would like to get an estimation of the execution costs and time, before (optionally) initiating execution of the processing service. Having discovered a processing service of interest I may 'save' it to my Workspace, (which acts as a bookmark) - either with or without my parameterisation.</p>
+</div>
+<div class="paragraph">
+<p>Having initiated execution of a <em>Processing Service</em>, I would like to monitor its progress (including any errors occurring), and have access to the results output at the successful conclusion. I would like to visualise my Processing Results graphically with custom visualsation parameters, and possibly download the results. Additionally, I would like to (optionally) publish the Processing Results so that it is available to other users, discoverable through the EP catalogue.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_processingDiscovery">Figure 5</a> illustrates discovery and parameterisation of a Sentinel-2 Land Cover processor, from the Forestry TEP platform.</p>
+</div>
+<div id="img_processingDiscovery" class="imageblock text-center">
+<div class="content">
+<img src="./images/discover-processing.png" alt="discover processing" width="800">
+</div>
+<div class="title">Figure 5. Processing Discovery - Sentinel-2 Land Cover processor (<a href="https://f-tep.com/app/" class="bare">https://f-tep.com/app/</a>)</div>
+</div>
+<div class="paragraph">
+<p><a href="#img_processingResults">Figure 6</a> illustrates the visualisation of processing results, from the Forestry TEP platform.</p>
+</div>
+<div id="img_processingResults" class="imageblock text-center">
+<div class="content">
+<img src="./images/processing-results.png" alt="processing results" width="800">
+</div>
+<div class="title">Figure 6. Processing Results (<a href="https://f-tep.com/app/" class="bare">https://f-tep.com/app/</a>)</div>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Consumer logs in on the EP</p>
+</li>
+<li>
+<p>Consumer begins searching for <em>Processing Services</em> on the EP. The starting point is the full unfiltered set of <em>Processing Services</em> that contains commercial/non-commercial services</p>
+</li>
+<li>
+<p>Optionally, the resultset is automatically filtered to include only those services that the Consumer has right to visualise. <em>It may be the case that the EP chooses to make these 'unavailable services' visible to the Consumer to publicise their existence</em></p>
+</li>
+<li>
+<p>Consumer filters the resultset by any combination of textual search terms and selection of service facets</p>
+</li>
+<li>
+<p>Consumer incrementally adjusts their search criteria to refine the filtered resultset</p>
+</li>
+<li>
+<p>Consumer selects a <em>Processing Service</em> of interest; the EP checks they are authorised to access the product</p>
+</li>
+<li>
+<p>Consumer views the manual for the selected service in order to understand its required input data/parameters and the nature of its algorithm</p>
+</li>
+<li>
+<p>Consumer views T&amp;Cs for the service and accepts terms if not already done so</p>
+</li>
+<li>
+<p>Optionally, the Consumer 'saves' (a reference to) the product to their workspace</p>
+</li>
+<li>
+<p>Consumer searches the EP catalogue for input data of interest, by specification of spatial/temporal (and other) characteristics</p>
+</li>
+<li>
+<p>Consumer selects the input data from their search results and/or from their workspace data</p>
+</li>
+<li>
+<p>Consumer specifies the input parameters of the <em>Processing Service</em></p>
+</li>
+<li>
+<p>Consumer requests processing execution</p>
+</li>
+<li>
+<p>The EP checks that the Consumer has the authorisation to launch the <em>Processing Service</em> and access the specified data</p>
+</li>
+<li>
+<p>The EP estimates the cost and duration of the processing and checks the Consumer has enough resources to execute the processing</p>
+</li>
+<li>
+<p>Consumer is presented with the cost/duration estimation and confirms the processing</p>
+</li>
+<li>
+<p>Consumer monitors the status of the processing (%completion, execution logs)</p>
+</li>
+<li>
+<p>When the processing completes successfully the <em>Processing Results</em> are made available to the user in their <em>Workspace</em></p>
+</li>
+<li>
+<p>The Consumer&#8217;s billing account is updated comensurate with the 'cost' of the processing</p>
+</li>
+<li>
+<p>Optionally, the Consumer downloads the results</p>
+</li>
+<li>
+<p>Optionally, the Consumer visualises the processing logs (e.g. for error inspection)</p>
+</li>
+<li>
+<p>Optionally, the Consumer visualises the results and is able to manipulate and parameterise the view - with the possibility to download the result of their visualisation</p>
+</li>
+<li>
+<p>Optionally, the Consumer publishes their results in the catalogue - specifying all necessary metadata to support discovery</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The use case does not explore how the user obtains/maintains a resource quota in the platform in order to 'pay' for their usage
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The use case does not consider the possibility of processing services for which the user requires a license key. This would have to be considered as an extension of this case.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_consumer_discovers_and_executes_interactive_applications">2.5. Consumer discovers and executes Interactive Applications</h3>
+<div class="paragraph">
+<p>As a Consumer I want to list and search for commercial and non-commercial <em>Interactive Applications</em>, by specification of textual and faceted search criteria. I want to be able to incrementally narrow my search with more criteria clauses. For each <em>Interactive Application</em> in the search result I want to get more detailed information, including a description and access to its execution manual. If I have not already done so, then any <em>Terms &amp; Conditions</em> associated to usage of the <em>Interactive Application</em> should be made clear to me, with the opportunity for me to accept the T&amp;Cs before I am authorised to execute the application.</p>
+</div>
+<div class="paragraph">
+<p>Having started the <em>Interactive Application</em> I want to access the application user interface via my web browser, perform analytics accessing EO data, value-added products and other resources available on or outside the platform. I would like to export my Analysis Results (text, products, screenshots etc.) from the application into my EP workspace, allowing me to visualise and download the results. At the conclusion of my analysis session I would like to stop the application to ensure that I am not using unecessary resources and/or incurring unwanted costs.</p>
+</div>
+<div class="paragraph">
+<p>As a Consumer, I should be able to request a list of Interactive Application sessions that I currently have 'live' in the system - through which I can manage the sessions by rejoining or stopping as required.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_selectInteractiveApplication">Figure 7</a> illustrates listing and selection of an Interactive Application, from the Costal TEP platform.</p>
+</div>
+<div id="img_selectInteractiveApplication" class="imageblock text-center">
+<div class="content">
+<img src="./images/interactive-application.png" alt="interactive application" width="800">
+</div>
+<div class="title">Figure 7. Interactive Application - Discovery and selection (<a href="https://www.coastal-tep.eu/" class="bare">https://www.coastal-tep.eu/</a>)</div>
+</div>
+<div class="paragraph">
+<p><a href="#img_snapApplication">Figure 8</a> illustrates the SNAP application running interactively in the user&#8217;s web browser, from the Costal TEP platform.</p>
+</div>
+<div id="img_snapApplication" class="imageblock text-center">
+<div class="content">
+<img src="./images/snap-application.png" alt="snap application" width="800">
+</div>
+<div class="title">Figure 8. Interactive Application - SNAP running in web browser (<a href="https://www.coastal-tep.eu/" class="bare">https://www.coastal-tep.eu/</a>)</div>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Consumer logs in on the EP</p>
+</li>
+<li>
+<p>Consumer begins searching for <em>Interactive Applications</em> on the EP. The starting point is the full unfiltered set of <em>Interactive Applications</em> that contains commercial/non-commercial applications</p>
+</li>
+<li>
+<p>Optionally, the resultset is automatically filtered to include only those services that the Consumer has right to visualise. <em>It may be the case that the EP chooses to make these 'unavailable applications' visible to the Consumer to publicise their existence</em></p>
+</li>
+<li>
+<p>Consumer filters the resultset by any combination of textual search terms and selection of application facets</p>
+</li>
+<li>
+<p>Consumer incrementally adjusts their search criteria to refine the filtered resultset</p>
+</li>
+<li>
+<p>Alternative Flow: <a href="#aflow-existing-session">Existing Session Selection</a></p>
+</li>
+<li>
+<p>Consumer views the description and execution manual for the selected application</p>
+</li>
+<li>
+<p>Consumer selects an <em>Interactive Application</em> of interest; the EP checks they are authorised to access the application</p>
+</li>
+<li>
+<p>Consumer views T&amp;Cs for the application and accepts terms if not already done so</p>
+</li>
+<li>
+<p>Optionally, the Consumer 'saves' (a reference to) the application to their workspace</p>
+</li>
+<li>
+<p>Consumer searches the EP catalogue for input data of interest, by specification of spatial/temporal (and other) characteristics</p>
+</li>
+<li>
+<p>Consumer selects the input data from their search results and/or from their workspace data</p>
+</li>
+<li>
+<p>Alternative Flow: <a href="#aflow-data-selection">Input Data Selection</a></p>
+</li>
+<li>
+<p>EP checks that the Consumer is authorised to access the data and has accepted the associated T&amp;Cs - prompting for confirmation of acceptance as required</p>
+</li>
+<li>
+<p>If applicable, the EP estimates the cost for the application/data, checks the Consumer has enough resources to cover this cost, and the Consumer is presented with the cost indication</p>
+</li>
+<li>
+<p>Consumer accepts and starts the Interactive Application, which is presented to them in their web browser</p>
+</li>
+<li>
+<p>The previously selected input data is made available within the execution context of the <em>Interactive Application</em></p>
+</li>
+<li>
+<p>Consumer uses the application to perform analytics using the imput data</p>
+</li>
+<li>
+<p>Optionally, the Consumer accesses additional data to be introduced into the analysis within the <em>Interactive Application</em>, (the EP checks rights/costs as required)</p>
+</li>
+<li>
+<p>Consumer saves/exports their Analysis Results from the application to be saved on the EP, within their <em>Workspace</em></p>
+</li>
+<li>
+<p>The Consumer&#8217;s billing account is updated comensurate with the 'cost' of the processing</p>
+</li>
+<li>
+<p>Optionally, the Consumer downloads the results</p>
+</li>
+<li>
+<p>Optionally, the Consumer visualises the results and is able to manipulate and parameterise the view - with the possibility to download the result of their visualisation</p>
+</li>
+<li>
+<p>Optionally, the Consumer publishes their results in the catalogue - specifying all necessary metadata to support discovery</p>
+</li>
+</ol>
+</div>
+<div id="aflow-existing-session" class="paragraph">
+<div class="title">Alternative Flow: Existing Session Selection</div>
+<p>Rather that discovering a starting a new application instance, instead they list existing 'live' sessions, that they can rejoin</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Consumer obtains a list of their current 'live' interactive sessions</p>
+</li>
+<li>
+<p>Consumer selects to rejoin an existing session</p>
+</li>
+</ol>
+</div>
+<div id="aflow-data-selection" class="paragraph">
+<div class="title">Alternative Flow: Input Data Selection</div>
+<p>Rather than pre-selecting the input data before invoking the <em>Interactive Application</em>, it may be preferable (depending on the application) to make the input data selection from within the <em>Interactive Application</em>. The use case is not elaborated here in regard of this approach, but it should be ensured that the data access is made within the context of the user&#8217;s access rights and associated billing considerations.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_consumer_analyses_value_added_product">2.6. Consumer analyses value-added product</h3>
+<div class="paragraph">
+<p>This use-case is described in document <a href="#EP-UC">[EP-UC]</a>. However, it is seen as the same as use-case <a href="#_consumer_discovers_and_executes_interactive_applications">Consumer discovers and executes Interactive Applications</a>, just with particular emphasis on the inclusion of Value-added Products in the analysis, and perhaps with an associated set of specific tooling in mind (WebGIS, DataCube, etc.).</p>
+</div>
+<div class="paragraph">
+<p>By way of illustration, <a href="#img_valueAddedProducts">Figure 9</a> provides an example that uses PUMA WebGIS to combine value-added products with in-situ data, taken from the Urban TEP platform.</p>
+</div>
+<div id="img_valueAddedProducts" class="imageblock text-center">
+<div class="content">
+<img src="./images/value-added-products.png" alt="value added products" width="800">
+</div>
+<div class="title">Figure 9. Value Added Products Analyses - PUMA WebGIS (<a href="https://urban-tep.eu/" class="bare">https://urban-tep.eu/</a>)</div>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_functional_mapping">3. Functional Mapping</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Identification of functional areas and their mapping to domain areas.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version v0.2<br>
+Last updated 2019-02-20 09:23:12 UTC
+</div>
+</div>
+</body>
+</html>
