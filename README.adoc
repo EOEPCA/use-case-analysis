@@ -6,4 +6,4 @@ This is the latest published version of the *Use Case Analysis* document.
 
 The document is published here for community review and feedback.
 
-Comments are invited and should be made by raising an issue on the link:issues[Issues Page].
+Comments are invited and should be made by raising an issue on the link:../../issues[Issues Page].
