@@ -7,16 +7,16 @@
 <meta name="generator" content="Asciidoctor 1.5.8">
 <meta name="description" content="Use Case Analysis for the Common Architecture">
 <meta name="keywords" content="common architecture use case analysis">
-<meta name="author" content="Richard Conway">
+<meta name="author" content="TVUK System Team">
 <title>Use Case Analysis</title>
-<link rel="stylesheet" href="./stylesheets/telespazio.css">
+<link rel="stylesheet" href="./stylesheets/eoepca.css">
 </head>
 <body class="article">
 <div id="header">
 <h1>EOEPCA - Use Case Analysis</h1>
 <div class="details">
-<span id="author" class="author">Richard Conway</span><br>
-<span id="email" class="email">&lt;<a href="mailto:richard.conway@telespazio.com">richard.conway@telespazio.com</a>&gt;</span><br>
+<span id="author" class="author">TVUK System Team</span><br>
+<span id="email" class="email">&lt;<a href="mailto:Eoepca.SystemTeam@telespazio.com">Eoepca.SystemTeam@telespazio.com</a>&gt;</span><br>
 <span id="revnumber">version v0.2,</span>
 <span id="revdate">15/02/2019</span>
 <br><span id="revremark">Early draft</span>
@@ -77,6 +77,7 @@
 <li><a href="#_consumer_discovers_and_executes_on_demand_processing_service">2.4. Consumer discovers and executes On-demand Processing Service</a></li>
 <li><a href="#_consumer_discovers_and_executes_interactive_applications">2.5. Consumer discovers and executes Interactive Applications</a></li>
 <li><a href="#_consumer_analyses_value_added_product">2.6. Consumer analyses value-added product</a></li>
+<li><a href="#_consumer_executes_bulk_processing">2.7. Consumer executes Bulk processing</a></li>
 </ul>
 </li>
 <li><a href="#_functional_mapping">3. Functional Mapping</a></li>
@@ -284,6 +285,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AOI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Area of Interest</p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EO</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Earth Observation</p></td>
@@ -547,6 +552,9 @@ The use case does not consider the case where the Consumer is able to select sub
 <p>Consumer logs in on the EP</p>
 </li>
 <li>
+<p><strong>Discover and Select Processing Service&#8230;&#8203;</strong></p>
+</li>
+<li>
 <p>Consumer begins searching for <em>Processing Services</em> on the EP. The starting point is the full unfiltered set of <em>Processing Services</em> that contains commercial/non-commercial services</p>
 </li>
 <li>
@@ -571,10 +579,16 @@ The use case does not consider the case where the Consumer is able to select sub
 <p>Optionally, the Consumer 'saves' (a reference to) the product to their workspace</p>
 </li>
 <li>
+<p><strong>Discover and Select Input Data&#8230;&#8203;</strong></p>
+</li>
+<li>
 <p>Consumer searches the EP catalogue for input data of interest, by specification of spatial/temporal (and other) characteristics</p>
 </li>
 <li>
 <p>Consumer selects the input data from their search results and/or from their workspace data</p>
+</li>
+<li>
+<p><strong>Initiate Processing&#8230;&#8203;</strong></p>
 </li>
 <li>
 <p>Consumer specifies the input parameters of the <em>Processing Service</em></p>
@@ -599,6 +613,9 @@ The use case does not consider the case where the Consumer is able to select sub
 </li>
 <li>
 <p>The Consumer&#8217;s billing account is updated comensurate with the 'cost' of the processing</p>
+</li>
+<li>
+<p><strong>Exploit Results&#8230;&#8203;</strong></p>
 </li>
 <li>
 <p>Optionally, the Consumer downloads the results</p>
@@ -689,7 +706,7 @@ The use case does not consider the possibility of processing services for which 
 <p>Consumer incrementally adjusts their search criteria to refine the filtered resultset</p>
 </li>
 <li>
-<p>Alternative Flow: <a href="#aflow-existing-session">Existing Session Selection</a></p>
+<p><strong><em>Alternative Flow:</em></strong> <a href="#aflow-existing-session">Existing Session Selection</a></p>
 </li>
 <li>
 <p>Consumer views the description and execution manual for the selected application</p>
@@ -710,7 +727,7 @@ The use case does not consider the possibility of processing services for which 
 <p>Consumer selects the input data from their search results and/or from their workspace data</p>
 </li>
 <li>
-<p>Alternative Flow: <a href="#aflow-data-selection">Input Data Selection</a></p>
+<p><strong><em>Alternative Flow:</em></strong> <a href="#aflow-data-selection">Input Data Selection</a></p>
 </li>
 <li>
 <p>EP checks that the Consumer is authorised to access the data and has accepted the associated T&amp;Cs - prompting for confirmation of acceptance as required</p>
@@ -725,7 +742,7 @@ The use case does not consider the possibility of processing services for which 
 <p>The previously selected input data is made available within the execution context of the <em>Interactive Application</em></p>
 </li>
 <li>
-<p>Consumer uses the application to perform analytics using the imput data</p>
+<p>Consumer uses the application to perform analytics using the input data</p>
 </li>
 <li>
 <p>Optionally, the Consumer accesses additional data to be introduced into the analysis within the <em>Interactive Application</em>, (the EP checks rights/costs as required)</p>
@@ -784,6 +801,137 @@ The use case does not consider the possibility of processing services for which 
 <hr>
 <div style="page-break-after: always;"></div>
 </div>
+<div class="sect2">
+<h3 id="_consumer_executes_bulk_processing">2.7. Consumer executes Bulk processing</h3>
+<div class="paragraph">
+<p>This use case builds upon case <a href="#_consumer_discovers_and_executes_on_demand_processing_service">Consumer discovers and executes On-demand Processing Service</a>.</p>
+</div>
+<div class="paragraph">
+<p>As a Consumer, I want to execute a processing service over a large amount of data. I want to utilise the EP&#8217;s discovery service to select a processing service. I want to utlise the EP&#8217;s discovery service to select multiple datasets. The data discovery should facilitate selection of typical bulk processing scenarios, such as daily acquisitions, or selection by AOI. Having submitted my bulk processing, I would like to monitor the status of the processing, receive the completed <em>Processing Results</em>, with the ability to visualise/download etc. the results using the facilities of the EP. In the case of an error, then I should be alerted, with the capability to investigate the cause through access to the processing logs.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_bulkProcessing">Figure 10</a> shows bulk processing at ESA&#8217;s Grid Processing On Demand (G-POD) system.</p>
+</div>
+<div id="img_bulkProcessing" class="imageblock text-center">
+<div class="content">
+<img src="./images/bulk-processing.png" alt="bulk processing" width="800">
+</div>
+<div class="title">Figure 10. Bulk Processing - Results of a bulk processing from G-POD (<a href="http://gpod.eo.esa.int/" class="bare">http://gpod.eo.esa.int/</a>)</div>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Consumer logs in on the EP</p>
+</li>
+<li>
+<p><strong>Discover and Select Processing Service&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Consumer discovers and selects a Processing Service as described in use case <a href="#_consumer_discovers_and_executes_on_demand_processing_service">Consumer discovers and executes On-demand Processing Service</a>. <em>Steps not repeated here.</em></p>
+</li>
+<li>
+<p>Alternatively, the Consumer selects a processing service from their Workspace</p>
+</li>
+<li>
+<p><strong>Discover and Select Bulk Data&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Consumer searches the EP catalogue for input data of interest, by specification of spatial/temporal (and other) characteristics</p>
+</li>
+<li>
+<p>Consumer is able to select multiple data items by adding them to a preparatory 'bulk-data collection'</p>
+</li>
+<li>
+<p>Consumer can perform multiple discrete searches to add more data to the 'bulk-data collection'</p>
+</li>
+<li>
+<p>Consumer can select data from their workspace for addition to the 'bulk-data collection'</p>
+</li>
+<li>
+<p>The EP checks they are authorised to access the product</p>
+</li>
+<li>
+<p>Consumer views detailed metadata for the selected product</p>
+</li>
+<li>
+<p>Consumer views T&amp;Cs for the service and accepts terms of not already done so</p>
+</li>
+<li>
+<p><strong>Initiate Bulk Processing&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Consumer specifies the input parameters of the <em>Processing Service</em></p>
+</li>
+<li>
+<p>Optionally, the Consumer defines a collection of data to which the results have to be included</p>
+</li>
+<li>
+<p>Consumer requests bulk processing execution</p>
+</li>
+<li>
+<p>The EP checks that the Consumer has the authorisation to launch the <em>Processing Service</em> and access the specified data</p>
+</li>
+<li>
+<p>The EP estimates the cost and duration of the processing and checks the Consumer has enough resources to execute the processing</p>
+</li>
+<li>
+<p>Consumer is presented with the cost/duration estimation and confirms the processing</p>
+</li>
+<li>
+<p>The EP creates multiple processing requests, split according to the bulk data that has been selected</p>
+</li>
+<li>
+<p>Consumer monitors the status of the bulk processing (%completion, execution logs)</p>
+</li>
+<li>
+<p>When the processing completes successfully the <em>Processing Results</em> are made available to the user in their <em>Workspace</em> and/or the target <em>Collection</em> selected by the user</p>
+</li>
+<li>
+<p>The Consumer&#8217;s billing account is updated comensurate with the 'cost' of the bulk processing</p>
+</li>
+<li>
+<p><strong><em>Alternative Flow:</em></strong> <a href="#aflow-bulk-processing-error">Bulk Processing Error</a></p>
+</li>
+<li>
+<p><strong>Exploit Results&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Optionally, the Consumer downloads the results</p>
+</li>
+<li>
+<p>Optionally, the Consumer visualises the processing logs (e.g. for error inspection)</p>
+</li>
+<li>
+<p>Optionally, the Consumer visualises the results and is able to manipulate and parameterise the view - with the possibility to download the result of their visualisation</p>
+</li>
+<li>
+<p>Optionally, the Consumer publishes their results in the catalogue - specifying all necessary metadata to support discovery</p>
+</li>
+</ol>
+</div>
+<div id="aflow-bulk-processing-error" class="paragraph">
+<div class="title">Alternative Flow: Bulk Processing Error</div>
+<p>In the case of errors during bulk processing</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>EP checks for errors during the processing</p>
+</li>
+<li>
+<p>Consumer is alerted to errors occuring during the bulk processing</p>
+</li>
+<li>
+<p>Consumer accesses bulk processing logs to investigate the error cause</p>
+</li>
+<li>
+<p>(Optionally) Consumer diagnoses problem and resubmits corrected bulk processing request. <em>This assumes that the error cause was under the control of the Consumer, i.e. they made an input error.</em></p>
+</li>
+</ol>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -798,7 +946,7 @@ The use case does not consider the possibility of processing services for which 
 <div id="footer">
 <div id="footer-text">
 Version v0.2<br>
-Last updated 2019-02-19 16:46:36 UTC
+Last updated 2019-02-27 10:56:14 UTC
 </div>
 </div>
 </body>
