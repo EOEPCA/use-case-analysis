@@ -13,7 +13,7 @@
 </head>
 <body class="article">
 <div id="header">
-<h1>EOEPCA - Use Case Analysis</h1>
+<h1>Use Case Analysis (EOEPCA.TN.005)</h1>
 <div class="details">
 <span id="author" class="author">TVUK System Team</span><br>
 <span id="email" class="email">&lt;<a href="mailto:Eoepca.SystemTeam@telespazio.com">Eoepca.SystemTeam@telespazio.com</a>&gt;</span><br>
@@ -78,6 +78,15 @@
 <li><a href="#_consumer_discovers_and_executes_interactive_applications">2.5. Consumer discovers and executes Interactive Applications</a></li>
 <li><a href="#_consumer_analyses_value_added_product">2.6. Consumer analyses value-added product</a></li>
 <li><a href="#_consumer_executes_bulk_processing">2.7. Consumer executes Bulk processing</a></li>
+<li><a href="#_consumer_executes_systematic_processing">2.8. Consumer executes Systematic processing</a></li>
+<li><a href="#_consumer_performs_open_science">2.9. Consumer performs Open Science</a></li>
+<li><a href="#_consumer_accesses_ep_services_with_external_application">2.10. Consumer accesses EP services with External Application</a></li>
+<li><a href="#_expert_user_builds_new_processing_service">2.11. Expert user builds new processing service</a></li>
+<li><a href="#_expert_user_builds_new_processing_services_chains">2.12. Expert user builds new processing services chains</a></li>
+<li><a href="#_expert_user_builds_new_interactive_application">2.13. Expert user builds new interactive application</a></li>
+<li><a href="#_expert_user_builds_new_value_added_products">2.14. Expert user builds new value-added products</a></li>
+<li><a href="#_expert_develops_with_interactive_development_environment">2.15. Expert develops with interactive development environment</a></li>
+<li><a href="#_expert_performs_training">2.16. Expert performs training</a></li>
 </ul>
 </li>
 <li><a href="#_functional_mapping">3. Functional Mapping</a></li>
@@ -202,8 +211,16 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">A <em>Processing Service</em> whose execution is initiated automatically (on behalf of a user), either according to a schedule (routine) or triggered by an event (e.g. arrival of new data).</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bulk Processing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execution of a <em>Processing Service</em> on large amounts of data specified by AOI and TOI.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Processing Result</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The <em>Products</em> produced as output of a <em>Processing Service</em> execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reusable Research Object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An encapsulation of some research/analysis that describes all aspects required to reproduce the analysis, including data used, processing performed etc.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Interactive Application</p></td>
@@ -300,6 +317,10 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SSH</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Secure Shell</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TOI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time of Interest</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">VNC</p></td>
@@ -585,7 +606,19 @@ The use case does not consider the case where the Consumer is able to select sub
 <p>Consumer searches the EP catalogue for input data of interest, by specification of spatial/temporal (and other) characteristics</p>
 </li>
 <li>
+<p>Platforms aids the Consumer in selecting input data that is compatible with the chosen processing service</p>
+</li>
+<li>
 <p>Consumer selects the input data from their search results and/or from their workspace data</p>
+</li>
+<li>
+<p>The EP checks they are authorised to access the product</p>
+</li>
+<li>
+<p>Consumer views detailed metadata for the selected product</p>
+</li>
+<li>
+<p>Consumer views T&amp;Cs for the service and accepts terms of not already done so</p>
 </li>
 <li>
 <p><strong>Initiate Processing&#8230;&#8203;</strong></p>
@@ -630,6 +663,18 @@ The use case does not consider the case where the Consumer is able to select sub
 <p>Optionally, the Consumer publishes their results in the catalogue - specifying all necessary metadata to support discovery</p>
 </li>
 </ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The use case considers the user interaction in which the procesor is select first, followed by selection of compatible data. We might also consider the alternative in which the input data is selected first, and the Platform facilitates the selection of compatible processors. Ideally the platform should support both approaches.
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -807,7 +852,7 @@ The use case does not consider the possibility of processing services for which 
 <p>This use case builds upon case <a href="#_consumer_discovers_and_executes_on_demand_processing_service">Consumer discovers and executes On-demand Processing Service</a>.</p>
 </div>
 <div class="paragraph">
-<p>As a Consumer, I want to execute a processing service over a large amount of data. I want to utilise the EP&#8217;s discovery service to select a processing service. I want to utlise the EP&#8217;s discovery service to select multiple datasets. The data discovery should facilitate selection of typical bulk processing scenarios, such as daily acquisitions, or selection by AOI. Having submitted my bulk processing, I would like to monitor the status of the processing, receive the completed <em>Processing Results</em>, with the ability to visualise/download etc. the results using the facilities of the EP. In the case of an error, then I should be alerted, with the capability to investigate the cause through access to the processing logs.</p>
+<p>As a Consumer, I want to execute a processing service over a large amount of data. I want to utilise the EP&#8217;s discovery service to select a processing service. I want to utilise the EP&#8217;s discovery service to select multiple datasets, typically by specification or AOI and TOI to define the data inputs. The data discovery should facilitate selection of typical bulk processing scenarios, such as daily acquisitions, or selection by AOI. Having submitted my bulk processing, I would like to monitor the status of the processing, receive the completed <em>Processing Results</em>, with the ability to visualise/download etc. the results using the facilities of the EP. In the case of an error, then I should be alerted, with the capability to investigate the cause through access to the processing logs.</p>
 </div>
 <div class="paragraph">
 <p><a href="#img_bulkProcessing">Figure 10</a> shows bulk processing at ESA&#8217;s Grid Processing On Demand (G-POD) system.</p>
@@ -932,6 +977,366 @@ The use case does not consider the possibility of processing services for which 
 </div>
 <div style="page-break-after: always;"></div>
 </div>
+<div class="sect2">
+<h3 id="_consumer_executes_systematic_processing">2.8. Consumer executes Systematic processing</h3>
+<div class="paragraph">
+<p>This use case builds upon case <a href="#_consumer_discovers_and_executes_on_demand_processing_service">Consumer discovers and executes On-demand Processing Service</a>.</p>
+</div>
+<div class="paragraph">
+<p>As a Consumer, I want to setup an automated processing task that will be triggered for systematic execution by the platform (on behalf of the user). The triggering event(s) shall include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>According to a time schedule (daily, weekly, etc.)</p>
+</li>
+<li>
+<p>Arrival of specific new input data</p>
+</li>
+<li>
+<p>External event trigger (e.g. earthquake alert trigger)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I want to utilise the EP&#8217;s discovery service to select a processing service. I want to utlise the EP&#8217;s discovery service to select input dataset(s). I want to define my systematic processing by specification of the triggering event for automated processing. I should be alerted that the systematic processing has been triggered. I would like to monitor the status of the processing, receive the completed <em>Processing Results</em>, with the ability to visualise/download etc. the results using the facilities of the EP. In the case of an error, then I should be alerted, with the capability to investigate the cause through access to the processing logs.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_systematicProcessing">Figure 11</a> shows setup of systematic EO data processing at ESA&#8217;s Grid Processing On Demand (G-POD) system.</p>
+</div>
+<div id="img_systematicProcessing" class="imageblock text-center">
+<div class="content">
+<img src="./images/systematic-processing.png" alt="systematic processing" width="800">
+</div>
+<div class="title">Figure 11. Systematic Processing - Setup of systematic processing from G-POD (<a href="http://gpod.eo.esa.int/" class="bare">http://gpod.eo.esa.int/</a>)</div>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Consumer logs in on the EP</p>
+</li>
+<li>
+<p><strong>Discover and Select Processing Service&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Consumer discovers and selects a Processing Service as described in use case <a href="#_consumer_discovers_and_executes_on_demand_processing_service">Consumer discovers and executes On-demand Processing Service</a>. <em>Steps not repeated here.</em></p>
+</li>
+<li>
+<p>Alternatively, the Consumer selects a processing service from their Workspace</p>
+</li>
+<li>
+<p><strong>Discover and Select Input Data&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Consumer discovers and selects Input Data as described in use case <a href="#_consumer_discovers_and_executes_on_demand_processing_service">Consumer discovers and executes On-demand Processing Service</a>. <em>Steps not repeated here.</em></p>
+</li>
+<li>
+<p>Alternatively, the Consumer selects input data from their Workspace</p>
+</li>
+<li>
+<p><strong>Define Systematic Processing&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Consumer specifies the input parameters of the <em>Processing Service</em></p>
+</li>
+<li>
+<p>Consumer specifies the systematic processing triggering conditions</p>
+</li>
+<li>
+<p>Optionally, the Consumer defines a collection of data to which the results have to be included</p>
+</li>
+<li>
+<p>The EP checks that the Consumer has the authorisation to launch the <em>Processing Service</em> and access the specified data</p>
+</li>
+<li>
+<p>The EP estimates the future cost/duration of the processing and checks the Consumer has enough resources to execute the processing. See <a href="#note-systematic-processing-cost">Note1</a> below.</p>
+</li>
+<li>
+<p>Consumer is presented with the cost/duration estimation and confirms the systematic processing</p>
+</li>
+<li>
+<p><strong>Execute Systematic Processing&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>EP initiates systematic processing according to the defined trigger condition</p>
+</li>
+<li>
+<p>Consumer monitors the status of the systematic processing (%completion, execution logs)</p>
+</li>
+<li>
+<p>When the processing completes successfully the <em>Processing Results</em> are made available to the user in their <em>Workspace</em> and/or the target <em>Collection</em> selected by the user</p>
+</li>
+<li>
+<p>The Consumer&#8217;s billing account is updated comensurate with the 'cost' of the systematic processing</p>
+</li>
+<li>
+<p>Optionally, the EP notifies the Consumer of the occurrence and completion of the systematic processing</p>
+</li>
+<li>
+<p><strong><em>Alternative Flow:</em></strong> <a href="#aflow-systematic-processing-error">Systematic Processing Error</a></p>
+</li>
+<li>
+<p><strong>Exploit Results&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Optionally, the Consumer downloads the results</p>
+</li>
+<li>
+<p>Optionally, the Consumer visualises the processing logs (e.g. for error inspection)</p>
+</li>
+<li>
+<p>Optionally, the Consumer visualises the results and is able to manipulate and parameterise the view - with the possibility to download the result of their visualisation</p>
+</li>
+<li>
+<p>Optionally, the Consumer publishes their results in the catalogue - specifying all necessary metadata to support discovery</p>
+</li>
+</ol>
+</div>
+<div id="aflow-systematic-processing-error" class="paragraph">
+<div class="title">Alternative Flow: Systematic Processing Error</div>
+<p>In the case of errors during systematic processing</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>EP checks for errors during the processing</p>
+</li>
+<li>
+<p>Consumer is alerted to errors occuring during the systematic processing</p>
+</li>
+<li>
+<p>Consumer accesses systematic processing logs to investigate the error cause</p>
+</li>
+<li>
+<p>(Optionally) Consumer diagnoses problem and resubmits corrected systematic processing definition. <em>This assumes that the error cause was under the control of the Consumer, i.e. they made an input error.</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="big"><strong>Notes</strong></span></p>
+</div>
+<div id="note-systematic-processing-cost" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Systematic Processing Costs</div>
+Given that the systematic processing occurs asynchronous to the Consumer submitting the definition, the possibility exists that, at time of trigger/execution, the Consumer no longer has sufficient resources to cover the task. This condition must be trapped and handled by the EP - perhaps raising an error to the Consumer. See alternative flow <a href="#aflow-systematic-processing-error">Systematic Processing Error</a>.
+</td>
+</tr>
+</table>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_consumer_performs_open_science">2.9. Consumer performs Open Science</h3>
+<div class="paragraph">
+<p>As a Consumer I want to share my analysis and processing results in such a way that facilitates scientific collaboration. I want to link my results to a scientific publication, and assign a DOI to my results to reference it in my scientific paper. I want to encapsulate my research/analysis as a <em>Reusable Research Object</em>, to capture all aspects of my analysis including data used and processing performed etc., so that it can be reproduced, I can re-use my analysis in the future, or share it with others for collaboration.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_openScience">Figure 12</a> illustrates a shared analysis result linked to a reference scientific publication.</p>
+</div>
+<div id="img_openScience" class="imageblock text-center">
+<div class="content">
+<img src="./images/open-science.png" alt="open science" width="800">
+</div>
+<div class="title">Figure 12. Open Science - Sharing analysis results on the Geohazards TEP (<a href="https://geohazards-tep.eu/" class="bare">https://geohazards-tep.eu/</a>)</div>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Consumer logs in on the EP</p>
+</li>
+<li>
+<p>Consumer selects items (e.g. data, processing services, processing results)</p>
+</li>
+<li>
+<p>EP verifies that Consumer has right to share the item</p>
+</li>
+<li>
+<p>Consumer selects one of the collaborative options, including:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>share processing results</p>
+</li>
+<li>
+<p>link to scientific publication</p>
+</li>
+<li>
+<p>create a Reusable Research Object for sharing</p>
+</li>
+<li>
+<p>Others TBD - see <a href="#note-collaboration-options">Note1</a>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Consumer specifies collaborators and associated access rights (read/write - user/group/everyone). See <a href="#note-collaboration-groups">Note2</a>.</p>
+</li>
+<li>
+<p>The EP shares the item according to the Consumers specification</p>
+</li>
+<li>
+<p>Optionally, the EP registers a DOI for the item</p>
+</li>
+<li>
+<p>Optionally, collaborators are automatically notified of the sharing of the item</p>
+</li>
+<li>
+<p>Collaborators access the shared item; the EP checks that the Consumer is authorised to access the item</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="big"><strong>Notes</strong></span></p>
+</div>
+<div id="note-collaboration-options" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Collaboration Options</div>
+Each of the 'collaborative options' needs to be defined in more detail, and perhaps explored through additional use cases.
+</td>
+</tr>
+</table>
+</div>
+<div id="note-collaboration-groups" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Collaboration Groups</div>
+This use case assumes the concept of 'collaborators'. This implies a grouping of user that needs to be explorted in further details through additional use cases.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_consumer_accesses_ep_services_with_external_application">2.10. Consumer accesses EP services with External Application</h3>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TBD</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_expert_user_builds_new_processing_service">2.11. Expert user builds new processing service</h3>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TBD</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_expert_user_builds_new_processing_services_chains">2.12. Expert user builds new processing services chains</h3>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TBD</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_expert_user_builds_new_interactive_application">2.13. Expert user builds new interactive application</h3>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TBD</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_expert_user_builds_new_value_added_products">2.14. Expert user builds new value-added products</h3>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TBD</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_expert_develops_with_interactive_development_environment">2.15. Expert develops with interactive development environment</h3>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TBD</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_expert_performs_training">2.16. Expert performs training</h3>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>TBD</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -946,7 +1351,7 @@ The use case does not consider the possibility of processing services for which 
 <div id="footer">
 <div id="footer-text">
 Version v0.2<br>
-Last updated 2019-02-27 10:56:14 UTC
+Last updated 2019-03-05 15:01:06 UTC
 </div>
 </div>
 </body>
