@@ -239,6 +239,10 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">An Interactive Application for analysis provided as a remote desktop session to a VM hosted on the exploitation platform. The user will have access to a number of applications within the hosted OS. The remote desktop session is provided through the user&#8217;s web browser.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">External Application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An application or script that is developed and executed outside of the Exploitation Platform, but is able to use the data/services of the EP via a programmatic interface (API).</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Analysis Result</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The <em>Products</em> produced as output of an <em>Interactive Application</em> analysis session.</p></td>
 </tr>
@@ -305,6 +309,10 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">AOI</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Area of Interest</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application Programming Interface</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EO</p></td>
@@ -1134,7 +1142,7 @@ Given that the systematic processing occurs asynchronous to the Consumer submitt
 <div class="sect2">
 <h3 id="_consumer_performs_open_science">2.9. Consumer performs Open Science</h3>
 <div class="paragraph">
-<p>As a Consumer I want to share my analysis and processing results in such a way that facilitates scientific collaboration. I want to link my results to a scientific publication, and assign a DOI to my results to reference it in my scientific paper. I want to encapsulate my research/analysis as a <em>Reusable Research Object</em>, to capture all aspects of my analysis including data used and processing performed etc., so that it can be reproduced, I can re-use my analysis in the future, or share it with others for collaboration.</p>
+<p>As a Consumer I want to share my analysis and processing results in such a way that facilitates scientific collaboration. I want to link my results to a scientific publication, and assign a DOI to my results to reference it in my scientific paper. I want to encapsulate my research/analysis as a <em>Reusable Research Object</em>, to capture all aspects of my analysis including data used and processing performed etc., so that it can be reproduced, I can re-use my analysis in the future, or share it with others for collaboration. A simple example could be a Jupyter notebook that captures an annotated analysis, identifying input data, executing code to transform the data, and presenting/visualising the output results. This case should then be generalised for execution of more complex analyses using platform data / processing services (local and external).</p>
 </div>
 <div class="paragraph">
 <p><a href="#img_openScience">Figure 12</a> illustrates a shared analysis result linked to a reference scientific publication.</p>
@@ -1228,15 +1236,58 @@ This use case assumes the concept of 'collaborators'. This implies a grouping of
 <div class="sect2">
 <h3 id="_consumer_accesses_ep_services_with_external_application">2.10. Consumer accesses EP services with External Application</h3>
 <div class="paragraph">
-<p>TBD</p>
+<p>As a Consumer I want to be able to use and/or develop an external application that uses the services of the EP via programmatic interfaces, (i.e. public API). I want to delegate to the application, authorising it to act on my behalf when interfacing to the EP. Hence, my usage of the external application is made within the context of my EP user profile, workspace, account etc. as if I was interacting with the EP through its 'native' user interface. Examples of external applications include mobile applications, or simply scripts that remotely exploit the data / processing services of the EP.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_externalApplication">Figure 13</a> illustrates a mobile application interfacing with the Forestry TEP discovery and visualisation services.</p>
+</div>
+<div id="img_externalApplication" class="imageblock text-center">
+<div class="content">
+<img src="./images/external-application.png" alt="external application" width="800">
+</div>
+<div class="title">Figure 13. External Application - Mobile application exploiting Forestry TEP services (<a href="https://f-tep.com/" class="bare">https://f-tep.com/</a>)</div>
 </div>
 <hr>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>TBD</p>
+<p>Consumer installs on their local host an external application, e.g. installs an app on their mobile phone</p>
+</li>
+<li>
+<p>Consumer starts application and are directed to authorise the application to access the EP on their behalf</p>
+</li>
+<li>
+<p>Consumer authenticates to the EP and grants the requested privileges to the application</p>
+</li>
+<li>
+<p>External Application uses the Consumer&#8217;s delegated credentials to access the services of the EP, via a programmable interface (e.g. API)</p>
+</li>
+<li>
+<p>EP uses the delegated credentials to check that the application is authorised to access the requested data / service</p>
+</li>
+<li>
+<p>External Application utilises the data and services of the EP to provide a full-featured user experience to the Consumer. For axample, allowing execution of processing services and visualisation of results.</p>
+</li>
+<li>
+<p>The Consumer’s billing account is updated comensurate with the 'cost' of the actions performed</p>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p><span class="big"><strong>Notes</strong></span></p>
+</div>
+<div id="note-external-script" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">External (non-interative) Script</div>
+The case of an external script might need a slightly different approach (flow) for the authorisation of the delegated access. For example, a non-interactive (batch) script may need to obtain the delegated credentials in advance of the script execution.
+</td>
+</tr>
+</table>
 </div>
 <hr>
 <div style="page-break-after: always;"></div>
