@@ -17,9 +17,9 @@
 <div class="details">
 <span id="author" class="author">TVUK System Team</span><br>
 <span id="email" class="email">&lt;<a href="mailto:Eoepca.SystemTeam@telespazio.com">Eoepca.SystemTeam@telespazio.com</a>&gt;</span><br>
-<span id="revnumber">version v0.2,</span>
-<span id="revdate">15/02/2019</span>
-<br><span id="revremark">Early draft</span>
+<span id="revnumber">version v0.3,</span>
+<span id="revdate">11/03/2019</span>
+<br><span id="revremark">In-Progress Draft</span>
 </div>
 </div>
 <div id="content">
@@ -236,7 +236,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Interactive Remote Desktop</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An Interactive Application for analysis provided as a remote desktop session to a VM hosted on the exploitation platform. The user will have access to a number of applications within the hosted OS. The remote desktop session is provided through the user&#8217;s web browser.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An Interactive Application for analysis provided as a remote desktop session to an OS-session (or directly to a 'native' application) on the exploitation platform. The user will have access to a number of applications within the hosted OS. The remote desktop session is provided through the user’s web browser.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">External Application</p></td>
@@ -396,7 +396,7 @@
 </div>
 <div id="img_productDiscovery" class="imageblock text-center">
 <div class="content">
-<img src="./images/discover-product.png" alt="discover product" width="800">
+<img src="./images/discover-product.png" alt="discover product" width="100%">
 </div>
 <div class="title">Figure 1. Product Discovery - EO Browser (<a href="http://apps.eocloud.sentinel-hub.com/eo-browser/" class="bare">http://apps.eocloud.sentinel-hub.com/eo-browser/</a>)</div>
 </div>
@@ -405,7 +405,7 @@
 </div>
 <div id="img_customVisualisation" class="imageblock text-center">
 <div class="content">
-<img src="./images/visualise-product.png" alt="visualise product" width="800">
+<img src="./images/visualise-product.png" alt="visualise product" width="100%">
 </div>
 <div class="title">Figure 2. Product Visualisation - EO Browser (<a href="http://apps.eocloud.sentinel-hub.com/eo-browser/" class="bare">http://apps.eocloud.sentinel-hub.com/eo-browser/</a>)</div>
 </div>
@@ -450,25 +450,30 @@
 </li>
 </ol>
 </div>
-<div class="admonitionblock note">
+<div class="paragraph">
+<p><span class="big"><strong>Notes</strong></span></p>
+</div>
+<div id="note-guest-user" class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
 <div class="title">Note</div>
 </td>
 <td class="content">
+<div class="title">Guest User</div>
 The use case does not mention the Guest user. It should be taken into account that an EP may choose to allow limited access to a Guest user, such as searching/browsing catalogues, before insisting on user login for exploitation activities. <em>This approach might be typical in order to allow a potential user discover EP capabilities before signing up</em>
 </td>
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
+<div id="note-data-subsetting" class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
 <div class="title">Note</div>
 </td>
 <td class="content">
+<div class="title">Data Sub-setting</div>
 The use case does not consider the case where the Consumer is able to select sub-setting (spatial/temporal) of the data product itself, which might be typical of data accessible through a service such as OPeNDAP. <em>The extent to which this case should be considered for the EP is TBD</em>
 </td>
 </tr>
@@ -503,7 +508,7 @@ The use case does not consider the case where the Consumer is able to select sub
 </div>
 <div id="img_manageMyData" class="imageblock text-center">
 <div class="content">
-<img src="./images/manage-my-data.png" alt="manage my data" width="800">
+<img src="./images/manage-my-data.png" alt="manage my data" width="100%">
 </div>
 <div class="title">Figure 3. Manage My Data</div>
 </div>
@@ -512,7 +517,7 @@ The use case does not consider the case where the Consumer is able to select sub
 </div>
 <div id="img_workspaceUpload" class="imageblock text-center">
 <div class="content">
-<img src="./images/workspace-upload.png" alt="workspace upload" width="800">
+<img src="./images/workspace-upload.png" alt="workspace upload" width="100%">
 </div>
 <div class="title">Figure 4. Workspace Upload</div>
 </div>
@@ -561,7 +566,7 @@ The use case does not consider the case where the Consumer is able to select sub
 </div>
 <div id="img_processingDiscovery" class="imageblock text-center">
 <div class="content">
-<img src="./images/discover-processing.png" alt="discover processing" width="800">
+<img src="./images/discover-processing.png" alt="discover processing" width="100%">
 </div>
 <div class="title">Figure 5. Processing Discovery - Sentinel-2 Land Cover processor (<a href="https://f-tep.com/app/" class="bare">https://f-tep.com/app/</a>)</div>
 </div>
@@ -570,7 +575,7 @@ The use case does not consider the case where the Consumer is able to select sub
 </div>
 <div id="img_processingResults" class="imageblock text-center">
 <div class="content">
-<img src="./images/processing-results.png" alt="processing results" width="800">
+<img src="./images/processing-results.png" alt="processing results" width="100%">
 </div>
 <div class="title">Figure 6. Processing Results (<a href="https://f-tep.com/app/" class="bare">https://f-tep.com/app/</a>)</div>
 </div>
@@ -672,37 +677,43 @@ The use case does not consider the case where the Consumer is able to select sub
 </li>
 </ol>
 </div>
-<div class="admonitionblock note">
+<div class="paragraph">
+<p><span class="big"><strong>Notes</strong></span></p>
+</div>
+<div id="note-data-proc-selection-order" class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
 <div class="title">Note</div>
 </td>
 <td class="content">
-The use case considers the user interaction in which the procesor is select first, followed by selection of compatible data. We might also consider the alternative in which the input data is selected first, and the Platform facilitates the selection of compatible processors. Ideally the platform should support both approaches.
+<div class="title">Data/Processor Selection Order</div>
+The use case considers the user interaction in which the processor is selected first, followed by selection of compatible data. We might also consider the alternative in which the input data is selected first, and the Platform facilitates the selection of compatible processors. Ideally the platform should support both approaches.
 </td>
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
+<div id="note-resource-quotas" class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
 <div class="title">Note</div>
 </td>
 <td class="content">
+<div class="title">Resource Quotas</div>
 The use case does not explore how the user obtains/maintains a resource quota in the platform in order to 'pay' for their usage
 </td>
 </tr>
 </table>
 </div>
-<div class="admonitionblock note">
+<div id="note-proc-license-key" class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
 <div class="title">Note</div>
 </td>
 <td class="content">
+<div class="title">Processor License Key</div>
 The use case does not consider the possibility of processing services for which the user requires a license key. This would have to be considered as an extension of this case.
 </td>
 </tr>
@@ -727,7 +738,7 @@ The use case does not consider the possibility of processing services for which 
 </div>
 <div id="img_selectInteractiveApplication" class="imageblock text-center">
 <div class="content">
-<img src="./images/interactive-application.png" alt="interactive application" width="800">
+<img src="./images/interactive-application.png" alt="interactive application" width="100%">
 </div>
 <div class="title">Figure 7. Interactive Application - Discovery and selection (<a href="https://www.coastal-tep.eu/" class="bare">https://www.coastal-tep.eu/</a>)</div>
 </div>
@@ -736,7 +747,7 @@ The use case does not consider the possibility of processing services for which 
 </div>
 <div id="img_snapApplication" class="imageblock text-center">
 <div class="content">
-<img src="./images/snap-application.png" alt="snap application" width="800">
+<img src="./images/snap-application.png" alt="snap application" width="100%">
 </div>
 <div class="title">Figure 8. Interactive Application - SNAP running in web browser (<a href="https://www.coastal-tep.eu/" class="bare">https://www.coastal-tep.eu/</a>)</div>
 </div>
@@ -835,6 +846,7 @@ The use case does not consider the possibility of processing services for which 
 <div class="title">Alternative Flow: Input Data Selection</div>
 <p>Rather than pre-selecting the input data before invoking the <em>Interactive Application</em>, it may be preferable (depending on the application) to make the input data selection from within the <em>Interactive Application</em>. The use case is not elaborated here in regard of this approach, but it should be ensured that the data access is made within the context of the user&#8217;s access rights and associated billing considerations.</p>
 </div>
+<hr>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
@@ -847,7 +859,7 @@ The use case does not consider the possibility of processing services for which 
 </div>
 <div id="img_valueAddedProducts" class="imageblock text-center">
 <div class="content">
-<img src="./images/value-added-products.png" alt="value added products" width="800">
+<img src="./images/value-added-products.png" alt="value added products" width="100%">
 </div>
 <div class="title">Figure 9. Value Added Products Analyses - PUMA WebGIS (<a href="https://urban-tep.eu/" class="bare">https://urban-tep.eu/</a>)</div>
 </div>
@@ -867,7 +879,7 @@ The use case does not consider the possibility of processing services for which 
 </div>
 <div id="img_bulkProcessing" class="imageblock text-center">
 <div class="content">
-<img src="./images/bulk-processing.png" alt="bulk processing" width="800">
+<img src="./images/bulk-processing.png" alt="bulk processing" width="100%">
 </div>
 <div class="title">Figure 10. Bulk Processing - Results of a bulk processing from G-POD (<a href="http://gpod.eo.esa.int/" class="bare">http://gpod.eo.esa.int/</a>)</div>
 </div>
@@ -983,6 +995,7 @@ The use case does not consider the possibility of processing services for which 
 </li>
 </ol>
 </div>
+<hr>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
@@ -1014,7 +1027,7 @@ The use case does not consider the possibility of processing services for which 
 </div>
 <div id="img_systematicProcessing" class="imageblock text-center">
 <div class="content">
-<img src="./images/systematic-processing.png" alt="systematic processing" width="800">
+<img src="./images/systematic-processing.png" alt="systematic processing" width="100%">
 </div>
 <div class="title">Figure 11. Systematic Processing - Setup of systematic processing from G-POD (<a href="http://gpod.eo.esa.int/" class="bare">http://gpod.eo.esa.int/</a>)</div>
 </div>
@@ -1058,7 +1071,7 @@ The use case does not consider the possibility of processing services for which 
 <p>The EP checks that the Consumer has the authorisation to launch the <em>Processing Service</em> and access the specified data</p>
 </li>
 <li>
-<p>The EP estimates the future cost/duration of the processing and checks the Consumer has enough resources to execute the processing. See <a href="#note-systematic-processing-cost">Note1</a> below.</p>
+<p>The EP estimates the future cost/duration of the processing and checks the Consumer has enough resources to execute the processing. See <a href="#note-systematic-processing-cost">Systematic Processing Costs</a> below.</p>
 </li>
 <li>
 <p>Consumer is presented with the cost/duration estimation and confirms the systematic processing</p>
@@ -1137,6 +1150,7 @@ Given that the systematic processing occurs asynchronous to the Consumer submitt
 </tr>
 </table>
 </div>
+<hr>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
@@ -1149,7 +1163,7 @@ Given that the systematic processing occurs asynchronous to the Consumer submitt
 </div>
 <div id="img_openScience" class="imageblock text-center">
 <div class="content">
-<img src="./images/open-science.png" alt="open science" width="800">
+<img src="./images/open-science.png" alt="open science" width="100%">
 </div>
 <div class="title">Figure 12. Open Science - Sharing analysis results on the Geohazards TEP (<a href="https://geohazards-tep.eu/" class="bare">https://geohazards-tep.eu/</a>)</div>
 </div>
@@ -1179,13 +1193,13 @@ Given that the systematic processing occurs asynchronous to the Consumer submitt
 <p>create a Reusable Research Object for sharing</p>
 </li>
 <li>
-<p>Others TBD - see <a href="#note-collaboration-options">Note1</a>.</p>
+<p>Others TBD - see note <a href="#note-collaboration-options">Collaboration Options</a>.</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Consumer specifies collaborators and associated access rights (read/write - user/group/everyone). See <a href="#note-collaboration-groups">Note2</a>.</p>
+<p>Consumer specifies collaborators and associated access rights (read/write - user/group/everyone). See note <a href="#note-collaboration-groups">Collaboration Groups</a>.</p>
 </li>
 <li>
 <p>The EP shares the item according to the Consumers specification</p>
@@ -1225,7 +1239,7 @@ Each of the 'collaborative options' needs to be defined in more detail, and perh
 </td>
 <td class="content">
 <div class="title">Collaboration Groups</div>
-This use case assumes the concept of 'collaborators'. This implies a grouping of user that needs to be explorted in further details through additional use cases.
+This use case assumes the concept of 'collaborators'. This implies a grouping of users that needs to be explored in further details through additional use cases.
 </td>
 </tr>
 </table>
@@ -1243,7 +1257,7 @@ This use case assumes the concept of 'collaborators'. This implies a grouping of
 </div>
 <div id="img_externalApplication" class="imageblock text-center">
 <div class="content">
-<img src="./images/external-application.png" alt="external application" width="800">
+<img src="./images/external-application.png" alt="external application" width="100%">
 </div>
 <div class="title">Figure 13. External Application - Mobile application exploiting Forestry TEP services (<a href="https://f-tep.com/" class="bare">https://f-tep.com/</a>)</div>
 </div>
@@ -1295,15 +1309,89 @@ The case of an external script might need a slightly different approach (flow) f
 <div class="sect2">
 <h3 id="_expert_user_builds_new_processing_service">2.11. Expert user builds new processing service</h3>
 <div class="paragraph">
-<p>TBD</p>
+<p>As an Expert user, I want to integrate my own software into the platform to be exposed as a new processing service. I want to be able to prepare the software in a self-contained package containing all execution dependencies, for loading into the EP. I want to test the package by deploying and executing it in a hosted test environment, with access to platform data for testing. I want to debug the software and inspect the processing logs. Once satisfied, I want to publish the application as a new processing service, supported by anciliary information including metadata and processor user manual. The metadata should enable discovery of the service and faciliate its usage with compatible data and in chaining. Once published, the new processing service should be discoverable in the EP Catalogue, available for Consumers according to access rights I define.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_buildProcessingService">Figure 14</a> illustrates packaging of a new processing service, from the Forestry TEP platform.</p>
+</div>
+<div id="img_buildProcessingService" class="imageblock text-center">
+<div class="content">
+<img src="./images/build-processing-service.png" alt="build processing service" width="100%">
+</div>
+<div class="title">Figure 14. Build Processing Service - Packaging a new processor using Docker image - Forestry TEP (<a href="https://f-tep.com/app/" class="bare">https://f-tep.com/app/</a>)</div>
 </div>
 <hr>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>TBD</p>
+<p>Expert user logs in on the EP</p>
+</li>
+<li>
+<p>Expert access EP processor development environment</p>
+</li>
+<li>
+<p>Expert packages the software into a non-interactive application package, conformant with the EPs application package standard</p>
+</li>
+<li>
+<p>Alternatively, Expert prepares the application package offline (conformant with the EPs application package standard) and uploads to the EP processor development environment</p>
+</li>
+<li>
+<p>Expert deploys the package as a new 'test' (unpublished) processing service; the EP checks the Expert is authorised to do so</p>
+</li>
+<li>
+<p>Expert tests the procesing service execution, by performing an execution in accordance with use case <a href="#_consumer_discovers_and_executes_on_demand_processing_service">Consumer discovers and executes On-demand Processing Service</a></p>
+</li>
+<li>
+<p>EP checks for errors and notifies Expert as required</p>
+</li>
+<li>
+<p>Expert checks processor logs for correct operation</p>
+</li>
+<li>
+<p>Expert checks <em>Processing Results</em> for expected outputs</p>
+</li>
+<li>
+<p>If necessary, Expert modifies software, re-packages/deploys, and repeats the testing cycle</p>
+</li>
+<li>
+<p>When the process is stable, Expert publishes the packages as a new processing service; the EP checks the Expert is authorised to do so</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Expert specifies metadata to describe the processor to make it discoverable, and to facilitate the EP to ensure compatible use of the processing service (e.g. with compatible input data, and output data for compatible chaining)</p>
+</li>
+<li>
+<p>Expert provides user manual to aid users of the processing service</p>
 </li>
 </ol>
+</div>
+</li>
+<li>
+<p>The EP checks the integrity of the software and that it adheres to the EP terms and conditions</p>
+</li>
+<li>
+<p>The EP adds the processing service to the Application Catalogue so that is available to Consumers in their discover/browse searches</p>
+</li>
+<li>
+<p>Optionally, EP notifies Consumers about the new service</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="big"><strong>Notes</strong></span></p>
+</div>
+<div id="note-proc-prep-billing" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Processor Preparation Billing</div>
+This use-case does not consider whether billing is applied to the usage of the processor test environment, and the associated processor execution. It is assumed that billing may not be applied, in order to encourage such contributions. However, it should be recognised that this could be abused by Experts exploiting the development environment as a convenient processing environment.
+</td>
+</tr>
+</table>
 </div>
 <hr>
 <div style="page-break-after: always;"></div>
@@ -1311,15 +1399,87 @@ The case of an external script might need a slightly different approach (flow) f
 <div class="sect2">
 <h3 id="_expert_user_builds_new_processing_services_chains">2.12. Expert user builds new processing services chains</h3>
 <div class="paragraph">
-<p>TBD</p>
+<p>As an Expert user, I want to chain multiple processing services, potentially offered by different platforms, in parallel or sequentially. I want to prepare the chain by defining sequencing/relations of the processing services, and the input/output parameterisation of each step in the chain. I would like to publish the processing services chain as a new processing service for me or the Consumer to use, supported by anciliary information including metadata and processor-chain user manual, (see note <a href="#note-reusable-chain-specification">Reusable Chain Specification</a>). The metadata should enable discovery of the service and faciliate its usage with compatible data and in chaining, (see note <a href="#note-nested-chaining">Nested Chaining</a>). Once published, the new processing service should be discoverable in the EP Catalogue, available for Consumers according to access rights I define.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_buildProcessingChain">Figure 15</a> illustrates building a processing chain at the Geohazards TEP platform.</p>
+</div>
+<div id="img_buildProcessingChain" class="imageblock text-center">
+<div class="content">
+<img src="./images/build-processing-chain.png" alt="build processing chain" width="100%">
+</div>
+<div class="title">Figure 15. Build Processing Chain - Example taken from the Geohazards TEP (<a href="https://geohazards-tep.eu/" class="bare">https://geohazards-tep.eu/</a>)</div>
 </div>
 <hr>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>TBD</p>
+<p>Expert user logs in on the EP</p>
+</li>
+<li>
+<p>Expert discovers processing services from the platform, in accordance with <a href="#_consumer_discovers_and_executes_on_demand_processing_service">Consumer discovers and executes On-demand Processing Service</a>. <strong>This step should include the facility to discover/include processing services from other platforms.</strong></p>
+</li>
+<li>
+<p>Expert chooses processing services to be chained; the EP checks the Expert is authorised to use those processing services</p>
+</li>
+<li>
+<p>Expert defines all aspects of the chain by specifying the sequencing and relationships of the steps, and the input/output parameters of each step</p>
+</li>
+<li>
+<p>Expert tests the processing-chain, as if it was a new processing service, as described in use case <a href="#_expert_user_builds_new_processing_service">Expert user builds new processing service</a>; EP ensures the Expert is authorised to do so</p>
+</li>
+<li>
+<p>If necessary the Expert refines the processing-chain defintion and repeats the testing cycle</p>
+</li>
+<li>
+<p>When the processing-chain is stable, Expert publishes the chain as a new processing service; the EP checks the Expert is authorised to publish the processing chain</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Expert specifies metadata to describe the processor-chain to make it discoverable, and to facilitate the EP to ensure compatible use of the processing service</p>
+</li>
+<li>
+<p>Expert provides user manual to aid users of the processing service</p>
 </li>
 </ol>
+</div>
+</li>
+<li>
+<p>The EP adds the processing service to the Application Catalogue so that is available to Consumers in their discover/browse searches</p>
+</li>
+<li>
+<p>Optionally, EP notifies Consumers about the new service</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="big"><strong>Notes</strong></span></p>
+</div>
+<div id="note-reusable-chain-specification" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Reusable Chain Specification</div>
+In order to publish the processing-chain as a generally reusable processing service, then the specific input data should not be specified in the chain definition. Instead this should be specified at time of an individual execution, in order to ensure the chain is usable as a general resource.
+</td>
+</tr>
+</table>
+</div>
+<div id="note-nested-chaining" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Nested Chaining</div>
+Once published as a processing service, it should in principle then be possible to regard this processing-chain as a single step in another processing-chain.
+</td>
+</tr>
+</table>
 </div>
 <hr>
 <div style="page-break-after: always;"></div>
@@ -1327,15 +1487,39 @@ The case of an external script might need a slightly different approach (flow) f
 <div class="sect2">
 <h3 id="_expert_user_builds_new_interactive_application">2.13. Expert user builds new interactive application</h3>
 <div class="paragraph">
-<p>TBD</p>
+<p>As an Expert user, I want to integrate my standalone application software into the platform to be exposed as a new interative application. I want to be able to prepare the software in a self-contained package containing all execution dependencies, for loading into the EP. I want to test the package by deploying and executing it in a hosted test environment, with access to platform data for testing. I want to debug the software and inspect the execution logs. Once satisfied, I want to publish the application as a new interative application, supported by anciliary information included metadata and application user manual. The metadata should enable discovery of the application and faciliate its usage with compatible data. Once published, the new interactive application should be discoverable in the EP Catalogue, available for Consumers according to access rights I define.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_buildInteractiveApp">Figure 16</a> illustrates packaging of a new interative application, from the Forestry TEP platform. The key point here is that the interactive application must be engineered in such a way as to support the remoting of the application&#8217;s user interface. Thus, the EP&#8217;s application package standard must support this approach, and the EP must ensure the network connectivity required to deliver the remote view.</p>
+</div>
+<div id="img_buildInteractiveApp" class="imageblock text-center">
+<div class="content">
+<img src="./images/build-interactive-application.png" alt="build interactive application" width="100%">
+</div>
+<div class="title">Figure 16. Build Interactive Application - Packaging a new application using Docker image - Forestry TEP (<a href="https://f-tep.com/app/" class="bare">https://f-tep.com/app/</a>)</div>
+</div>
+<div class="paragraph">
+<p>This use-case is largely the same as case <a href="#_expert_user_builds_new_processing_service">Expert user builds new processing service</a>, the main difference being the nature of the application being deployed, i.e. an application that presents a user interface to the Consumer through their web browser interface. The interactive application may be of the following type:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Interactive Console Application</dt>
+<dd>
+<p>A simple Interactive Application for analysis in which a console interface to a platform-hosted terminal is provided to the user. The console interface can be provided through the user’s browser session or through a remote SSH connection.</p>
+</dd>
+<dt class="hdlist1">Interactive Web Application</dt>
+<dd>
+<p>An Interactive Application for analysis provided as a rich user interface through the user’s web browser.</p>
+</dd>
+<dt class="hdlist1">Interactive Remote Desktop</dt>
+<dd>
+<p>An Interactive Application for analysis provided as a remote desktop session to an OS-session (or directly to a 'native' application) on the exploitation platform. The user will have access to a number of applications within the hosted OS. The remote desktop session is provided through the user’s web browser.</p>
+</dd>
+</dl>
 </div>
 <hr>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>TBD</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>For brevity, the use-case steps are not reproduced here - instead case <a href="#_expert_user_builds_new_processing_service">Expert user builds new processing service</a> should be referred to, taking into account the deployment of an <em>Interactive Application</em> rather than a <em>Processing Service</em>.</p>
 </div>
 <hr>
 <div style="page-break-after: always;"></div>
@@ -1343,13 +1527,40 @@ The case of an external script might need a slightly different approach (flow) f
 <div class="sect2">
 <h3 id="_expert_user_builds_new_value_added_products">2.14. Expert user builds new value-added products</h3>
 <div class="paragraph">
-<p>TBD</p>
+<p>This use-case builds upon cases <a href="#_consumer_executes_bulk_processing">Consumer executes Bulk processing</a> and <a href="#_consumer_executes_systematic_processing">Consumer executes Systematic processing</a>.</p>
+</div>
+<div class="paragraph">
+<p>As an Expert user, I want to be able to configure and execute a bulk processing (use-case <a href="#_consumer_executes_bulk_processing">Consumer executes Bulk processing</a>) or systematic processing (use-case <a href="#_consumer_executes_systematic_processing">Consumer executes Systematic processing</a>), and publish its results automatically as a new value-added product collection into the platform, (or add products to an existing collection). Once published, the new value-added products should be available in the EP Catalogue, for Consumers to discover/visualise (use-case <a href="#_consumer_discovers_and_visualises_products">Consumer discovers and visualises products</a>), according to access rights I define.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_newValueAddedProduct">Figure 17</a> shows Sentinel-1 InSAR products systematically produced after each Sentinel-1 acquisition, and published into a platform collection, in the Geohazards TEP.</p>
+</div>
+<div id="img_newValueAddedProduct" class="imageblock text-center">
+<div class="content">
+<img src="./images/new-value-added-product.png" alt="new value added product" width="100%">
+</div>
+<div class="title">Figure 17. New Value-added Product - Systematic publication of value-added products - Geohazards TEP (<a href="https://geohazards-tep.eu/" class="bare">https://geohazards-tep.eu/</a>)</div>
 </div>
 <hr>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>TBD</p>
+<p>Expert user logs in on the EP</p>
+</li>
+<li>
+<p>Expert defines a product collection, including description of the product, basic metadata and other information. <em>This data should be sufficient to support discovery of the collection</em></p>
+</li>
+<li>
+<p>Expert selects a bulk or systematic processing (defined in use-cases <a href="#_consumer_executes_bulk_processing">Consumer executes Bulk processing</a> and <a href="#_consumer_executes_systematic_processing">Consumer executes Systematic processing</a>); the EP checks the Expert is authorised to access the selected processing</p>
+</li>
+<li>
+<p>Expert configures the bulk or systematic processing to publish data into the defined product collection, (or an already existing collection); the EP checks the Expert is authorised to add products to the selected collection</p>
+</li>
+<li>
+<p>EP publishes results automatically once processing is over, and includes the new value-added products into the selected collection</p>
+</li>
+<li>
+<p>Optionally, EP notifies Consumers about the new products</p>
 </li>
 </ol>
 </div>
@@ -1359,15 +1570,85 @@ The case of an external script might need a slightly different approach (flow) f
 <div class="sect2">
 <h3 id="_expert_develops_with_interactive_development_environment">2.15. Expert develops with interactive development environment</h3>
 <div class="paragraph">
-<p>TBD</p>
+<p>As an Expert user, I want to access an on-line interactive development environment where I can author and/or upload my code (written according to my preferred programming language) and execute it in total or step-by-step, to analyse input data, value-added products and other ancillary data. In my code implementation, I want to use a general set of libraries to process and visualise EO data (e.g. SNAP python library) together with specific libraries required by my application (e.g. Tensorflow machine learning library) and libraries to access the other services provided by the platform.</p>
+</div>
+<div class="paragraph">
+<p>This use-case might be seen as a special case of case <a href="#_consumer_discovers_and_executes_interactive_applications">Consumer discovers and executes Interactive Applications</a>, since the interactive development environment may be considered to be an interactive application.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_webDevEnv">Figure 18</a> shows an example implementation using a Jupyter Notebook - mocked-up with images from Raster Foundry.</p>
+</div>
+<div id="img_webDevEnv" class="imageblock text-center">
+<div class="content">
+<img src="./images/web-dev-environment.png" alt="web dev environment" width="100%">
+</div>
+<div class="title">Figure 18. Web Development Environment - Example mocked-up with images from Raster Foundry (<a href="https://www.rasterfoundry.com/" class="bare">https://www.rasterfoundry.com/</a>)</div>
 </div>
 <hr>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>TBD</p>
+<p>Expert user logs in on the EP</p>
+</li>
+<li>
+<p>Expert accesses on-line interactive development environment; the EP checks that the Expert is authorised to do so</p>
+</li>
+<li>
+<p>Expert develops and/or uploads code. Supported programming languages include: python, R, others TBD</p>
+</li>
+<li>
+<p>Within the interactive development environment, Expert is provided with a 'platform' library that provides them access to the platforms resources (data/processing) from their code; according to their user rights in the EP</p>
+</li>
+<li>
+<p>Within the interactive development environemnt, Expert is provided with a standard set of libraries against which to develop their code, for EO data manipulation and visualisation</p>
+</li>
+<li>
+<p>Expert is able to configure additional specific libraries to be imported into their working environment, against which to develop their code, to satisfy specific code needs</p>
+</li>
+<li>
+<p>Expert executes their code in total or step-by-step to perform their analysis; the EP checks they are authorised to access the product(s) used</p>
+</li>
+<li>
+<p>Optionally, Expert saves their development (code) in their platform <em>Workspace</em>, for later re-use.<br>
+<em>Note that this step may overlap with use-case <a href="#_consumer_performs_open_science">Consumer performs Open Science</a>, if the development can be saved within a Reusable Research Object</em></p>
+</li>
+<li>
+<p>Optionally, Expert saves their Processing Results in their platform <em>Workspace</em></p>
+</li>
+<li>
+<p>Optionally, Expert downloads their developments (code) and/or saved processing results</p>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p><span class="big"><strong>Notes</strong></span></p>
+</div>
+<div id="note-overlap-other-use-cases" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Overlap with Other Use-cases</div>
+<div class="paragraph">
+<p>It is noted that there is some overlap between this use-case and:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#_consumer_discovers_and_executes_interactive_applications">Consumer discovers and executes Interactive Applications</a></dt>
+<dd>
+<p>Since the interactive development environment may be considered to be an interactive application</p>
+</dd>
+<dt class="hdlist1"><a href="#_consumer_performs_open_science">Consumer performs Open Science</a></dt>
+<dd>
+<p>Since the Expert&#8217;s saved work might for the basis for a <em>Reusable Research Object</em></p>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <hr>
 <div style="page-break-after: always;"></div>
@@ -1375,13 +1656,80 @@ The case of an external script might need a slightly different approach (flow) f
 <div class="sect2">
 <h3 id="_expert_performs_training">2.16. Expert performs training</h3>
 <div class="paragraph">
-<p>TBD</p>
+<p>As an Expert user, I want to provide support to Consumers in the use of platform processing services and interactive applications, by provision of learning aids, including: documentation, tutorials, webinars/lessons/demonstrations (live and on-demand), exercies and tests. I would like to organise these into on-line courses for Consumers to attend. <em>Note that it might be typical for an Expert to create such training content for their own services/application, but we should not preclude the case to create learning content for other&#8217;s services/applications. This is in the spirit of creating an EP as a collaborative environment.</em></p>
+</div>
+<div class="paragraph">
+<p>As a Consumer, I want to be able to discover/browse the learning content, and attend on-line courses.</p>
+</div>
+<div class="paragraph">
+<p><a href="#img_training">Figure 19</a> provides an illustration (mock-up) of a possible course list implementation.</p>
+</div>
+<div id="img_training" class="imageblock text-center">
+<div class="content">
+<img src="./images/training.png" alt="training" width="100%">
+</div>
+<div class="title">Figure 19. Training - Course List example mock-up with images from <a href="http://coursera.org/" class="bare">http://coursera.org/</a></div>
 </div>
 <hr>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>TBD</p>
+<p><strong>Expert Course Preparation&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Expert user logs in on the EP</p>
+</li>
+<li>
+<p>Expert accesses training environment</p>
+</li>
+<li>
+<p>Expert defines on-line courses; the EP checks the Expert has authorisation to do so</p>
+</li>
+<li>
+<p>Expert identifies processing services and interactive applications as the subject of the on-line course</p>
+</li>
+<li>
+<p>Expert prepares on-demand training content, including: documentation, tutorials, webinars, lessons, demonstrations, exercies and tests<br>
+<em>In the simple case, the Expert prepares the content offline (e.g. screencast videos) and uploads to the platform. In the more sophisticated case, the EP provides functions to facilitate the creation of the content</em></p>
+</li>
+<li>
+<p>Expert schedules live webinars/lessons/demonstrations</p>
+</li>
+<li>
+<p>Expert broadcasts live (at previously arranged date/time) webinars/lessons/demonstrations, for the live 'attendance' by Consumers</p>
+</li>
+<li>
+<p><strong>Consumer Course 'Attendance'&#8230;&#8203;</strong></p>
+</li>
+<li>
+<p>Consumer logs in on the EP</p>
+</li>
+<li>
+<p>Consumer discovers/browses for on-line courses</p>
+</li>
+<li>
+<p>Alternatively, Consumer has selected a processing service or interactive application of interest, and is provided with links to related on-line courses</p>
+</li>
+<li>
+<p>Consumer requests to attend on-line course</p>
+</li>
+<li>
+<p>EP checks the Consumer has enough resources to cover the course costs</p>
+</li>
+<li>
+<p>EP and/or Expert grants authorises Consumer access to the course</p>
+</li>
+<li>
+<p>The Consumer&#8217;s billing account is updated comensurate with the 'cost' of the on-line course</p>
+</li>
+<li>
+<p>Consumer accesses course content via the training environment defined by the Expert; the EP checks the Consumer is authorised to do so</p>
+</li>
+<li>
+<p>Consumer accesses on-demand course content</p>
+</li>
+<li>
+<p>Consumer 'attends' live course content as delivered by the Expert</p>
 </li>
 </ol>
 </div>
@@ -1401,8 +1749,8 @@ The case of an external script might need a slightly different approach (flow) f
 </div>
 <div id="footer">
 <div id="footer-text">
-Version v0.2<br>
-Last updated 2019-03-05 15:01:06 UTC
+Version v0.3<br>
+Last updated 2019-03-11 14:51:11 UTC
 </div>
 </div>
 </body>
