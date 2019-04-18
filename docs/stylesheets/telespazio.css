@@ -1,6 +1,0 @@
-@import "asciidoctor.css";
-
-/* Centre align figure captions */
-.imageblock.text-center>.title {
-    text-align: center;
-}
