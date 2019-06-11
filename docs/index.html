@@ -17,8 +17,8 @@
 <div class="details">
 <span id="author" class="author">TVUK System Team</span><br>
 <span id="email" class="email">&lt;<a href="mailto:Eoepca.SystemTeam@telespazio.com">Eoepca.SystemTeam@telespazio.com</a>&gt;</span><br>
-<span id="revnumber">version v0.4,</span>
-<span id="revdate">18/04/2019</span>
+<span id="revnumber">version v0.5-inprogress,</span>
+<span id="revdate">dd/mm/yyyy</span>
 <br><span id="revremark">In-Progress Draft</span>
 </div>
 </div>
@@ -81,12 +81,15 @@
 <li><a href="#_expert_user_builds_new_value_added_products">2.14. Expert user builds new value-added products</a></li>
 <li><a href="#_expert_develops_with_interactive_development_environment">2.15. Expert develops with interactive development environment</a></li>
 <li><a href="#_expert_performs_training">2.16. Expert performs training</a></li>
+<li><a href="#_user_uses_commercial_data_or_processing_services_which_he_has_contracted_for_directly">2.17. User uses commercial data or processing services which he has contracted for directly</a></li>
+<li><a href="#_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_bilateral_clearing">2.18. User uses commercial data or processing services and pays using his platform account (bilateral clearing)</a></li>
+<li><a href="#_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_via_clearing_house">2.19. User uses commercial data or processing services and pays using his platform account (via clearing house)</a></li>
 </ul>
 </li>
 <li><a href="#_functional_mapping">3. Functional Mapping</a>
 <ul class="sectlevel2">
 <li><a href="#_user_accesses_platform_services_2">3.1. User accesses Platform services</a></li>
-<li><a href="#_consumer_discovers_and_visualises_products_2">3.2. Consumer discovers and visualises products</a></li>
+<li><a href="#_consumer_discovers_and_visualizes_products">3.2. Consumer discovers and visualizes products</a></li>
 <li><a href="#_consumer_uploads_data_to_their_workspace_2">3.3. Consumer uploads data to their workspace</a></li>
 <li><a href="#_consumer_discovers_and_executes_on_demand_processing_service_2">3.4. Consumer discovers and executes On-demand Processing Service</a></li>
 <li><a href="#_consumer_discovers_and_executes_interactive_applications_2">3.5. Consumer discovers and executes Interactive Applications</a></li>
@@ -101,6 +104,9 @@
 <li><a href="#_expert_user_builds_new_value_added_products_2">3.14. Expert user builds new value-added products</a></li>
 <li><a href="#_expert_develops_with_interactive_development_environment_2">3.15. Expert develops with interactive development environment</a></li>
 <li><a href="#_expert_performs_training_2">3.16. Expert performs training</a></li>
+<li><a href="#_user_uses_commercial_data_or_processing_services_which_he_has_contracted_for_directly_2">3.17. User uses commercial data or processing services which he has contracted for directly</a></li>
+<li><a href="#_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_bilateral_clearing_2">3.18. User uses commercial data or processing services and pays using his platform account (bilateral clearing)</a></li>
+<li><a href="#_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_via_clearing_house_2">3.19. User uses commercial data or processing services and pays using his platform account (via clearing house)</a></li>
 </ul>
 </li>
 </ul>
@@ -332,6 +338,14 @@ ESA-EOPSDP-TN-17-050</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Terms &amp; Conditions (T&amp;Cs)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The obligations that the user agrees to abide by in regard of usage of products/services of the platform. T&amp;Cs are set by the provider of each product/service.</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Licenser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A copyright owner or agent authorized to issue licences for access to data or processing services, typically on commercial terms</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A entity, such as a Product, Processing Service or Interactive Application, which is of interest to a user, is indexed in a catalogue and can be returned as a single meaningful search result</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -480,7 +494,7 @@ ESA-EOPSDP-TN-17-050</p>
 <p>Consumer views detailed metadata for the selected product</p>
 </li>
 <li>
-<p>Consumer views T&amp;Cs for the service and accepts terms of not already done so</p>
+<p>Consumer views T&amp;Cs for the service and accepts terms if not already done so</p>
 </li>
 <li>
 <p>Optionally, the Consumer 'saves' (a reference to) the product to their workspace</p>
@@ -496,6 +510,10 @@ ESA-EOPSDP-TN-17-050</p>
 </li>
 </ol>
 </div>
+<div id="aflow-arrival-from-google" class="paragraph">
+<div class="title">Alternative Flow: User Discovers Resources using a General-Purpose Search Engine</div>
+<p>A User, who may be unaware of the platform, may begin searching for products using a search engine such as Google. The User may then follow a link directly to a product-related page.</p>
+</div>
 <div class="paragraph">
 <p><span class="big"><strong>Notes</strong></span></p>
 </div>
@@ -508,6 +526,19 @@ ESA-EOPSDP-TN-17-050</p>
 <td class="content">
 <div class="title">Guest User</div>
 The use case does not mention the Guest user. It should be taken into account that an EP may choose to allow limited access to a Guest user, such as searching/browsing catalogues, before insisting on user login for exploitation activities. <em>This approach might be typical in order to allow a potential user discover EP capabilities before signing up</em>
+</td>
+</tr>
+</table>
+</div>
+<div id="note-seo" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="title">Search Engine Indexing</div>
+To facilitate Users discovering products and the EP as a whole using a search engine it&#8217;s necessary to allow search engines to effectively index them. This requires Guest access to as much as possible but also extends further to other SEO requirements.
 </td>
 </tr>
 </table>
@@ -1779,6 +1810,188 @@ Once published as a processing service, it should in principle then be possible 
 </li>
 </ol>
 </div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_user_uses_commercial_data_or_processing_services_which_he_has_contracted_for_directly">2.17. User uses commercial data or processing services which he has contracted for directly</h3>
+<div class="paragraph">
+<p>As a User I want to buy a licence directly from a provider of data or processing services (not necessarily published on my home platform) and then access this data / service within my home platform.</p>
+</div>
+<div class="paragraph">
+<p>In this use case the complexities of sales, billing and licensing are handled outside the federation of exploitation platforms. The user obtains a licence, tied to his organisation or user ID(s), without interacting with the platform.</p>
+</div>
+<div class="paragraph">
+<p>The platform federation must then authorize and report his use of the data. Involved is the User, the Licenser (copyright owner or agent authorized to issue licences), the host platform (in which the resource being accessed is originally published) and the home platform.</p>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User contracts for a resource licence, supplying his EP user ID(s) or an account/organization identifier</p>
+</li>
+<li>
+<p>User accesses the resource (data or processing service) using his home platform, which may involve subsequent federated access</p>
+</li>
+<li>
+<p>The host platform authorizes his use of this resource by making a request to an API endpoint operated by the Licenser</p>
+</li>
+<li>
+<p>Processing or data access continues normally, subject to re-authorization after a time or volume specified by the Licenser</p>
+</li>
+<li>
+<p>The user of the data or service is reported to the Licenser</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_bilateral_clearing">2.18. User uses commercial data or processing services and pays using his platform account (bilateral clearing)</h3>
+<div class="paragraph">
+<p>As a User I want to use commercially licensed resources via my home platform and pay via my billing account with this platform. As a Licenser I want to publish my resources via my own platform (the 'host' platform) and receive payment via my billing account with my own platform.</p>
+</div>
+<div class="paragraph">
+<p>This use-case assumes a network of agreements between exploitation platforms. Each platform has (or may have) an 'account' with each other platform.</p>
+</div>
+<div class="paragraph">
+<p>Some important notes on the arrangement:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The home platform always bears the credit risk that its User does not pay. It must still pay the host platform. This is because the home platform is most able to assess the User&#8217;s creditworthiness and to pursue payment.</p>
+</li>
+<li>
+<p>The host platform always bears the credit risk that the home platform does not pay. It must still pay the Licenser.</p>
+</li>
+<li>
+<p>The home platform bears the exchange-rate risk if the two platforms use different currencies.</p>
+</li>
+<li>
+<p>The payment is 'pushed' by the home platform, not pulled by the host platform. This permits caching and the transfer of commercial processing services between platforms for local execution, but also requires sufficient trust between platforms. Auditing may be required.</p>
+</li>
+<li>
+<p>Either platform can refuse the purchase for risk reasons, but the Licenser cannot.</p>
+</li>
+<li>
+<p>Both platforms will wish to charge for this risk and for processing costs.</p>
+</li>
+<li>
+<p>It requires O(n^2) agreements between platforms for any User to be able to use any Resource. Licensers may need to publish on multiple platforms if an inadequate network is achieved.</p>
+</li>
+</ol>
+</div>
+<hr>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Licenser publishes a commercially licenced resource via the host platform (his home platform) and configures pricing information in the host platform&#8217;s currency.</p>
+</li>
+<li>
+<p>User begins access to this resource using his home platform. Any estimated costs presented include licensing costs and platform fees and he is required to agree to the terms of the license (which includes the pricing)</p>
+</li>
+<li>
+<p>Immediately prior to access occurring the home platform authorizes an inter-platform debt:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The home platform checks that a contract between it and the host platform is in place and in good standing.</p>
+</li>
+<li>
+<p>A debit to the User&#8217;s account (a debt to be later owed by the User to the home platform) is authorized by the home platform, after assessing creditworthiness and fraud risk and optionally 'blocking' some available credit.</p>
+</li>
+<li>
+<p>The home platform makes a request to the host platform to authorize payment (a debt later owed by the home platform to the host platform).</p>
+</li>
+<li>
+<p>The host platform checks that a contract between it and the home platform is in place and in good standing.</p>
+</li>
+<li>
+<p>The host platform authorizes a debit to the home platform&#8217;s account with it.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>The home platform proceeds with Resource access (which may involve delegation to other platforms, transfer of data or only locally cached resources). Inter-platform requests supporting this may be refused by the host platform if the user identified does not have sufficient authorized payments or a fixed-price licence.</p>
+</li>
+<li>
+<p>The home platform reports Resource use to the host platform and the true cost is confirmed (which should be in line with the pricing but takes in to account repeat access - eg, repeated use of a satellite image for which a licence only needs to be bought once), clearing part of the authorized payment.</p>
+</li>
+<li>
+<p>The home platform ensures that further authorizations are obtained or access is blocked if the amount authorized is exhausted.</p>
+</li>
+<li>
+<p>The host platform credits the Licenser&#8217;s account as the payment is cleared.</p>
+</li>
+<li>
+<p>The home platform records the debit in the User&#8217;s account.</p>
+</li>
+<li>
+<p>The platforms later reconcile and settle payments, transferring a net amount through a manual or external process.</p>
+</li>
+</ol>
+</div>
+<div id="aflow-mediated-billing-time-based-licence" class="paragraph">
+<div class="title">Alternative Flow: Time-based or Unlimited Licences</div>
+<p>Instead of depending on use, the licence to use a Resource may be a fixed price for a certain time or be perpetual (like a traditional software purchase). In this case there is no need to delay clearing payment until after resource access has occurred. The User can request a licence and the billing account is updated immediately. Access to the Resource is then possible across the whole federation.</p>
+</div>
+<div id="aflow-mediated-billing-direct-to-host" class="paragraph">
+<div class="title">Alternative Flow: Direct Payment via Host Platform Account</div>
+<p>Instead of buying a licence using the home platform a User may have bought or buy a licence through a User account at the host platform. This is possible even if no inter-platform payment agreement is operational between the two platforms. However, this only works if the price is fixed (such as a time-based or unlimited licence).</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>EP determines that the User cannot buy access via the home platform but can do so via the host platform</p>
+</li>
+<li>
+<p>EP provides a link to the host platform to do this</p>
+</li>
+<li>
+<p>EP provides access to the licensed resource once the User has bought a suitable licence</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_via_clearing_house">2.19. User uses commercial data or processing services and pays using his platform account (via clearing house)</h3>
+<div class="paragraph">
+<p>As a User I want to use commercially licensed resources via my home platform and pay via my billing account with this platform. As a Licenser I want to publish my resources via my own platform (the 'host' platform) and receive payment via my billing account with my own platform.</p>
+</div>
+<div class="paragraph">
+<p>Unlike the previous one, this use-case assumes that each platform forms a contract with a clearing house and payments are cleared via it. Potentially, the clearing house performs credit checks on participants and guarantees accepted payments, depending on the commercial model. Using a clearing house would ensure full interoperability between platforms within the system.</p>
+</div>
+<div class="paragraph">
+<p>Some important notes on the arrangement:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The home platform always bears the credit risk that its User does not pay. It must still pay the clearing house. This is because the home platform is most able to assess the User&#8217;s creditworthiness and to pursue payment.</p>
+</li>
+<li>
+<p>EITHER the clearing house always bears the credit risk that the home platform does not pay, OR the clearing house provides technical services and payment netting, but passes on default risk to participants in an agreed way. It may require security to be posted or a minimum balance to be kept.</p>
+</li>
+<li>
+<p>The host platform always bears the credit risk that the clearing house does not pay (but this should be made very unlikely). It must still pay the Licenser.</p>
+</li>
+<li>
+<p>Either platform or clearing house can refuse the purchase for risk reasons, but the Licenser cannot.</p>
+</li>
+<li>
+<p>Both platforms and clearing house will wish to charge for this risk and for processing costs.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>A clearing house also provides a point where the rules of the system can be established and enforced (eg, a requirement for non-discrimination between platforms) and technical compliance tested. It could also help permit standardization of contracts and terms and reduce the effort required for credit control and audit of participants compared to performing this for all cooperating bilateral pairs.</p>
+</div>
+<hr>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -1874,13 +2087,46 @@ Once published as a processing service, it should in principle then be possible 
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">EP customises platform resources based on user identity and data</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">EP can ban users identified by administrators</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">User deletes their account and their personal data is removed</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">User registers</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">User updates account details</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
 </tbody>
 </table>
 <hr>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_consumer_discovers_and_visualises_products_2">3.2. Consumer discovers and visualises products</h3>
+<h3 id="_consumer_discovers_and_visualizes_products">3.2. Consumer discovers and visualizes products</h3>
+<div class="paragraph">
+<p>Note: to avoid repetition, this section defines some functionality which is shared between Products and other types of Resource, such as Processing Services.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 85%;">
@@ -1898,10 +2144,133 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform catalogues Resources</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Products have Resource functionality</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Users can search the catalogue for Resources using free text, AoI/time where applicable and facets</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP provides a browser-based UI for performing searches for Resources and viewing results (but this need not be one single UI for all kinds of Resource)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">When showing information about a Resource, a User can view detailed metadata and documentation</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can filter or mark Resource search results and information display based on user account data (eg, licences purchased, academic vs commercial user) and Resource access rules / ownership</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can refuse access to some or all aspects of a Resource based on the User and Resource (eg, show summary or search result but not allow data access, documentation access or visualization)</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The catalogue contains, for each data Product, costing data (licence prices, data to estimate data sizes/processing times)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Users can view the T&amp;Cs associated with Resources</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP permits authorized Users to add and update T&amp;C text and metadata (which may be shared across multiple Resources)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP permits authorized Users to update Resource access rules and settings (licences required, descriptions, costing data, etc)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can request, record and display acceptance of identified T&amp;Cs by a User (noting that a User may have to accept T&amp;Cs more than once if he represents multiple organizations)</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can prevent access to Resources when T&amp;C acceptance is required and not completed and can prompt the user to do this (note: this access may happen inside a UI, API or executing processing service)</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Users have a 'user workspace' and can 'save' Resources in to it</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">EP can cost proposed access and use of a Product (which may involve estimating data size, processing time and licencing costs)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User can view an interactive visualization of Products, considering User parameters (eg, location or band selected) and the dataset (eg, preferred projection, appropriate colouring, key and units, etc)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An authorized User can specify a Product&#8217;s default visualization and parameterization that can be available in search results and used to quickly assess the data&#8217;s relevance to the user</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User can download visualization images</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP presents a site map and per-Resource structured data for external search engines (eg Google, Google Dataset), but only for Resources hosted on the platform and not accessible only via federation</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User can download Products/parts of Products, subject to access constraints and configured costs</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Use of Resources (including search, metadata display, costing, download and execution, but not modification of resources) still functions in as high-performance and uniform a way as possible even when the Resources are located on other platforms within the federation (and access and ownership rules are still enforced)</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x<br>
+<br>
+<br>
+TODO: Define 'organization'</p></td>
 </tr>
 </tbody>
 </table>
@@ -1927,9 +2296,63 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Each User has a 'user workspace' which displays information about previously saved or uploaded data</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP permits uploaded data to be used like any other data, including combining it with other data</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User can upload data using a browser</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User can upload data using a resumable and scriptable method (eg HTTP PUT or ftp)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP restricts uploads based on user rights, including any applicable quotas or budget constraints</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP provides a means to add metadata to uploaded data (as much metadata as possible should be guessed from the data, eg title, licence, variables, &#8230;&#8203; from NetCDF)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Uploaded data and workspace-saved data can be visualized, similar to search results</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Uploaded data and its catalogue entries can be published, making it available for use by other users, with a requirement that all necessary metadata for discovery is specified</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can hide from public access or remove (and restore) published datasets which are alleged to breach copyright</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP supports compliance with the Copyright Directive article 17 requirements (eg, via upload and data federation filters to auto-detect copyright violations)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
 </tbody>
@@ -1956,10 +2379,82 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Processing Services have Resource functionality (search, T&amp;Cs, etc)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The catalogue contains costing data for Processing Services (eg, licence costs, data to estimate data sizes/processing times, special requirements such as GPUs)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User can parameterize processing by entering required parameters and selecting compatible input data using the catalogue search</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User viewing Products can search for / select applicable Processing Services, in which case input data will be pre-specified when arriving at the the parameterization</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can cost proposed processing requests (which may involve estimating data size, processing time and licencing costs)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Users can initiate processing once all required parameters and inputs are specified</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can reject processing if quotas, budgets or credit-control constraints are reached (as appropriate to its pricing model)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User can save parameterizations of a Processing Service in the user workspace, not just a reference to the service</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User can view information about submitted processing requests (eg, start time, cost incurred, errors encountered, log output, proportion completed if available, result information and link(s))</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Processing service outputs can be published (as a Product), subject to compliance with licensing by the owners of the data used and the entry of required catalogue information</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Users' billing accounts are updated as processing continues and completes</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Users can download output data</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Users can visualise the output data (and download visualisations) similarly to other data within the platform</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 </tr>
 </tbody>
 </table>
@@ -1985,10 +2480,118 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Interactive Applications have Resource functionality</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Interactive Application may require a dedicated VM (or multiple VMs) or other cloud resources which run for the length of an Interactive Application session</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">If an Interactive Application uses a dedicated VM then it can include a GUI environment (eg X Windows) which the user interacts with remotely (eg using remote desktop or VNC)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Interactive Application can provide or consist entirely of a web app (which may be a one-page JavaScript app+API, may be server-side generated or may require no server-side resources at all except for static files and access to the platform API)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">If the application has a web app then the platform UI will facilitate the display of this app (eg by providing a link and/or allowing it to be used embedded in the portal UI)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An interactive application may open ports (eg, an ssh or HTTP port) so that a user can interact with it using a CLI/console-like interface or using a client application</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An interactive application can access the platform APIs (eg to run Processing Services) under the delegated credentials of the Consumer</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The catalogue contains costing data for Interactive Applications (eg, licence costs, size of dedicated VMs required)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can cost interactive application use, if possible and appropriate to the application (eg, price per hour)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can stop applications if quotas, budgets or credit-control constraints are reached</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can use a data search to find compatible input data for an interactive application, if required by the application</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can use their workspace saved data to specify data for an interactive application</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An interactive application can request data and/or processing as required by its functionality</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can save screenshots and other outputs from an application to the workspace as appropriate to the application</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can download screenshots and other outputs from an application</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer&#8217;s billing account is updated as the application is used</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can publish application output data to the catalogue just as any other data from the workspace can be published as a Product</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can resume an earlier interactive application 'session' by choosing it from a list</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can terminate an Interactive Application session</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 </tr>
 </tbody>
 </table>
@@ -1997,35 +2600,18 @@ Once published as a processing service, it should in principle then be possible 
 </div>
 <div class="sect2">
 <h3 id="_consumer_analyses_value_added_product_2">3.6. Consumer analyses value-added product</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 85%;">
-<col style="width: 5%;">
-<col style="width: 5%;">
-<col style="width: 5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-middle">Platform Function</th>
-<th class="tableblock halign-center valign-middle">UM</th>
-<th class="tableblock halign-center valign-middle">P&amp;C</th>
-<th class="tableblock halign-center valign-middle">RM</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p>The functionality in 'Consumer discovers and executes Interactive Applications' is sufficient to cover this use-case as well.</p>
+</div>
 <hr>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_consumer_executes_bulk_processing_2">3.7. Consumer executes Bulk processing</h3>
+<div class="paragraph">
+<p>Functionality listed for 'Consumer discovers and executes On-demand Processing Service' is also relevant but<br>
+is not duplicated here.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 85%;">
@@ -2043,10 +2629,46 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Consumers can create a 'bulk data collection' and add multiple data specifications to it (which should be compatible with a chosen target Processing Service)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Consumers can add data using data search or using workspace saved data</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Consumers can specify an input data collection when parameterizing a processing request (in place of an individual piece of data)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Consumers can specify an output data collection when parameterizing a processing request</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Bulk data processing can be split by the platform in to multiple parallel requests</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Functionality for on-demand data processing, such as viewing logs and downloading outputs, can be applied to bulk processing and data collections</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Consumers can resubmit processing requests after correcting errors - output data for unmodified completed requests will not be regenerated unnecessarily</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 </tr>
 </tbody>
 </table>
@@ -2055,6 +2677,12 @@ Once published as a processing service, it should in principle then be possible 
 </div>
 <div class="sect2">
 <h3 id="_consumer_executes_systematic_processing_2">3.8. Consumer executes Systematic processing</h3>
+<div class="paragraph">
+<p>Functionality listed for 'Consumer discovers and executes On-demand Processing Service' and 'Consumer executes Bulk processing' is also relevant but is not duplicated here.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, functionlity listed for 'Expert user builds new value-added products' is also relevant to automatically publishing the output of systematic processing.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 85%;">
@@ -2072,8 +2700,62 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer, having parameterized and specified inputs for a processing service invocation, can select triggering conditions which can cause it to run repeatedly</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can cost the proposed systematic processing (which may involve estimating data size, processing time and licencing costs)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can ensure that the Consumer has sufficient credit to run systematic processing both at submission time and run time</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can recognize triggering conditions a run processing, passing information about the trigger to the processors (eg, which new data is available)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can trigger systematic processing according to a schedule</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can trigger systematic processing when new data becomes available</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can trigger systematic processing when triggered by an external event</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can notify the Consumer when systematic processing completes or fails</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The Consumer can see status information on systematic processing, such as execution logs, requests running and percent complete</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The Consumer can use other functionality targetted at output data (eg visualisation and publishing) with systematic processing outputs</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
@@ -2101,10 +2783,118 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can create a 'research collection' of results, links to resources, processing parameterizations, visualisations, documentation, etc.</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Items included in such a collection can be directly included or can be links, including 'Linked Data' (in the W3C sense) and links to scientific publications</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can share such a collection (eg, via URL), providing he has permission to share everything directly included</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can restrict to specific collaborators and with specific access rights (eg, read vs write)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP, optionally at the discretion of the sharer, notifies those with whom a collection has been shared</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Information relevant to creating 'research objects', particularly provenance information for the results of data processing, is maintained automatically by the EP as much as possible</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can add information about research collections and elements of them relevant to creating research objects, such as ORCID IDs</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Resources published in the catalogue contain details of their provenance</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can create a reusable research object from a research collection, in compliance with (a) research object standard(s)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A reusable research object will be a snapshot of the research collection at the time it was created</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A reusable research object may contain result data and/or intermediate data</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can publish a reusable research object in the catalogue</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can register a DOI for a research object or any other item he has registered in the catalogue</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP will ensure that the requirements of the DOI Foundation and DOI Registration Agency are complied with, eg. for long-term availability and immutability of resources published using DOIs</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can search for published research objects in the catalogue</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can view research objects found in the catalogue or via DOI</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can 'unpack' a research object he has access to in to a research collection within his workspace</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Where possible, processing described within a research collection can be repeated (and may make use of existing intermediate results)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Where randomness is involved in processing and where supported by the processor, the EP shall record any random seeds used and permit these to be reused when processing is repeated</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 </tr>
 </tbody>
 </table>
@@ -2130,10 +2920,34 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP provides an API for programmatic access to all suitable platform services except for account management (eg, catalogue search, data download, processing, workspace manipulation, data visualisation, processor and processing chain definition and upload)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The API is programming-language agnostic and accessible to non-professional programmers and scientists</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">API clients are provided for popular programming languages within the EO domain, eg Python</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An API authentication method suitable for use with external applications (such as mobile apps and web apps) is provided, eg oAuth</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An API authentication method suitable for use with scientist-written ad-hoc scripts is provided, eg API keys</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
 </tr>
 </tbody>
 </table>
@@ -2142,6 +2956,9 @@ Once published as a processing service, it should in principle then be possible 
 </div>
 <div class="sect2">
 <h3 id="_expert_user_builds_new_processing_service_2">3.11. Expert user builds new processing service</h3>
+<div class="paragraph">
+<p>This use-case is linked to 'Expert develops with interactive development environment' and may rely on some of its functionality.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 85%;">
@@ -2159,9 +2976,51 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can accept, use and publish processing services development in supported container formats (eg Docker and/or Singularity) and following any additional requirements (eg, built-in processing service descriptor files)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The interactive development environment can be used to create containers and submit them as processing services to the catalogue</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The UI and API can be used to upload pre-created containers and submit them to the catalogue</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP supports container development workflows by providing a convenient way to deploy and test a processing service via UI and API</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can publish a processing service so that others can find it in the catalogue, providing all metadata requirements have been met</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can specify processing service documentation and metadata, including information on its inputs and outpus to assist in building processing chains</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can perform checks on processing chains being published to ensure that they&#8217;re valid and comply with platform requirements</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can understand processing service versions/releases, present information about releases to users and optionally notify users when a processing service is updated</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
 </tbody>
@@ -2188,10 +3047,52 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can build a processing chain by specifying Processing Services (including other chains, and services on other platforms), data flows, parameters, etc</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP supports chain development workflows by providing a convenient way to deploy and test a processing chain via UI and API</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can publish a processing chain as a Processing Service so that others can find it in the catalogue, providing all metadata requirements have been met</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can specify processing chain documentation and metadata, including information on its inputs and outpus to assist in building new processing chains</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can perform checks on processing chains being published to ensure that they&#8217;re valid and comply with requirements (eg, that all of the Processing Services used are sufficiently accessible to all permitted users of the chain and that T&amp;Cs are complied with)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can understand processing chain versions/releases, present information about releases to users and optionally notify users when a processing chain is updated</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform permits the separation of input data and parameters which can be specified by a later chain user from the chain definition and from fixed processing service parameters or data which must not be changed</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP shall have any necessary support for including processing chain and chain execution provenance information in reusable research objects (for example, using the wfdesc and wfprov ontologies)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 </tr>
 </tbody>
 </table>
@@ -2217,10 +3118,22 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can create Interactive Applications which include containers (eg Docker or Singularity images) which must be running through the application session and use the UI or API to add them to the catalogue</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can create Interactive Applications which include or consist of static files (particularly JavaScript, CSS and HTML) which will be served directly by the platform without the need for dedicated resources like VMs or running containers</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can create Interactive Applications which are implemented using server-side infastructure which is not managed as dedicated resources within an application session - for example, an Interactive Development Environment consisting of JupyterHub and Kubernetes cluster all shared between all users. The application will still be able to use delegated credentials for data access.</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 </tr>
 </tbody>
 </table>
@@ -2246,9 +3159,21 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can create a Product collection, specifying all necessary metadata for discovery in the catalogue</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can define bulk or systematic processing whose output will automatically be added to the product collection on completion (if succesful), resulting in it being published with the same permissions and visibility as the collection</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Consumers can subscribe to a Resource or collection and will be notified when it changes (eg, new data is available, a new version of a Processing Service is release)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
 </tbody>
@@ -2275,10 +3200,70 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can access interactive development environments published in the catalogue, subject to access permissions</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Development environments suitable for developing in Python and R will be provided at a minimum</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">It is not specified whether an interactive development environment takes the form of a dedicated VM, a container, a management system like JupyterHub+Kubernetes, uses a remote UI like Hydrogen, etc - this may vary by environment</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can import and export code in ways most suitable for the particular language and environment, for example through uploads/downloads, git push/pull or integration with GitHub</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Facilities, such as libraries or APIs as best suited to the language and environment, are available within each development environment for accessing platform services, such as data and processing</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Access to platform facilities (which may include remote platforms) by the code under development will use the user&#8217;s credentials and be subject to normal access constraints (eg, T&amp;Cs)</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The development environments provided contain by default a suitable set of libraries for EO-domain data manipulation and visualisation</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Additional libraries can be specified by the Expert User</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User using a development environment can save the code in to the workspace</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User using a development environment can save data produced in to the workspace</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Development environments and executions will integrate with research object functionality, for example by allowing editing within a 'research collection' context or importing/exporting code from one, and by recording code, data, workflow and execution provenance</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 </tr>
 </tbody>
 </table>
@@ -2304,9 +3289,371 @@ Once published as a processing service, it should in principle then be possible 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">TBD</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can define on-line courses, if he has permission to do so</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can link on-line courses to his processing services or interactive applications</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can add content to an on-line course, including documents (eg documentation, tutorials), videos (eg, webinars, lessons or demonstrations), exercises and tests, and define the course structure</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An Expert User can schedule live video streams</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can find on-line course by searching the catalogue or by following links from related resources</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can join an on-line course, subject to access control and billing constraints and, if configured for the course, its publisher&#8217;s approval</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can charge the User&#8217;s account for course costs as defined by the course publisher, and can credit the publisher&#8217;s account as appropriate</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can access course content for courses previously joined</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer can view live video streams (however, it is not a requirement that they be streamed from the platform and not an external provider)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Consumer is billed for courses via his account according to prices set by its publisher (which may be zero)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_user_uses_commercial_data_or_processing_services_which_he_has_contracted_for_directly_2">3.17. User uses commercial data or processing services which he has contracted for directly</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 85%;">
+<col style="width: 5%;">
+<col style="width: 5%;">
+<col style="width: 5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Platform Function</th>
+<th class="tableblock halign-center valign-middle">UM</th>
+<th class="tableblock halign-center valign-middle">P&amp;C</th>
+<th class="tableblock halign-center valign-middle">RM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Licenser who has published Resources in the catalogue on a commercial basis can specify an API endpoint which will be contacted to authorize access to those Resources or can specify a list of permitted user IDs</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can restrict use of a Resource based on this API endpoint, including time or volume limits after which access must be re-authorized</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platform can report use of resources to their Licensers for billing purposes</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Licenser can specify a URL that prospective users will be shown so that they can buy licences</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The Licenser&#8217;s sales site can use an authentication protocol (such as OpenID Connect) to authenticate buyers using their EP credentials, and also to avoid a need to log in for users already logged in to the EP</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_bilateral_clearing_2">3.18. User uses commercial data or processing services and pays using his platform account (bilateral clearing)</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 85%;">
+<col style="width: 5%;">
+<col style="width: 5%;">
+<col style="width: 5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Platform Function</th>
+<th class="tableblock halign-center valign-middle">UM</th>
+<th class="tableblock halign-center valign-middle">P&amp;C</th>
+<th class="tableblock halign-center valign-middle">RM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Licenser can configure pricing for Resources in the catalogue in the 'host' platform, subject to access rules</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User using the 'home' platform (which may be different to the host platform) can request access to such Resources and will be asked to agree to the pricing, estimated (or fixed) costs and terms and conditions</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Pricing may be time-based (for a licence for the whole Resource) or volume/item-based, with different definitions appropriate for different kinds of Resource (eg, by CPU-time or data volume for processing, by satellite scene or grid square, etc)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">For volume-based pricing the User will be able to set a limit on the amount he will be billed after which accesses will fail unless the user requests additional access</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User will not be required to request access and go through payment authorization if the User already has a licence bought using a different platform or directly from the Licenser, providing that no additional payments will be required for use (eg, the licence is time-based)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User will not be required to request access or authorize payment if the User has already completed this and has not reached any payment limits</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The user will only be able to request access if all necessary platform payment clearing agreements are in place and in good standing to permit purchase, otherwise the user will be told which platform he can use for access</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">If a User cannot request access because payment clearing is not possible or disabled for the resource but a direct purchase via the host platform or Licencer site is possible and would grant access, the home platform provides a link to the host platform or a direct purchase site</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">If a User follows a link to make a purchase from a host platform then an expedited login/registration and purchase process is provided (the user does not need to search for the resource in the catalogue)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User can agree to the T&amp;Cs and prices and, if platform payment is fully authorized, will be granted access</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The home platform can assess the User&#8217;s creditworthiness and prevent platform payment authorization if it feels necessary</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The home platform can 'hold' some of the credit in the User&#8217;s account following platform payment authorization, if required by its billing model</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The home platform can request resource licensing platform payment authorization from the host platform using a defined protocol</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Each platform maintains a database of platform payments between it and other platforms</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The host platform can assess the creditworthiness and outstanding net inter-platform balance with the home platform and accept or reject platform payment authorization</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">For volume-based pricing, platforms in either role can limit the amount authorized and expire authorization for credit and financial control purposes. Additional authorization can be sought automatically, providing user-defined limits are kept to.</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Platforms distinguish the amount authorized from the amount cleared (ie, which is legally owed and for which settlement will be requested). For volume-based pricing settlement of platform payments will only be requested once the resource has been used (and may be 'chunked').</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">For time-based (ie, fixed in advance) pricing, the User can request a licence and payment will be immediately authorized and cleared. Access can then proceed.</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">For volume-based pricing, the home platform will report use of the Resource as or after it occurs to the host platform, marking (parts of) existing authorizations as cleared and generating new authorizations as old ones are exhausted</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The host platform can determine the true cost when responding to a report of Resource use, taking in to account that a licence make cover repeated use of an item (eg, repeated access to a single grid square or satellite image), and return this to the home platform</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">When inter-platform messaging is required to perform Resource use the home platform will include an identifier for the payment authorization, and the host platform may refuse access if this is insufficient, expired, etc.</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The host platform (according to the Licenser&#8217;s requirements) can specify whether access must always be made via inter-platform messaging or whether the home platform can transfer and cache data, processing service containers, etc</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platforms can credit/debit user accounts as platform payment is cleared</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platforms can reconcile and report inter-platform debts and outstanding authorizations, flagging any disagreements for manual dispute resolution, so that settlement can occur</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platforms can (part-)refund platform payments at the request of the Licenser</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platforms can mark payments as refunded following the outcome of manually conducted dispute resolution (eg, following a User complaining that the resource is not as described or does not work)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The platforms keep a detailed journal of the payment process for dispute resolution</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Effective security is applied to inter-platform payment processes to prevent impersonation of platforms and to provide non-repudiation</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Account credit given by the host platform to the Licenser will not be reversed if the home platform does not pay; inter-platform payment from the home platform to the host platform will not be reversed if the User does not pay</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Platforms can be configured to deduct agreed fees from inter-platform and platform-to-Licenser payments, but this may be invisible to the User</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Pricing settings will specify a currency and all inter-platform requests will use this currency, even if it is not the currency in which the User pays his account</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The home platform performs currency exchange and calculates and displays the local-currency rates which the User is charged</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x<br>
+<br>
+TODO: How do we handle organizations and projects which might be licensed as a whole?</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_via_clearing_house_2">3.19. User uses commercial data or processing services and pays using his platform account (via clearing house)</h3>
+<div class="paragraph">
+<p>Here it is assumed that a clearing house is commercially possible and provided by an external entity, not by a component specified in this document.</p>
+</div>
+<div class="paragraph">
+<p>TODO: We must determine if there is any possibility of this happening before including this in a final document, determine if we must develop/specify clearing holuse functionality and, if not, reconcile it with whatever model an external clearing house might use. I have no idea if it&#8217;s possible to 'buy' clearing house services from a financial institution but I would guess at 'no chance at all'.</p>
+</div>
+<div class="paragraph">
+<p>This functionality is only active when a clearing-house is in operation.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 85%;">
+<col style="width: 5%;">
+<col style="width: 5%;">
+<col style="width: 5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Platform Function</th>
+<th class="tableblock halign-center valign-middle">UM</th>
+<th class="tableblock halign-center valign-middle">P&amp;C</th>
+<th class="tableblock halign-center valign-middle">RM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">If configured, a platform can direct all inter-platform payment communication and functionality via a clearing-house, treating it as if it were the only other platform except for also specifying the true target platform in the messages.</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
 </tbody>
@@ -2317,8 +3664,8 @@ Once published as a processing service, it should in principle then be possible 
 </div>
 <div id="footer">
 <div id="footer-text">
-Version v0.4<br>
-Last updated 2019-04-18 15:45:36 +0100
+Version v0.5-inprogress<br>
+Last updated 2019-06-11 09:16:33 +0100
 </div>
 </div>
 </body>
