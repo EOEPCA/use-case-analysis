@@ -17,8 +17,8 @@
 <div class="details">
 <span id="author" class="author">TVUK System Team</span><br>
 <span id="email" class="email">&lt;<a href="mailto:Eoepca.SystemTeam@telespazio.com">Eoepca.SystemTeam@telespazio.com</a>&gt;</span><br>
-<span id="revnumber">version v0.5,</span>
-<span id="revdate">11/06/2019</span>
+<span id="revnumber">version v0.6,</span>
+<span id="revdate">09/07/2019</span>
 <br><span id="revremark">In-Progress Draft</span>
 </div>
 </div>
@@ -81,8 +81,8 @@
 <li><a href="#_expert_user_builds_new_value_added_products">2.14. Expert user builds new value-added products</a></li>
 <li><a href="#_expert_develops_with_interactive_development_environment">2.15. Expert develops with interactive development environment</a></li>
 <li><a href="#_expert_performs_training">2.16. Expert performs training</a></li>
-<li><a href="#_user_uses_commercial_data_or_processing_services_which_he_has_contracted_for_directly">2.17. User uses commercial data or processing services which he has contracted for directly</a></li>
-<li><a href="#_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_bilateral_clearing">2.18. User uses commercial data or processing services and pays using his platform account (bilateral clearing)</a></li>
+<li><a href="#_user_uses_federated_commercial_services_which_he_has_contracted_for_directly">2.17. User uses federated commercial services which he has contracted for directly</a></li>
+<li><a href="#_user_uses_commercial_services_from_another_platform_and_pays_using_his_platform_account_bilateral_clearing">2.18. User uses commercial services from another platform and pays using his platform account (bilateral clearing)</a></li>
 <li><a href="#_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_via_clearing_house">2.19. User uses commercial data or processing services and pays using his platform account (via clearing house)</a></li>
 </ul>
 </li>
@@ -104,8 +104,8 @@
 <li><a href="#_expert_user_builds_new_value_added_products_2">3.14. Expert user builds new value-added products</a></li>
 <li><a href="#_expert_develops_with_interactive_development_environment_2">3.15. Expert develops with interactive development environment</a></li>
 <li><a href="#_expert_performs_training_2">3.16. Expert performs training</a></li>
-<li><a href="#_user_uses_commercial_data_or_processing_services_which_he_has_contracted_for_directly_2">3.17. User uses commercial data or processing services which he has contracted for directly</a></li>
-<li><a href="#_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_bilateral_clearing_2">3.18. User uses commercial data or processing services and pays using his platform account (bilateral clearing)</a></li>
+<li><a href="#_user_uses_federated_commercial_services_which_he_has_contracted_for_directly_2">3.17. User uses federated commercial services which he has contracted for directly</a></li>
+<li><a href="#_user_uses_commercial_services_from_another_platform_and_pays_using_his_platform_account_bilateral_clearing_2">3.18. User uses commercial services from another platform and pays using his platform account (bilateral clearing)</a></li>
 <li><a href="#_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_via_clearing_house_2">3.19. User uses commercial data or processing services and pays using his platform account (via clearing house)</a></li>
 </ul>
 </li>
@@ -154,7 +154,7 @@
 <div class="content">
 <div class="paragraph">
 <p>EO Exploitation Platforms - Use Cases,<br>
-ESA-EOPSDP-TN-17-049</p>
+<a href="https://eoepca.github.io/use-case-analysis/resources/docs/ESA-EOPSDP-TN-17-049_1.0_EO_Exploitation_Platforms&#8212;&#8203;Use_Cases.pdf">ESA-EOPSDP-TN-17-049</a></p>
 </div>
 </div>
 </div></div></td>
@@ -173,7 +173,7 @@ ESA-EOPSDP-TN-17-049</p>
 <div class="content">
 <div class="paragraph">
 <p>Exploitation Platform - Functional Model,<br>
-ESA-EOPSDP-TN-17-050</p>
+<a href="https://eoepca.github.io/use-case-analysis/resources/docs/ESA-EOPSDP-TN-17-050_1.0_Exploitation_Platform&#8212;&#8203;Functional_Model.pdf">ESA-EOPSDP-TN-17-050</a></p>
 </div>
 </div>
 </div></div></td>
@@ -1814,43 +1814,88 @@ Once published as a processing service, it should in principle then be possible 
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_user_uses_commercial_data_or_processing_services_which_he_has_contracted_for_directly">2.17. User uses commercial data or processing services which he has contracted for directly</h3>
+<h3 id="_user_uses_federated_commercial_services_which_he_has_contracted_for_directly">2.17. User uses federated commercial services which he has contracted for directly</h3>
 <div class="paragraph">
-<p>As a User I want to buy a licence directly from a provider of data or processing services (not necessarily published on my home platform) and then access this data / service within my home platform.</p>
+<p>As a User I want to buy a licence directly from a provider of data or processing services (not necessarily published on my home platform) and then access this data / service via my home platform. I also wish to directly buy compute capacity from a federated platform and perform part or all of my processing near to the data on this other platform.</p>
 </div>
 <div class="paragraph">
-<p>In this use case the complexities of sales, billing and licensing are handled outside the federation of exploitation platforms. The user obtains a licence, tied to his organisation or user ID(s), without interacting with the platform.</p>
+<p>In this use case the complexities of sales, billing and licensing are handled outside the federation of exploitation platforms. The user obtains a licence or a remote platform account, tied to his organisation or user ID(s), without interacting with the home platform.</p>
 </div>
 <div class="paragraph">
-<p>The platform federation must then authorize and report his use of the data. Involved is the User, the Licenser (copyright owner or agent authorized to issue licences), the host platform (in which the resource being accessed is originally published) and the home platform.</p>
+<p>The platform federation must then authorize and report his use of licensed Resources and compute resources. Involved is the User, the Licenser (copyright owner or agent authorized to issue licences), the host platform (in which the resource being accessed is originally published) and the home platform.</p>
+</div>
+<div class="paragraph">
+<p>In this description the User is using a licensed Resource and compute facilities at a single federated platform. However, many other similar cases are possible - for example, a licensed processing service may be transferred from platform 2 to platform 3, work on data present at platform 3 and then return it to the home platform for visualization. Alternatively, only freely available or user-supplied data and processing services may be used with only compute capacity being paid for, or a remotely catalogued licensed processing service may be transferred to the home platform to run.</p>
 </div>
 <hr>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User contracts for a resource licence, supplying his EP user ID(s) or an account/organization identifier</p>
+<p>User discovers a commercially licensed Resource using federated search</p>
 </li>
 <li>
-<p>User accesses the resource (data or processing service) using his home platform, which may involve subsequent federated access</p>
+<p>User contracts for the Resource licence directly from the Licenser on the licenser&#8217;s web site, supplying his EP user ID(s) or an account/organization identifier</p>
 </li>
 <li>
-<p>The host platform authorizes his use of this resource by making a request to an API endpoint operated by the Licenser</p>
+<p>User contracts with a federated exploitation platform, the host platform, where the data he requires is hosted, and agrees to pay for compute costs</p>
 </li>
 <li>
-<p>Processing or data access continues normally, subject to re-authorization after a time or volume specified by the Licenser</p>
+<p>User accesses the resource (maybe as part of a wider processing chain) using his home platform, which may involve federated access. The user must specify that the host platform should be used for particular parts of the processing.</p>
 </li>
 <li>
-<p>The user of the data or service is reported to the Licenser</p>
+<p>User authorizes the home platform to access the User&#8217;s compute resources account at the host platform.</p>
+</li>
+<li>
+<p>Any estimate presented includes the cost of licenses, of host-platform compute servers and of network transfers.</p>
+</li>
+<li>
+<p>Part of the User&#8217;s processing occurs on the host platform, using data hosted there, and the result is returned to the home platform.</p>
+</li>
+<li>
+<p>The host platform authorizes his use of the Licensed Resource by making a request to an API endpoint operated by the Licenser</p>
+</li>
+<li>
+<p>Processing or data data access may be subject to re-authorization after a time or volume specified by the Licenser</p>
+</li>
+<li>
+<p>The User is billed directly for Resource use by the Licenser and compute capacity use by the host platform</p>
+</li>
+<li>
+<p>The use of the data or service is reported to the Licenser</p>
 </li>
 </ol>
+</div>
+<div id="aflow-home-platform-licence-use" class="paragraph">
+<div class="title">Alternative Flow: Using the Licensed Resource on the home platform</div>
+<p>The User may buy the licence directly from the Licenser even though the processing is completed on the home platform. The Licensed Resource may need to be transferred to the home platform or may already be present.</p>
+</div>
+<div id="aflow-host-platform-no-licence" class="paragraph">
+<div class="title">Alternative Flow: Using a local Resource on the host platform</div>
+<p>The User may have their own processing service or data on the home platform. This may then be transferred to the host platform, where (additional) data required for processing may be present. The User pays for the remote compute costs but no licence costs are involved.</p>
 </div>
 <hr>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_bilateral_clearing">2.18. User uses commercial data or processing services and pays using his platform account (bilateral clearing)</h3>
+<h3 id="_user_uses_commercial_services_from_another_platform_and_pays_using_his_platform_account_bilateral_clearing">2.18. User uses commercial services from another platform and pays using his platform account (bilateral clearing)</h3>
 <div class="paragraph">
-<p>As a User I want to use commercially licensed resources via my home platform and pay via my billing account with this platform. As a Licenser I want to publish my resources via my own platform (the 'host' platform) and receive payment via my billing account with my own platform.</p>
+<p>As a User I want to access remote Resources or compute via my home platform and pay via my billing account with this platform. As a Resource Licenser I want to publish my resources via my own platform (the 'host' platform) and receive payment via my billing account with my own platform.</p>
+</div>
+<div class="paragraph">
+<p>This use case covers several behaviours, which may occur in combination, which require payment to the owner or customers of another EP. Some examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Some commercially licenced data or processing services are catalogued in the host (remote) platform. The data and/or processing service is copied to the home platform to be used in a local processing chain (which may also involve local data).</p>
+</li>
+<li>
+<p>A processing service created by the User is transferred to the host platform and runs on data hosted there, using compute resources physically present there. The result is copied back.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The EP must determine where to execute code and when to transfer data. This may depend on estimated data sizes, estimated processing service output size, cloud costs in different locations, User and Licenser settings and commercial arrangements. Different parts of a single chain may happen in different locations if this is most efficient or the only permitted option.</p>
 </div>
 <div class="paragraph">
 <p>This use-case assumes a network of agreements between exploitation platforms. Each platform has (or may have) an 'account' with each other platform.</p>
@@ -1858,8 +1903,8 @@ Once published as a processing service, it should in principle then be possible 
 <div class="paragraph">
 <p>Some important notes on the arrangement:</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
 <p>The home platform always bears the credit risk that its User does not pay. It must still pay the host platform. This is because the home platform is most able to assess the User&#8217;s creditworthiness and to pursue payment.</p>
 </li>
@@ -1870,18 +1915,18 @@ Once published as a processing service, it should in principle then be possible 
 <p>The home platform bears the exchange-rate risk if the two platforms use different currencies.</p>
 </li>
 <li>
-<p>The payment is 'pushed' by the home platform, not pulled by the host platform. This permits caching and the transfer of commercial processing services between platforms for local execution, but also requires sufficient trust between platforms. Auditing may be required.</p>
+<p>Costs may simply be reported between platforms. It&#8217;s possible that no other communication will happen. This permits caching and the transfer of commercial processing services between platforms for local execution, but also requires sufficient trust between platforms. Auditing may be required.</p>
 </li>
 <li>
-<p>Either platform can refuse the purchase for risk reasons, but the Licenser cannot.</p>
+<p>Either platform can refuse the purchase for risk reasons, but a Licenser cannot.</p>
 </li>
 <li>
 <p>Both platforms will wish to charge for this risk and for processing costs.</p>
 </li>
 <li>
-<p>It requires O(n^2) agreements between platforms for any User to be able to use any Resource. Licensers may need to publish on multiple platforms if an inadequate network is achieved.</p>
+<p>It requires O(n^2) agreements between platforms for any User to be able to use any Resource or EP. Licensers may need to publish on multiple platforms and Users may need to open accounts on multiple platforms if an inadequate network is achieved.</p>
 </li>
-</ol>
+</ul>
 </div>
 <hr>
 <div class="olist arabic">
@@ -1890,17 +1935,20 @@ Once published as a processing service, it should in principle then be possible 
 <p>Licenser publishes a commercially licenced resource via the host platform (his home platform) and configures pricing information in the host platform&#8217;s currency.</p>
 </li>
 <li>
-<p>User begins access to this resource using his home platform. Any estimated costs presented include licensing costs and platform fees and he is required to agree to the terms of the license (which includes the pricing)</p>
+<p>Host platform owner configures and publishes pricing information in the host platform currency.</p>
 </li>
 <li>
-<p>Immediately prior to access occurring the home platform authorizes an inter-platform debt:</p>
+<p>User begins accesses involving remote compute or Resources using his home platform&#8217;s facilities. The EP computes an execution plan (including the location of any data and processing used and any network transfers) and presents estimated costs. Estimated costs include licensing costs, remote and local compute costs and platform fees. The User is required to agree to the terms of the licences involved and the pricing structure.</p>
+</li>
+<li>
+<p>Immediately prior to access occurring the home platform authorizes an inter-platform debt or debts:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>The home platform checks that a contract between it and the host platform is in place and in good standing.</p>
 </li>
 <li>
-<p>A debit to the User&#8217;s account (a debt to be later owed by the User to the home platform) is authorized by the home platform, after assessing creditworthiness and fraud risk and optionally 'blocking' some available credit.</p>
+<p>A debit to the User&#8217;s account (a debt to be later owed by the User to the home platform) is authorized by the home platform, after assessing creditworthiness and fraud risk and optionally 'blocking' some available credit. This may be more than the estimated cost so as to cover inaccuracies or it may be increased later.</p>
 </li>
 <li>
 <p>The home platform makes a request to the host platform to authorize payment (a debt later owed by the home platform to the host platform).</p>
@@ -1915,19 +1963,22 @@ Once published as a processing service, it should in principle then be possible 
 </div>
 </li>
 <li>
-<p>The home platform proceeds with Resource access (which may involve delegation to other platforms, transfer of data or only locally cached resources). Inter-platform requests supporting this may be refused by the host platform if the user identified does not have sufficient authorized payments or a fixed-price licence.</p>
+<p>The home platform proceeds with execution (which may involve delegation to other platforms, transfer of data or only locally cached resources).</p>
 </li>
 <li>
-<p>The home platform reports Resource use to the host platform and the true cost is confirmed (which should be in line with the pricing but takes in to account repeat access - eg, repeated use of a satellite image for which a licence only needs to be bought once), clearing part of the authorized payment.</p>
+<p>The home platform reports any local licensed Resource use to the host platform and the true cost is confirmed (which should be in line with the pricing but takes in to account repeat access - eg, repeated use of a satellite image for which a licence only needs to be bought once), clearing part of the authorized payment.</p>
 </li>
 <li>
-<p>The home platform ensures that further authorizations are obtained or access is blocked if the amount authorized is exhausted.</p>
+<p>The host platform reports any remote Resource or compute use to the home platform.</p>
+</li>
+<li>
+<p>The home and host platforms ensure that further authorizations are obtained or access is blocked if the amount authorized is exhausted.</p>
 </li>
 <li>
 <p>The host platform credits the Licenser&#8217;s account as the payment is cleared.</p>
 </li>
 <li>
-<p>The home platform records the debit in the User&#8217;s account.</p>
+<p>The home platform records the debits in the User&#8217;s account.</p>
 </li>
 <li>
 <p>The platforms later reconcile and settle payments, transferring a net amount through a manual or external process.</p>
@@ -1936,10 +1987,10 @@ Once published as a processing service, it should in principle then be possible 
 </div>
 <div id="aflow-mediated-billing-time-based-licence" class="paragraph">
 <div class="title">Alternative Flow: Time-based or Unlimited Licences</div>
-<p>Instead of depending on use, the licence to use a Resource may be a fixed price for a certain time or be perpetual (like a traditional software purchase). In this case there is no need to delay clearing payment until after resource access has occurred. The User can request a licence and the billing account is updated immediately. Access to the Resource is then possible across the whole federation.</p>
+<p>Instead of depending on use, a licence to use a Resource may be a fixed price for a certain time or be perpetual (like a traditional software purchase). In this case there is no need to delay clearing payment until after resource access has occurred. The User can request a licence and the billing account is updated immediately. Access to the Resource is then possible across the whole federation.</p>
 </div>
 <div id="aflow-mediated-billing-direct-to-host" class="paragraph">
-<div class="title">Alternative Flow: Direct Payment via Host Platform Account</div>
+<div class="title">Alternative Flow: Direct Licence Payment via Host Platform Account</div>
 <p>Instead of buying a licence using the home platform a User may have bought or buy a licence through a User account at the host platform. This is possible even if no inter-platform payment agreement is operational between the two platforms. However, this only works if the price is fixed (such as a time-based or unlimited licence).</p>
 </div>
 <div class="olist loweralpha">
@@ -1954,6 +2005,44 @@ Once published as a processing service, it should in principle then be possible 
 <p>EP provides access to the licensed resource once the User has bought a suitable licence</p>
 </li>
 </ol>
+</div>
+<div id="aflow-mediated-billing-triangles" class="paragraph">
+<div class="title">Alternative Flow: Access/billing Triangles</div>
+<p>A user on platform A (the home platform) could run a processing chain which includes processing on platform B (the compute-host platform) using a licensed Resource with volume-based pricing which is hosted on platform C (the resource-host platform).</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The user begins processing, as above.</p>
+</li>
+<li>
+<p>The home platform authorizes inter-platform payments to platforms B and C.</p>
+</li>
+<li>
+<p>Execution begins and compute occurs on platform B.</p>
+</li>
+<li>
+<p>Platform B clears payments as compute continues.</p>
+</li>
+<li>
+<p>Before using the licensed Resource hosted on platform C (which may involve cross-platform transfers or may be cached), platform B requests access using the delegated context (user, original platform and overall request).</p>
+</li>
+<li>
+<p>Platform C accepts the request and returns whatever limits apply.</p>
+</li>
+<li>
+<p>Platform B uses the licensed Resource from platform C and reports its use to it.</p>
+</li>
+<li>
+<p>Platform C clears payments from platform A, up to the amount authorized.</p>
+</li>
+<li>
+<p>If the amount authorized is exhausted then platform C refuses additional use when requested from platform B. Platform B communicates this to platform A and, depending on the response, tries again (more payment authorized) or denies access, which may result in processing failing.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>TODO: oAuth, or simialr, authorization of remote compute?</p>
 </div>
 <hr>
 <div style="page-break-after: always;"></div>
@@ -3354,7 +3443,7 @@ is not duplicated here.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_user_uses_commercial_data_or_processing_services_which_he_has_contracted_for_directly_2">3.17. User uses commercial data or processing services which he has contracted for directly</h3>
+<h3 id="_user_uses_federated_commercial_services_which_he_has_contracted_for_directly_2">3.17. User uses federated commercial services which he has contracted for directly</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 85%;">
@@ -3401,13 +3490,61 @@ is not duplicated here.</p>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User submitting on-demand processing, bulk processing, systematic processing can specify a different federated EP on which the processing (or a component of it, for processing chains) should run</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User submitting processing to run on another EP must authorize the home platform to access his host platform account&#8217;s compute resources (eg using oAuth)</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">When calculating estimated costs, the home platform can contact the host platform to request the estimated costs for the remote part of the processing</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can execute processing on a remote EP using the requesting user&#8217;s credentials (note: the container to run may come from the remote platform or a third platform)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The EP can manage processing running on remote EPs - eg, it can display the status and terminate processing</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">An EP can retrieve processing services or data from any federated EP using the requesting user&#8217;s credentials</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">When data processing occurs, the inputs and processing services or chains involved can be transferred from other EPs if necessary</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">When final outputs are produced by delegated processing run on another EP the User can see them in the local workspace/UI and can choose to transfer them</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
 </tbody>
 </table>
 <hr>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_bilateral_clearing_2">3.18. User uses commercial data or processing services and pays using his platform account (bilateral clearing)</h3>
+<h3 id="_user_uses_commercial_services_from_another_platform_and_pays_using_his_platform_account_bilateral_clearing_2">3.18. User uses commercial services from another platform and pays using his platform account (bilateral clearing)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 85%;">
@@ -3461,13 +3598,13 @@ is not duplicated here.</p>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">The user will only be able to request access if all necessary platform payment clearing agreements are in place and in good standing to permit purchase, otherwise the user will be told which platform he can use for access</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The user will only be able to request federated access to licensed Resources if all necessary platform payment clearing agreements are in place and in good standing to permit purchase, otherwise the user will be told which platform he can use for access</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">If a User cannot request access because payment clearing is not possible or disabled for the resource but a direct purchase via the host platform or Licencer site is possible and would grant access, the home platform provides a link to the host platform or a direct purchase site</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">If a User cannot request access to a Licensed Resource because payment clearing is not possible or disabled for the resource but a direct purchase via the host platform or Licencer site is possible and would grant access, the home platform provides a link to the host platform or a direct purchase site</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
@@ -3485,6 +3622,36 @@ is not duplicated here.</p>
 <td class="tableblock halign-center valign-middle"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">On-demand processing, bulk processing, systematic processing where cross-platform access and payments are possible will be automatically planned for execution using knowledge of Resource locations and estimated sizes and costs (eg, a processing service may be moved to another platform to run close to data). A 'plan' includes the locations of data processing, Resources and the data transfers required. This plan will be used when displaying estimates and for subsequence execution.</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A User can refuse to allow federated execution of processing, requiring that all remote data and processing services be transferred to the home platform</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A Resource owner can specify that the Resource is not permitted to leave its host platform</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">When remote execution or the use of licensed Resources hosted remotely occurs the home platform uses platform payments, described below, to arrange for the User to pay the Resource or EP owner</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Platform payments must be authorized by multiple parties, cleared as debts are incurred and subsequently settled when (net) payments are made between platforms</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">The home platform can assess the User&#8217;s creditworthiness and prevent platform payment authorization if it feels necessary</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"></td>
@@ -3497,10 +3664,16 @@ is not duplicated here.</p>
 <td class="tableblock halign-center valign-middle"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">The home platform can request resource licensing platform payment authorization from the host platform using a defined protocol</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The home platform can request Resource licensing platform payment authorization from the Resource&#8217;s host platform using a defined protocol</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">The home platform can request compute cost platform payment authorization from the compute host platform using the protocol</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">Each platform maintains a database of platform payments between it and other platforms</p></td>
@@ -3521,31 +3694,67 @@ is not duplicated here.</p>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">Platforms distinguish the amount authorized from the amount cleared (ie, which is legally owed and for which settlement will be requested). For volume-based pricing settlement of platform payments will only be requested once the resource has been used (and may be 'chunked').</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Platforms distinguish the amount authorized from the amount cleared (ie, which is legally owed and for which settlement will be requested). For volume-based Resource licence and compute pricing, settlement of platform payments will only be requested once the resource/compute has been used (and may be 'chunked').</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">For time-based (ie, fixed in advance) pricing, the User can request a licence and payment will be immediately authorized and cleared. Access can then proceed.</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">For time-based (ie, fixed in advance) licence pricing, the User can request a licence and payment will be immediately authorized and cleared. Access can then proceed.</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">For volume-based pricing, the home platform will report use of the Resource as or after it occurs to the host platform, marking (parts of) existing authorizations as cleared and generating new authorizations as old ones are exhausted</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A home platform can authorize a payment to a compute platform prior to submitting compute jobs on behalf of its user</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">The host platform can determine the true cost when responding to a report of Resource use, taking in to account that a licence make cover repeated use of an item (eg, repeated access to a single grid square or satellite image), and return this to the home platform</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A compute-host platform can report actual compute consumption to the home platform, which results in payments being partly cleared</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">When inter-platform messaging is required to perform Resource use the home platform will include an identifier for the payment authorization, and the host platform may refuse access if this is insufficient, expired, etc.</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A compute-host platform can report authorization exhaustion to the home platform, which may respond requesting additional authorization or may request termination.</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A home platform beginning execution involving a remotely hosted volume-pricing based licensed Resource can authorize an initial platform payment in advance</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A compute platform, on encountering a need to use a commercially licensed volume-based pricing Resource, can request permission from the resource host first, including full context information (the home platform and user and the payment authorization to use)</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A resource host can refuse or permit the use of its resource based on extant payment authorizations</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A compute platform which has completed Resource use can report this to the resource host, which results in the resource host clearing payments from the home platform (via messaging directly with the home platform). The resource host calculates the true cost of access for this purpose ((eg, repeated access to a single grid square or satellite image may not cost anything extra).</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">A compute platform whose Resource use is rejected can report this to the home platform (which may be the same platform) which will then decide whether to seek further payment authorizations or to refuse access</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">When inter-platform messaging is required to perform Resource use or to submit compute jobs the requesting platform will include an identifier for the payment authorization (and other context information such as user and home platform), and the host platform may refuse access if this is insufficient, expired, etc.</p></td>
 <td class="tableblock halign-center valign-middle"></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">x</p></td>
@@ -3629,7 +3838,7 @@ TODO: How do we handle organizations and projects which might be licensed as a w
 <p>Here it is assumed that a clearing house is commercially possible and provided by an external entity, not by a component specified in this document.</p>
 </div>
 <div class="paragraph">
-<p>TODO: We must determine if there is any possibility of this happening before including this in a final document, determine if we must develop/specify clearing holuse functionality and, if not, reconcile it with whatever model an external clearing house might use. I have no idea if it&#8217;s possible to 'buy' clearing house services from a financial institution but I would guess at 'no chance at all'.</p>
+<p>TODO: We must determine if there is any possibility of this happening before including this in a final document, determine if we must develop/specify clearing house functionality and, if not, reconcile it with whatever model an external clearing house might use. I have no idea if it&#8217;s possible to 'buy' clearing house services from a financial institution but I would guess at 'no chance at all'.</p>
 </div>
 <div class="paragraph">
 <p>This functionality is only active when a clearing-house is in operation.</p>
@@ -3658,14 +3867,17 @@ TODO: How do we handle organizations and projects which might be licensed as a w
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>TODO: Do we direct resource use reports and pricing data via the clearing house as well?</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version v0.5<br>
-Last updated 2019-06-11 09:25:06 +0100
+Version v0.6<br>
+Last updated 2019-07-09 12:46:18 +0100
 </div>
 </div>
 </body>
