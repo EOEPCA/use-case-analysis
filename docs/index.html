@@ -2,57 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.8">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="description" content="Use Case Analysis for the Common Architecture">
 <meta name="keywords" content="common architecture use case analysis">
 <meta name="author" content="TVUK System Team">
-<title>Use Case Analysis</title>
-<link rel="stylesheet" href="./stylesheets/eoepca.css">
+<title>Use Case Analysis Document: EOEPCA.TN.005</title>
+<link rel="stylesheet" href="stylesheets/eoepca.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="book toc2 toc-left">
 <div id="header">
-<h1>Use Case Analysis (EOEPCA.TN.005)</h1>
+<h1>Use Case Analysis Document: EOEPCA.TN.005</h1>
 <div class="details">
 <span id="author" class="author">TVUK System Team</span><br>
 <span id="email" class="email">&lt;<a href="mailto:Eoepca.SystemTeam@telespazio.com">Eoepca.SystemTeam@telespazio.com</a>&gt;</span><br>
-<span id="revnumber">version v0.6,</span>
-<span id="revdate">09/07/2019</span>
+<span id="revnumber">version 0.7,</span>
+<span id="revdate">18/07/2019</span>
 <br><span id="revremark">In-Progress Draft</span>
 </div>
-</div>
-<div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="imageblock right">
-<div class="content">
-<img src="./images/telespazio.png" alt="telespazio" width="200">
-</div>
-</div>
-<div class="paragraph">
-<div class="title"><span class="big"><strong>Technical Note</strong></span></div>
-<p>Use Case Analysis for the Common Architecture</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">COMMENTS and ISSUES</dt>
-<dd>
-<p>If you would like to raise comments or issues on this document, please do so by raising an Issue at the following URL <a href="https://github.com/EOEPCA/use-case-analysis/issues" class="bare">https://github.com/EOEPCA/use-case-analysis/issues</a>.</p>
-</dd>
-<dt class="hdlist1">PDF</dt>
-<dd>
-<p>This document is available in PDF format <a href="https://eoepca.github.io/use-case-analysis/EOEPCA-use-case-analysis.pdf">here</a>.</p>
-</dd>
-<dt class="hdlist1">COPYRIGHT</dt>
-<dd>
-<p>Copyright © 2019 TBD (ESA or TVUK or something else ?)</p>
-</dd>
-</dl>
-</div>
-<div style="page-break-after: always;"></div>
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Use Case Analysis</div>
 <ul class="sectlevel1">
 <li><a href="#_introduction">1. Introduction</a>
 <ul class="sectlevel2">
@@ -63,7 +34,7 @@
 <li><a href="#_glossary">1.5. Glossary</a></li>
 </ul>
 </li>
-<li><a href="#_use_cases">2. Use Cases</a>
+<li><a href="#mainUseCases">2. Use Cases</a>
 <ul class="sectlevel2">
 <li><a href="#_user_accesses_platform_services">2.1. User accesses Platform services</a></li>
 <li><a href="#_consumer_discovers_and_visualises_products">2.2. Consumer discovers and visualises products</a></li>
@@ -86,7 +57,7 @@
 <li><a href="#_user_uses_commercial_data_or_processing_services_and_pays_using_his_platform_account_via_clearing_house">2.19. User uses commercial data or processing services and pays using his platform account (via clearing house)</a></li>
 </ul>
 </li>
-<li><a href="#_functional_mapping">3. Functional Mapping</a>
+<li><a href="#mainFunctionalMapping">3. Functional Mapping</a>
 <ul class="sectlevel2">
 <li><a href="#_user_accesses_platform_services_2">3.1. User accesses Platform services</a></li>
 <li><a href="#_consumer_discovers_and_visualizes_products">3.2. Consumer discovers and visualizes products</a></li>
@@ -111,6 +82,101 @@
 </li>
 </ul>
 </div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>EO Exploitation Platform Common Architecture<br>
+<em>Use Case Analysis Document</em><br>
+EOEPCA.TN.005</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>COMMENTS and ISSUES</strong><br>
+If you would like to raise comments or issues on this document, please do so by raising an Issue at the following URL <a href="https://github.com/EOEPCA/use-case-analysis/issues" class="bare">https://github.com/EOEPCA/use-case-analysis/issues</a>.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>PDF</strong><br>
+This document is available in PDF format <a href="EOEPCA-use-case-analysis.pdf" target="_blank" rel="noopener">here</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>EUROPEAN SPACE AGENCY CONTRACT REPORT</strong><br>
+The work described in this report was done under ESA contract. Responsibility for the contents resides in the author or organisation that prepared it.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><strong>TELESPAZIO VEGA UK Ltd</strong><br>
+350 Capability Green, Luton, Bedfordshire, LU1 3LU, United Kingdom.<br>
+Tel: +44 (0)1582 399000<br>
+<a href="http://telespazio-vega.com/">www.telespazio-vega.com</a></p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">AMENDMENT HISTORY</dt>
+<dd>
+<p>This document shall be amended by releasing a new edition of the document in its entirety.<br>
+The Amendment Record Sheet below records the history and issue status of this document.</p>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Amendment Record Sheet</caption>
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 25%;">
+<col style="width: 62.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">ISSUE</th>
+<th class="tableblock halign-center valign-top">DATE</th>
+<th class="tableblock halign-left valign-top">REASON</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">0.7</p></th>
+<td class="tableblock halign-center valign-top"><p class="tableblock">18/07/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Typos, clarifications and updates to template</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">0.6</p></th>
+<td class="tableblock halign-center valign-top"><p class="tableblock">09/07/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Added some cross-platform compute requests to use cases</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">0.5</p></th>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11/06/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initial functional mapping analysis</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">0.4</p></th>
+<td class="tableblock halign-center valign-top"><p class="tableblock">18/04/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Complete use case descriptions</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">0.3</p></th>
+<td class="tableblock halign-center valign-top"><p class="tableblock">18/04/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Addition of more use case descriptions</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">0.2</p></th>
+<td class="tableblock halign-center valign-top"><p class="tableblock">15/02/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First set of use case descriptions</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-center valign-top"><p class="tableblock">0.1</p></th>
+<td class="tableblock halign-center valign-top"><p class="tableblock">09/01/2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initial draft</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -125,8 +191,17 @@
 </div>
 <div class="sect2">
 <h3 id="_structure_of_the_document">1.2. Structure of the Document</h3>
-<div class="paragraph">
-<p>TBD</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Section 2 - <a href="#mainUseCases">Use Cases</a></dt>
+<dd>
+<p>Provides a description of each use case.</p>
+</dd>
+<dt class="hdlist1">Section 3 - <a href="#mainFunctionalMapping">Functional Mapping</a></dt>
+<dd>
+<p>Derives high-level functionalities from the use-cases and maps these to <em>Domain Areas</em>.</p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect2">
@@ -136,9 +211,9 @@
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 14.2857%;">
-<col style="width: 71.4285%;">
-<col style="width: 14.2858%;">
+<col style="width: 18.1818%;">
+<col style="width: 63.6363%;">
+<col style="width: 18.1819%;">
 </colgroup>
 <thead>
 <tr>
@@ -150,40 +225,24 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="EP-UC"></a>[EP-UC]</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
-<div class="content">
-<div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>EO Exploitation Platforms - Use Cases,<br>
-<a href="https://eoepca.github.io/use-case-analysis/resources/docs/ESA-EOPSDP-TN-17-049_1.0_EO_Exploitation_Platforms%2D%2DUse_Cases.pdf" target="_blank" rel="noopener">ESA-EOPSDP-TN-17-049</a></p>
-</div>
-</div>
+<a href="resources/docs/ESA-EOPSDP-TN-17-049_1.0_EO_Exploitation_Platforms%2D%2DUse_Cases.pdf" target="_blank" rel="noopener">ESA-EOPSDP-TN-17-049</a></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
-<div class="content">
-<div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Issue 1.0,<br>
 15/12/2017</p>
-</div>
-</div>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="EP-FM"></a>[EP-FM]</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
-<div class="content">
-<div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Exploitation Platform - Functional Model,<br>
-<a href="https://eoepca.github.io/use-case-analysis/resources/docs/ESA-EOPSDP-TN-17-050_1.0_Exploitation_Platform%2D%2DFunctional_Model.pdf" target="_blank" rel="noopener">ESA-EOPSDP-TN-17-050</a></p>
-</div>
-</div>
+<a href="resources/docs/ESA-EOPSDP-TN-17-050_1.0_Exploitation_Platform%2D%2DFunctional_Model.pdf" target="_blank" rel="noopener">ESA-EOPSDP-TN-17-050</a></p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
-<div class="content">
-<div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Issue 1.0,<br>
 30/11/2017</p>
-</div>
-</div>
 </div></div></td>
 </tr>
 </tbody>
@@ -401,7 +460,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_use_cases">2. Use Cases</h2>
+<h2 id="mainUseCases">2. Use Cases</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Each use case is presented in the following sub-sections.</p>
@@ -449,7 +508,7 @@
 <div class="sect2">
 <h3 id="_consumer_discovers_and_visualises_products">2.2. Consumer discovers and visualises products</h3>
 <div class="paragraph">
-<p>As a Consumer I want to search for Products of all types by specification of textual and faceted search criteria. I want to be able to incrementally narrow my search with more criteria clauses. For each Product in the search result I want to get more detailed information that describes the product, its usage terms and costs, and visualise the data graphically. Having discovered a product of interest I may 'save' it to my Workspace, download it, or use it as input to further exploitation activities.</p>
+<p>As a Consumer I want to search for Products of all types by specification of textual and faceted search criteria. I want to be able to incrementally narrow my search with more criteria clauses. The data/products available to the user should not be limited to EO data - it should be possible for the user to augment their processing/analysis with data from other sources such as in-situ sensor data, lidar etc. For each Product in the search result I want to get more detailed information that describes the product, its usage terms and costs, and visualise the data graphically. Having discovered a product of interest I may 'save' it to my Workspace, download it, or use it as input to further exploitation activities.</p>
 </div>
 <div class="paragraph">
 <p><a href="#img_productDiscovery">Figure 1</a> illustrates discovery of EO data products using the EO Browser system.</p>
@@ -476,7 +535,7 @@
 <p>Consumer logs in on the EP</p>
 </li>
 <li>
-<p>Consumer begins searching for products on the EP. The starting point is the full unfiltered product set that contains commercial/non-commercial EO data and value-added products</p>
+<p>Consumer begins searching for products on the EP. The starting point is the full unfiltered product set that contains commercial/non-commercial EO data, value-added products and additional data such as in-situ sensor measurements</p>
 </li>
 <li>
 <p>Optionally, the resultset is automatically filtered to include only those collections that the Consumer has right to visualise. <em>It may be the case that the EP chooses to make these 'unavailable collections' visible to the Consumer to publicise their existence</em></p>
@@ -521,7 +580,7 @@
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Guest User</div>
@@ -534,7 +593,7 @@ The use case does not mention the Guest user. It should be taken into account th
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Search Engine Indexing</div>
@@ -547,7 +606,7 @@ To facilitate Users discovering products and the EP as a whole using a search en
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Data Sub-setting</div>
@@ -696,7 +755,7 @@ The use case does not consider the case where the Consumer is able to select sub
 <p>Consumer searches the EP catalogue for input data of interest, by specification of spatial/temporal (and other) characteristics</p>
 </li>
 <li>
-<p>Platforms aids the Consumer in selecting input data that is compatible with the chosen processing service</p>
+<p>The EP aids the Consumer in selecting input data that is compatible with the chosen processing service</p>
 </li>
 <li>
 <p>Consumer selects the input data from their search results and/or from their workspace data</p>
@@ -761,7 +820,7 @@ The use case does not consider the case where the Consumer is able to select sub
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Data/Processor Selection Order</div>
@@ -774,7 +833,7 @@ The use case considers the user interaction in which the processor is selected f
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Resource Quotas</div>
@@ -787,7 +846,7 @@ The use case does not explore how the user obtains/maintains a resource quota in
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Processor License Key</div>
@@ -1218,7 +1277,7 @@ The use case does not consider the possibility of processing services for which 
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Systematic Processing Costs</div>
@@ -1299,7 +1358,7 @@ Given that the systematic processing occurs asynchronous to the Consumer submitt
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Collaboration Options</div>
@@ -1312,7 +1371,7 @@ Each of the 'collaborative options' needs to be defined in more detail, and perh
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Collaboration Groups</div>
@@ -1371,7 +1430,7 @@ This use case assumes the concept of 'collaborators'. This implies a grouping of
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">External (non-interative) Script</div>
@@ -1461,7 +1520,7 @@ The case of an external script might need a slightly different approach (flow) f
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Processor Preparation Billing</div>
@@ -1536,7 +1595,7 @@ This use-case does not consider whether billing is applied to the usage of the p
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Reusable Chain Specification</div>
@@ -1549,7 +1608,7 @@ In order to publish the processing-chain as a generally reusable processing serv
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Nested Chaining</div>
@@ -1704,7 +1763,7 @@ Once published as a processing service, it should in principle then be possible 
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="title">Overlap with Other Use-cases</div>
@@ -2086,7 +2145,7 @@ Once published as a processing service, it should in principle then be possible 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_functional_mapping">3. Functional Mapping</h2>
+<h2 id="mainFunctionalMapping">3. Functional Mapping</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Identification of functional areas and their mapping to domain areas.</strong></p>
@@ -3876,8 +3935,8 @@ TODO: How do we handle organizations and projects which might be licensed as a w
 </div>
 <div id="footer">
 <div id="footer-text">
-Version v0.6<br>
-Last updated 2019-07-09 12:46:18 +0100
+Version 0.7<br>
+Last updated 2019-07-18 13:09:55 UTC
 </div>
 </div>
 </body>
