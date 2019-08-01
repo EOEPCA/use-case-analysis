@@ -1,6 +1,16 @@
 = Changelog
 All notable changes to this project will be documented in this file.
 
+== https://github.com/EOEPCA/use-case-analysis-src/compare/v0.7%2E%2E%2Ev1.0[v1.0] - 02.08.2019
+
+Issue for domain expert ITT.
+
+=== Added
+* n/a
+
+=== Changed
+* n/a
+
 == https://github.com/EOEPCA/use-case-analysis-src/compare/v0.6%2E%2E%2Ev0.7[v0.7] - 18.07.2019
 
 === Added
