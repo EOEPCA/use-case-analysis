@@ -1,0 +1,35 @@
+
+= Expert user builds new processing service
+
+As an Expert user, I want to integrate my own software into the platform to be exposed as a new processing service. I want to be able to prepare the software in a self-contained package containing all execution dependencies, for loading into the EP. I want to test the package by deploying and executing it in a hosted test environment, with access to platform data for testing. I want to debug the software and inspect the processing logs. Once satisfied, I want to publish the application as a new processing service, supported by anciliary information including metadata and processor user manual. The metadata should enable discovery of the service and faciliate its usage with compatible data and in chaining. Once published, the new processing service should be discoverable in the EP Catalogue, available for Consumers according to access rights I define.
+
+<<img_buildProcessingService>> illustrates packaging of a new processing service, from the Forestry TEP platform.
+
+[#img_buildProcessingService,reftext='{figure-caption} {counter:figure-num}']
+.Build Processing Service - Packaging a new processor using Docker image - Forestry TEP (https://f-tep.com/app/)
+image::build-processing-service.png[width=1000,align="center"]
+
+'''
+
+. Expert user logs in on the EP
+. Expert access EP processor development environment
+. Expert packages the software into a non-interactive application package, conformant with the EPs application package standard
+. Alternatively, Expert prepares the application package offline (conformant with the EPs application package standard) and uploads to the EP processor development environment
+. Expert deploys the package as a new 'test' (unpublished) processing service; the EP checks the Expert is authorised to do so
+. Expert tests the procesing service execution, by performing an execution in accordance with use case <<Consumer discovers and executes On-demand Processing Service>>
+. EP checks for errors and notifies Expert as required
+. Expert checks processor logs for correct operation
+. Expert checks _Processing Results_ for expected outputs
+. If necessary, Expert modifies software, re-packages/deploys, and repeats the testing cycle
+. When the process is stable, Expert publishes the packages as a new processing service; the EP checks the Expert is authorised to do so
+.. Expert specifies metadata to describe the processor to make it discoverable, and to facilitate the EP to ensure compatible use of the processing service (e.g. with compatible input data, and output data for compatible chaining)
+.. Expert provides user manual to aid users of the processing service
+. The EP checks the integrity of the software and that it adheres to the EP terms and conditions
+. The EP adds the processing service to the Application Catalogue so that is available to Consumers in their discover/browse searches
+. Optionally, EP notifies Consumers about the new service
+
+[big]#*Notes*#
+
+[[note-proc-prep-billing, Processor Preparation Billing]]
+.Processor Preparation Billing
+NOTE: This use-case does not consider whether billing is applied to the usage of the processor test environment, and the associated processor execution. It is assumed that billing may not be applied, in order to encourage such contributions. However, it should be recognised that this could be abused by Experts exploiting the development environment as a convenient processing environment.

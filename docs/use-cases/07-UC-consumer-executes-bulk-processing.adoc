@@ -1,0 +1,53 @@
+
+= Consumer executes Bulk processing
+
+This use case builds upon case <<Consumer discovers and executes On-demand Processing Service>>.
+
+As a Consumer, I want to execute a processing service over a large amount of data. I want to utilise the EP's discovery service to select a processing service. I want to utilise the EP's discovery service to select multiple datasets, typically by specification or AOI and TOI to define the data inputs. The data discovery should facilitate selection of typical bulk processing scenarios, such as daily acquisitions, or selection by AOI. Having submitted my bulk processing, I would like to monitor the status of the processing, receive the completed _Processing Results_, with the ability to visualise/download etc. the results using the facilities of the EP. In the case of an error, then I should be alerted, with the capability to investigate the cause through access to the processing logs.
+
+<<img_bulkProcessing>> shows bulk processing at ESA's Grid Processing On Demand (G-POD) system.
+
+[#img_bulkProcessing,reftext='{figure-caption} {counter:figure-num}']
+.Bulk Processing - Results of a bulk processing from G-POD (http://gpod.eo.esa.int/)
+image::bulk-processing.png[width=1000,align="center"]
+
+'''
+
+. Consumer logs in on the EP
+. *Discover and Select Processing Service...*
+. Consumer discovers and selects a Processing Service as described in use case <<Consumer discovers and executes On-demand Processing Service>>. _Steps not repeated here._
+. Alternatively, the Consumer selects a processing service from their Workspace
+. *Discover and Select Bulk Data...*
+. Consumer searches the EP catalogue for input data of interest, by specification of spatial/temporal (and other) characteristics
+. Consumer is able to select multiple data items by adding them to a preparatory 'bulk-data collection'
+. Consumer can perform multiple discrete searches to add more data to the 'bulk-data collection'
+. Consumer can select data from their workspace for addition to the 'bulk-data collection'
+. The EP checks they are authorised to access the product
+. Consumer views detailed metadata for the selected product
+. Consumer views T&Cs for the service and accepts terms of not already done so
+. *Initiate Bulk Processing...*
+. Consumer specifies the input parameters of the _Processing Service_
+. Optionally, the Consumer defines a collection of data to which the results have to be included
+. Consumer requests bulk processing execution
+. The EP checks that the Consumer has the authorisation to launch the _Processing Service_ and access the specified data
+. The EP estimates the cost and duration of the processing and checks the Consumer has enough resources to execute the processing
+. Consumer is presented with the cost/duration estimation and confirms the processing
+. The EP creates multiple processing requests, split according to the bulk data that has been selected
+. Consumer monitors the status of the bulk processing (%completion, execution logs)
+. When the processing completes successfully the _Processing Results_ are made available to the user in their _Workspace_ and/or the target _Collection_ selected by the user
+. The Consumer's billing account is updated comensurate with the 'cost' of the bulk processing
+. *_Alternative Flow:_* <<aflow-bulk-processing-error>>
+. *Exploit Results...*
+. Optionally, the Consumer downloads the results
+. Optionally, the Consumer visualises the processing logs (e.g. for error inspection)
+. Optionally, the Consumer visualises the results and is able to manipulate and parameterise the view - with the possibility to download the result of their visualisation
+. Optionally, the Consumer publishes their results in the catalogue - specifying all necessary metadata to support discovery
+
+[[aflow-bulk-processing-error, Bulk Processing Error]]
+.Alternative Flow: Bulk Processing Error
+In the case of errors during bulk processing
+
+.. EP checks for errors during the processing
+.. Consumer is alerted to errors occuring during the bulk processing
+.. Consumer accesses bulk processing logs to investigate the error cause
+.. (Optionally) Consumer diagnoses problem and resubmits corrected bulk processing request. _This assumes that the error cause was under the control of the Consumer, i.e. they made an input error._

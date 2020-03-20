@@ -1,0 +1,80 @@
+
+= User uses commercial services from another platform and pays using his platform account (bilateral clearing)
+
+As a User I want to access remote Resources or compute via my home platform and pay via my billing account with this platform. As a Resource Licenser I want to publish my resources via my own platform (the 'host' platform) and receive payment via my billing account with my own platform.
+
+This use case covers several behaviours, which may occur in combination, which require payment to the owner or customers of another EP. Some examples:
+
+- Some commercially licenced data or processing services are catalogued in the host (remote) platform. The data and/or processing service is copied to the home platform to be used in a local processing chain (which may also involve local data).
+- A processing service created by the User is transferred to the host platform and runs on data hosted there, using compute resources physically present there. The result is copied back.
+
+The EP must determine where to execute code and when to transfer data. This may depend on estimated data sizes, estimated processing service output size, cloud costs in different locations, User and Licenser settings and commercial arrangements. Different parts of a single chain may happen in different locations if this is most efficient or the only permitted option.
+
+This use-case assumes a network of agreements between exploitation platforms. Each platform has (or may have) an 'account' with each other platform.
+
+Some important notes on the arrangement:
+
+- The home platform always bears the credit risk that its User does not pay. It must still pay the host platform. This is because the home platform is most able to assess the User's creditworthiness and to pursue payment.
+- The host platform always bears the credit risk that the home platform does not pay. It must still pay the Licenser.
+- The home platform bears the exchange-rate risk if the two platforms use different currencies.
+- Costs may simply be reported between platforms. It's possible that no other communication will happen. This permits caching and the transfer of commercial processing services between platforms for local execution, but also requires sufficient trust between platforms. Auditing may be required.
+- Either platform can refuse the purchase for risk reasons, but a Licenser cannot.
+- Both platforms will wish to charge for this risk and for processing costs.
+- It requires O(n^2) agreements between platforms for any User to be able to use any Resource or EP. Licensers may need to publish on multiple platforms and Users may need to open accounts on multiple platforms if an inadequate network is achieved.
+
+
+'''
+
+. Licenser publishes a commercially licenced resource via the host platform (his home platform) and configures pricing information in the host platform's currency.
+. Host platform owner configures and publishes pricing information in the host platform currency.
+. User begins accesses involving remote compute or Resources using his home platform's facilities. The EP computes an execution plan (including the location of any data and processing used and any network transfers) and presents estimated costs. Estimated costs include licensing costs, remote and local compute costs and platform fees. The User is required to agree to the terms of the licences involved and the pricing structure.
+. Immediately prior to access occurring the home platform authorizes an inter-platform debt or debts:
+  .. The home platform checks that a contract between it and the host platform is in place and in good standing.
+  .. A debit to the User's account (a debt to be later owed by the User to the home platform) is authorized by the home platform, after assessing creditworthiness and fraud risk and optionally 'blocking' some available credit. This may be more than the estimated cost so as to cover inaccuracies or it may be increased later.
+  .. The home platform makes a request to the host platform to authorize payment (a debt later owed by the home platform to the host platform).
+  .. The host platform checks that a contract between it and the home platform is in place and in good standing.
+  .. The host platform authorizes a debit to the home platform's account with it.
+. The home platform proceeds with execution (which may involve delegation to other platforms, transfer of data or only locally cached resources).
+. The home platform reports any local licensed Resource use to the host platform and the true cost is confirmed (which should be in line with the pricing but takes in to account repeat access - eg, repeated use of a satellite image for which a licence only needs to be bought once), clearing part of the authorized payment.
+. The host platform reports any remote Resource or compute use to the home platform.
+. The home and host platforms ensure that further authorizations are obtained or access is blocked if the amount authorized is exhausted.
+. The host platform credits the Licenser's account as the payment is cleared.
+. The home platform records the debits in the User's account.
+. The platforms later reconcile and settle payments, transferring a net amount through a manual or external process.
+
+
+[[aflow-mediated-billing-time-based-licence, Time-based or Unlimited Licences]]
+.Alternative Flow: Time-based or Unlimited Licences
+
+Instead of depending on use, a licence to use a Resource may be a fixed price for a certain time or be perpetual (like a traditional software purchase). In this case there is no need to delay clearing payment until after resource access has occurred. The User can request a licence and the billing account is updated immediately. Access to the Resource is then possible across the whole federation.
+
+[[aflow-mediated-billing-direct-to-host, Direct Payment via Host Platform Account]]
+.Alternative Flow: Direct Licence Payment via Host Platform Account
+
+Instead of buying a licence using the home platform a User may have bought or buy a licence through a User account at the host platform. This is possible even if no inter-platform payment agreement is operational between the two platforms. However, this only works if the price is fixed (such as a time-based or unlimited licence).
+
+.. EP determines that the User cannot buy access via the home platform but can do so via the host platform
+.. EP provides a link to the host platform to do this
+.. EP provides access to the licensed resource once the User has bought a suitable licence
+
+
+[[aflow-mediated-billing-triangles, Access/billing Triangles]]
+.Alternative Flow: Access/billing Triangles
+
+A user on platform A (the home platform) could run a processing chain which includes processing on platform B (the compute-host platform) using a licensed Resource with volume-based pricing which is hosted on platform C (the resource-host platform).
+
+.. The user begins processing, as above.
+.. The home platform authorizes inter-platform payments to platforms B and C.
+.. Execution begins and compute occurs on platform B.
+.. Platform B clears payments as compute continues.
+.. Before using the licensed Resource hosted on platform C (which may involve cross-platform transfers or may be cached), platform B requests access using the delegated context (user, original platform and overall request).
+.. Platform C accepts the request and returns whatever limits apply.
+.. Platform B uses the licensed Resource from platform C and reports its use to it.
+.. Platform C clears payments from platform A, up to the amount authorized.
+.. If the amount authorized is exhausted then platform C refuses additional use when requested from platform B. Platform B communicates this to platform A and, depending on the response, tries again (more payment authorized) or denies access, which may result in processing failing.
+
+
+
+
+
+TODO: oAuth, or simialr, authorization of remote compute?

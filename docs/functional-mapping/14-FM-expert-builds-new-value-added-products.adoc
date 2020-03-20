@@ -1,0 +1,12 @@
+
+= Expert user builds new value-added products
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| An Expert User can create a Product collection, specifying all necessary metadata for discovery in the catalogue | | | x
+| An Expert User can define bulk or systematic processing whose output will automatically be added to the product collection on completion (if succesful), resulting in it being published with the same permissions and visibility as the collection | | x | x
+| Consumers can subscribe to a Resource or collection and will be notified when it changes (eg, new data is available, a new version of a Processing Service is release) | | | x
+
+|===

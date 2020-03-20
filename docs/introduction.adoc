@@ -1,0 +1,20 @@
+
+= Introduction
+
+== Purpose and Scope
+
+This document presents the use cases relevant to the Common Architecture.
+
+== Structure of the Document
+
+Section 2 - <<mainUseCases>>::
+Provides a description of each use case.
+
+Section 3 - <<mainFunctionalMapping>>::
+Derives high-level functionalities from the use-cases and maps these to _Domain Areas_.
+
+include::reference-docs.adoc[leveloffset=+1]
+
+include::terminology.adoc[leveloffset=+1]
+
+include::glossary.adoc[leveloffset=+1]

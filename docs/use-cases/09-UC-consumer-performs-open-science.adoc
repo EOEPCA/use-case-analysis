@@ -1,0 +1,36 @@
+
+= Consumer performs Open Science
+
+As a Consumer I want to share my analysis and processing results in such a way that facilitates scientific collaboration. I want to link my results to a scientific publication, and assign a DOI to my results to reference it in my scientific paper. I want to encapsulate my research/analysis as a _Reusable Research Object_, to capture all aspects of my analysis including data used and processing performed etc., so that it can be reproduced, I can re-use my analysis in the future, or share it with others for collaboration. A simple example could be a Jupyter notebook that captures an annotated analysis, identifying input data, executing code to transform the data, and presenting/visualising the output results. This case should then be generalised for execution of more complex analyses using platform data / processing services (local and external).
+
+<<img_openScience>> illustrates a shared analysis result linked to a reference scientific publication.
+
+[#img_openScience,reftext='{figure-caption} {counter:figure-num}']
+.Open Science - Sharing analysis results on the Geohazards TEP (https://geohazards-tep.eu/)
+image::open-science.png[width=1000,align="center"]
+
+'''
+
+. Consumer logs in on the EP
+. Consumer selects items (e.g. data, processing services, processing results)
+. EP verifies that Consumer has right to share the item
+. Consumer selects one of the collaborative options, including:
+.. share processing results
+.. link to scientific publication
+.. create a Reusable Research Object for sharing
+.. Others TBD - see note <<note-collaboration-options>>.
+. Consumer specifies collaborators and associated access rights (read/write - user/group/everyone). See note <<note-collaboration-groups>>.
+. The EP shares the item according to the Consumers specification
+. Optionally, the EP registers a DOI for the item
+. Optionally, collaborators are automatically notified of the sharing of the item
+. Collaborators access the shared item; the EP checks that the Consumer is authorised to access the item
+
+[big]#*Notes*#
+
+[[note-collaboration-options, Collaboration Options]]
+.Collaboration Options
+NOTE: Each of the 'collaborative options' needs to be defined in more detail, and perhaps explored through additional use cases.
+
+[[note-collaboration-groups, Collaboration Groups]]
+.Collaboration Groups
+NOTE: This use case assumes the concept of 'collaborators'. This implies a grouping of users that needs to be explored in further details through additional use cases.

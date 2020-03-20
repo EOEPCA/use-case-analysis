@@ -1,0 +1,15 @@
+
+= User accesses Platform services
+
+As a User, I want to be able to access the services of the system within the context of my user profile. I want to identify myself with the same unique identifier that I use on other platforms (e.g. email address or GitHub ID etc.). I should be directed to register or login if that is required to access the requested resource.
+
+'''
+
+. Admin logs in on the EP
+. Admin configures the access policy of the EP services
+. Guest successfully accesses unprotected services
+. Guest is denied access to protected services
+. Guest registers as a platform user with an existing (external) identity
+. Unauthenticated Consumer/Expert is denied access to protected services
+. Consumer/Expert logs in on the EP
+. Consumer/Expert successfully accesses protected services

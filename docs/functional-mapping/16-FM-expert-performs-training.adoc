@@ -1,0 +1,19 @@
+
+= Expert performs training
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| An Expert User can define on-line courses, if he has permission to do so | | | x
+| An Expert User can link on-line courses to his processing services or interactive applications | | | x
+| An Expert User can add content to an on-line course, including documents (eg documentation, tutorials), videos (eg, webinars, lessons or demonstrations), exercises and tests, and define the course structure | | | x
+| An Expert User can schedule live video streams | | | x
+| A Consumer can find on-line course by searching the catalogue or by following links from related resources | | | x
+| A Consumer can join an on-line course, subject to access control and billing constraints and, if configured for the course, its publisher's approval | | | x
+| The platform can charge the User's account for course costs as defined by the course publisher, and can credit the publisher's account as appropriate | | | x
+| A Consumer can access course content for courses previously joined | | | x
+| A Consumer can view live video streams (however, it is not a requirement that they be streamed from the platform and not an external provider) | | | x
+| A Consumer is billed for courses via his account according to prices set by its publisher (which may be zero) | | | x
+
+|===

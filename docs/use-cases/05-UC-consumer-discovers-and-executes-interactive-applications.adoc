@@ -1,0 +1,58 @@
+
+= Consumer discovers and executes Interactive Applications
+
+As a Consumer I want to list and search for commercial and non-commercial _Interactive Applications_, by specification of textual and faceted search criteria. I want to be able to incrementally narrow my search with more criteria clauses. For each _Interactive Application_ in the search result I want to get more detailed information, including a description and access to its execution manual. If I have not already done so, then any _Terms & Conditions_ associated to usage of the _Interactive Application_ should be made clear to me, with the opportunity for me to accept the T&Cs before I am authorised to execute the application.
+
+Having started the _Interactive Application_ I want to access the application user interface via my web browser, perform analytics accessing EO data, value-added products and other resources available on or outside the platform. I would like to export my Analysis Results (text, products, screenshots etc.) from the application into my EP workspace, allowing me to visualise and download the results. At the conclusion of my analysis session I would like to stop the application to ensure that I am not using unecessary resources and/or incurring unwanted costs.
+
+As a Consumer, I should be able to request a list of Interactive Application sessions that I currently have 'live' in the system - through which I can manage the sessions by rejoining or stopping as required.
+
+<<img_selectInteractiveApplication>> illustrates listing and selection of an Interactive Application, from the Costal TEP platform.
+
+[#img_selectInteractiveApplication,reftext='{figure-caption} {counter:figure-num}']
+.Interactive Application - Discovery and selection (https://www.coastal-tep.eu/)
+image::interactive-application.png[width=1000,align="center"]
+
+<<img_snapApplication>> illustrates the SNAP application running interactively in the user's web browser, from the Costal TEP platform.
+
+[#img_snapApplication,reftext='{figure-caption} {counter:figure-num}']
+.Interactive Application - SNAP running in web browser (https://www.coastal-tep.eu/)
+image::snap-application.png[width=1000,align="center"]
+
+'''
+
+. Consumer logs in on the EP
+. Consumer begins searching for _Interactive Applications_ on the EP. The starting point is the full unfiltered set of _Interactive Applications_ that contains commercial/non-commercial applications
+. Optionally, the resultset is automatically filtered to include only those services that the Consumer has right to visualise. _It may be the case that the EP chooses to make these 'unavailable applications' visible to the Consumer to publicise their existence_
+. Consumer filters the resultset by any combination of textual search terms and selection of application facets
+. Consumer incrementally adjusts their search criteria to refine the filtered resultset
+. *_Alternative Flow:_* <<aflow-existing-session>>
+. Consumer views the description and execution manual for the selected application
+. Consumer selects an _Interactive Application_ of interest; the EP checks they are authorised to access the application
+. Consumer views T&Cs for the application and accepts terms if not already done so
+. Optionally, the Consumer 'saves' (a reference to) the application to their workspace
+. Consumer searches the EP catalogue for input data of interest, by specification of spatial/temporal (and other) characteristics
+. Consumer selects the input data from their search results and/or from their workspace data
+. *_Alternative Flow:_* <<aflow-data-selection>>
+. EP checks that the Consumer is authorised to access the data and has accepted the associated T&Cs - prompting for confirmation of acceptance as required
+. If applicable, the EP estimates the cost for the application/data, checks the Consumer has enough resources to cover this cost, and the Consumer is presented with the cost indication
+. Consumer accepts and starts the Interactive Application, which is presented to them in their web browser
+. The previously selected input data is made available within the execution context of the _Interactive Application_
+. Consumer uses the application to perform analytics using the input data
+. Optionally, the Consumer accesses additional data to be introduced into the analysis within the _Interactive Application_, (the EP checks rights/costs as required)
+. Consumer saves/exports their Analysis Results from the application to be saved on the EP, within their _Workspace_
+. The Consumer's billing account is updated comensurate with the 'cost' of the processing
+. Optionally, the Consumer downloads the results
+. Optionally, the Consumer visualises the results and is able to manipulate and parameterise the view - with the possibility to download the result of their visualisation
+. Optionally, the Consumer publishes their results in the catalogue - specifying all necessary metadata to support discovery
+
+[[aflow-existing-session, Existing Session Selection]]
+.Alternative Flow: Existing Session Selection
+Rather that discovering and starting a new application instance, instead they list existing 'live' sessions, that they can rejoin
+
+.. Consumer obtains a list of their current 'live' interactive sessions
+.. Consumer selects to rejoin an existing session
+
+[[aflow-data-selection, Input Data Selection]]
+.Alternative Flow: Input Data Selection
+Rather than pre-selecting the input data before invoking the _Interactive Application_, it may be preferable (depending on the application) to make the input data selection from within the _Interactive Application_. The use case is not elaborated here in regard of this approach, but it should be ensured that the data access is made within the context of the user's access rights and associated billing considerations.

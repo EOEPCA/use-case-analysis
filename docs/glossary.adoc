@@ -1,0 +1,17 @@
+
+= Glossary
+
+The following acronyms and abbreviations have been used in this report.
+
+[cols="1,6"]
+|===
+| Term | Definition
+
+| AOI | Area of Interest
+| API | Application Programming Interface
+| EO | Earth Observation
+| EP | Exploitation Platform
+| SSH | Secure Shell
+| TOI | Time of Interest
+| VNC | Virtual Network Computing
+|===

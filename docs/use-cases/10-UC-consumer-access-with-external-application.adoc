@@ -1,0 +1,26 @@
+
+= Consumer accesses EP services with External Application
+
+As a Consumer I want to be able to use and/or develop an external application that uses the services of the EP via programmatic interfaces, (i.e. public API). I want to delegate to the application, authorising it to act on my behalf when interfacing to the EP. Hence, my usage of the external application is made within the context of my EP user profile, workspace, account etc. as if I was interacting with the EP through its 'native' user interface. Examples of external applications include mobile applications, or simply scripts that remotely exploit the data / processing services of the EP.
+
+<<img_externalApplication>> illustrates a mobile application interfacing with the Forestry TEP discovery and visualisation services.
+
+[#img_externalApplication,reftext='{figure-caption} {counter:figure-num}']
+.External Application - Mobile application exploiting Forestry TEP services (https://f-tep.com/)
+image::external-application.png[width=1000,align="center"]
+
+'''
+
+. Consumer installs on their local host an external application, e.g. installs an app on their mobile phone
+. Consumer starts application and are directed to authorise the application to access the EP on their behalf
+. Consumer authenticates to the EP and grants the requested privileges to the application
+. External Application uses the Consumer's delegated credentials to access the services of the EP, via a programmable interface (e.g. API)
+. EP uses the delegated credentials to check that the application is authorised to access the requested data / service
+. External Application utilises the data and services of the EP to provide a full-featured user experience to the Consumer. For axample, allowing execution of processing services and visualisation of results.
+. The Consumer’s billing account is updated comensurate with the 'cost' of the actions performed
+
+[big]#*Notes*#
+
+[[note-external-script, External (non-interative) Script]]
+.External (non-interative) Script
+NOTE: The case of an external script might need a slightly different approach (flow) for the authorisation of the delegated access. For example, a non-interactive (batch) script may need to obtain the delegated credentials in advance of the script execution.

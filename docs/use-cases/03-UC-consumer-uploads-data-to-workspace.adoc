@@ -1,0 +1,33 @@
+
+= Consumer uploads data to their workspace
+
+As a Consumer I want to upload data into my workspace and specify the name and destination in the target EP. I would like to treat my uploaded data the same as other (existing) data available in the EP. This includes:
+
+* Visualise the data in the platform
+* Use the data as input to analysis activities, e.g. interactively or through processing services
+
+Additionally, I would like to (optionally) publish the data so that it is available to other users, discoverable through the EP catalogue.
+
+The following figures provide implementation examples from the Hydrology TEP, https://hydrology-tep.eu/.
+
+<<img_manageMyData>> demonstrates the invocation of the 'Manage My Data' application.
+
+[#img_manageMyData,reftext='{figure-caption} {counter:figure-num}']
+.Manage My Data
+image::manage-my-data.png[width=1000,align="center"]
+
+<<img_workspaceUpload>> illustrates the invocation of the data upload capability.
+
+[#img_workspaceUpload,reftext='{figure-caption} {counter:figure-num}']
+.Workspace Upload
+image::workspace-upload.png[width=1000,align="center"]
+
+'''
+
+. Consumer logs in on the EP
+. Consumer navigates to their Workspace to be presented with data they have previously uploaded or 'saved'
+. Consumer requests to upload new data - specifying appropriate metadata including the location to which the data should be uploaded
+. Platform confirms the user's rights before accepting the request and ingesting the data into the user's workspace
+. Optionally, consumer can view the details of any data in their workspace, including that which they have uploaded
+. Optionally, consumer visualises their uploaded data and is able to manipulate and parameterise the view - with the possibility to download the result of their visualisation
+. Optionally, consumer publishes the uploaded data in the catalogue - specifying all necessary metadata to support discovery

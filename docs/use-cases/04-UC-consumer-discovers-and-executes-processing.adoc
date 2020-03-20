@@ -1,0 +1,68 @@
+
+= Consumer discovers and executes On-demand Processing Service
+
+As a Consumer I want to list and search for commercial and non-commercial _Processing Services_, by specification of textual and faceted search criteria. I want to be able to incrementally narrow my search with more criteria clauses. For each _Processing Service_ in the search result I want to get more detailed information, including a description and access to its execution manual. If I have not already done so, then any _Terms & Conditions_ associated to usage of the processing service should be made clear to me, with the opportunity for me to accept the T&Cs before I am authorised to execute the processing service.
+
+I want to prepare the _Processing Service_ for execution by specifying input data from within and outside the platform, and define any other parameters and configuration required to fully specify the job. Based upon my inputs I would like to get an estimation of the execution costs and time, before (optionally) initiating execution of the processing service. Having discovered a processing service of interest I may 'save' it to my Workspace, (which acts as a bookmark) - either with or without my parameterisation.
+
+Having initiated execution of a _Processing Service_, I would like to monitor its progress (including any errors occurring), and have access to the results output at the successful conclusion. I would like to visualise my Processing Results graphically with custom visualsation parameters, and possibly download the results. Additionally, I would like to (optionally) publish the Processing Results so that it is available to other users, discoverable through the EP catalogue.
+
+<<img_processingDiscovery>> illustrates discovery and parameterisation of a Sentinel-2 Land Cover processor, from the Forestry TEP platform.
+
+[#img_processingDiscovery,reftext='{figure-caption} {counter:figure-num}']
+.Processing Discovery - Sentinel-2 Land Cover processor (https://f-tep.com/app/)
+image::discover-processing.png[width=1000,align="center"]
+
+<<img_processingResults>> illustrates the visualisation of processing results, from the Forestry TEP platform.
+
+[#img_processingResults,reftext='{figure-caption} {counter:figure-num}']
+.Processing Results (https://f-tep.com/app/)
+image::processing-results.png[width=1000,align="center"]
+
+'''
+
+. Consumer logs in on the EP
+. *Discover and Select Processing Service...*
+. Consumer begins searching for _Processing Services_ on the EP. The starting point is the full unfiltered set of _Processing Services_ that contains commercial/non-commercial services
+. Optionally, the resultset is automatically filtered to include only those services that the Consumer has right to visualise. _It may be the case that the EP chooses to make these 'unavailable services' visible to the Consumer to publicise their existence_
+. Consumer filters the resultset by any combination of textual search terms and selection of service facets
+. Consumer incrementally adjusts their search criteria to refine the filtered resultset
+. Consumer selects a _Processing Service_ of interest; the EP checks they are authorised to access the product
+. Consumer views the manual for the selected service in order to understand its required input data/parameters and the nature of its algorithm
+. Consumer views T&Cs for the service and accepts terms if not already done so
+. Optionally, the Consumer 'saves' (a reference to) the product to their workspace
+. *Discover and Select Input Data...*
+. Consumer searches the EP catalogue for input data of interest, by specification of spatial/temporal (and other) characteristics
+. The EP aids the Consumer in selecting input data that is compatible with the chosen processing service
+. Consumer selects the input data from their search results and/or from their workspace data
+. The EP checks they are authorised to access the product
+. Consumer views detailed metadata for the selected product
+. Consumer views T&Cs for the service and accepts terms of not already done so
+. *Initiate Processing...*
+. Consumer specifies the input parameters of the _Processing Service_
+. Consumer requests processing execution
+. The EP checks that the Consumer has the authorisation to launch the _Processing Service_ and access the specified data
+. The EP estimates the cost and duration of the processing and checks the Consumer has enough resources to execute the processing
+. Consumer is presented with the cost/duration estimation and confirms the processing
+. Consumer monitors the status of the processing (%completion, execution logs)
+. When the processing completes successfully the _Processing Results_ are made available to the user in their _Workspace_
+. The Consumer's billing account is updated comensurate with the 'cost' of the processing
+. *Exploit Results...*
+. Optionally, the Consumer downloads the results
+. Optionally, the Consumer visualises the processing logs (e.g. for error inspection)
+. Optionally, the Consumer visualises the results and is able to manipulate and parameterise the view - with the possibility to download the result of their visualisation
+. Optionally, the Consumer publishes their results in the catalogue - specifying all necessary metadata to support discovery
+
+[big]#*Notes*#
+
+[[note-data-proc-selection-order, Data/Processor Selection Order]]
+.Data/Processor Selection Order
+NOTE: The use case considers the user interaction in which the processor is selected first, followed by selection of compatible data. We might also consider the alternative in which the input data is selected first, and the Platform facilitates the selection of compatible processors. Ideally the platform should support both approaches.
+
+[[note-resource-quotas, Resource Quotas]]
+.Resource Quotas
+NOTE: The use case does not explore how the user obtains/maintains a resource quota in the platform in order to 'pay' for their usage
+
+[[note-proc-license-key, Processor License Key]]
+.Processor License Key
+NOTE: The use case does not consider the possibility of processing services for which the user requires a license key. This would have to be considered as an extension of this case.

@@ -1,0 +1,62 @@
+
+= Consumer executes Systematic processing
+
+This use case builds upon case <<Consumer discovers and executes On-demand Processing Service>>.
+
+As a Consumer, I want to setup an automated processing task that will be triggered for systematic execution by the platform (on behalf of the user). The triggering event(s) shall include:
+
+* According to a time schedule (daily, weekly, etc.)
+* Arrival of specific new input data
+* External event trigger (e.g. earthquake alert trigger)
+
+I want to utilise the EP's discovery service to select a processing service. I want to utlise the EP's discovery service to select input dataset(s). I want to define my systematic processing by specification of the triggering event for automated processing. I should be alerted that the systematic processing has been triggered. I would like to monitor the status of the processing, receive the completed _Processing Results_, with the ability to visualise/download etc. the results using the facilities of the EP. In the case of an error, then I should be alerted, with the capability to investigate the cause through access to the processing logs.
+
+<<img_systematicProcessing>> shows setup of systematic EO data processing at ESA's Grid Processing On Demand (G-POD) system.
+
+[#img_systematicProcessing,reftext='{figure-caption} {counter:figure-num}']
+.Systematic Processing - Setup of systematic processing from G-POD (http://gpod.eo.esa.int/)
+image::systematic-processing.png[width=1000,align="center"]
+
+'''
+
+. Consumer logs in on the EP
+. *Discover and Select Processing Service...*
+. Consumer discovers and selects a Processing Service as described in use case <<Consumer discovers and executes On-demand Processing Service>>. _Steps not repeated here._
+. Alternatively, the Consumer selects a processing service from their Workspace
+. *Discover and Select Input Data...*
+. Consumer discovers and selects Input Data as described in use case <<Consumer discovers and executes On-demand Processing Service>>. _Steps not repeated here._
+. Alternatively, the Consumer selects input data from their Workspace
+. *Define Systematic Processing...*
+. Consumer specifies the input parameters of the _Processing Service_
+. Consumer specifies the systematic processing triggering conditions
+. Optionally, the Consumer defines a collection of data to which the results have to be included
+. The EP checks that the Consumer has the authorisation to launch the _Processing Service_ and access the specified data
+. The EP estimates the future cost/duration of the processing and checks the Consumer has enough resources to execute the processing. See <<note-systematic-processing-cost>> below.
+. Consumer is presented with the cost/duration estimation and confirms the systematic processing
+. *Execute Systematic Processing...*
+. EP initiates systematic processing according to the defined trigger condition
+. Consumer monitors the status of the systematic processing (%completion, execution logs)
+. When the processing completes successfully the _Processing Results_ are made available to the user in their _Workspace_ and/or the target _Collection_ selected by the user
+. The Consumer's billing account is updated comensurate with the 'cost' of the systematic processing
+. Optionally, the EP notifies the Consumer of the occurrence and completion of the systematic processing
+. *_Alternative Flow:_* <<aflow-systematic-processing-error>>
+. *Exploit Results...*
+. Optionally, the Consumer downloads the results
+. Optionally, the Consumer visualises the processing logs (e.g. for error inspection)
+. Optionally, the Consumer visualises the results and is able to manipulate and parameterise the view - with the possibility to download the result of their visualisation
+. Optionally, the Consumer publishes their results in the catalogue - specifying all necessary metadata to support discovery
+
+[[aflow-systematic-processing-error, Systematic Processing Error]]
+.Alternative Flow: Systematic Processing Error
+In the case of errors during systematic processing
+
+.. EP checks for errors during the processing
+.. Consumer is alerted to errors occuring during the systematic processing
+.. Consumer accesses systematic processing logs to investigate the error cause
+.. (Optionally) Consumer diagnoses problem and resubmits corrected systematic processing definition. _This assumes that the error cause was under the control of the Consumer, i.e. they made an input error._
+
+[big]#*Notes*#
+
+[[note-systematic-processing-cost, Systematic Processing Costs]]
+.Systematic Processing Costs
+NOTE: Given that the systematic processing occurs asynchronous to the Consumer submitting the definition, the possibility exists that, at time of trigger/execution, the Consumer no longer has sufficient resources to cover the task. This condition must be trapped and handled by the EP - perhaps raising an error to the Consumer. See alternative flow <<aflow-systematic-processing-error>>.

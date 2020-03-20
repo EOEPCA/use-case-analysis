@@ -1,0 +1,21 @@
+
+= User accesses Platform services
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| Each user uniquely identified | x | | 
+| User identification/authentication using external Identity Provider | x | | 
+| User assigned access privileges to platform resources (data/services) | x | | 
+| Unidentified / unauthorised user is regarded as a Guest with limited access | x | | 
+| EP enforces authorisation when user accesses platform resources (data/services) | x | | 
+| EP accesses resources of other platform on behalf of a user (delegated) | x | | 
+| EP enforces authorisation when an external platform attempts delegated access on behalf of a user | x | |
+| EP customises platform resources based on user identity and data | x | |
+| EP can ban users identified by administrators | x | |
+| User deletes their account and their personal data is removed | x | |
+| User registers | x | |
+| User updates account details | x | |
+ 
+|===

@@ -1,0 +1,28 @@
+
+= Consumer performs Open Science
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| A Consumer can create a 'research collection' of results, links to resources, processing parameterizations, visualisations, documentation, etc. | | | x
+| Items included in such a collection can be directly included or can be links, including 'Linked Data' (in the W3C sense) and links to scientific publications | | | x
+| A Consumer can share such a collection (eg, via URL), providing he has permission to share everything directly included | | | x
+| A Consumer can restrict to specific collaborators and with specific access rights (eg, read vs write) | | | x
+| The EP, optionally at the discretion of the sharer, notifies those with whom a collection has been shared | | | x
+| Information relevant to creating 'research objects', particularly provenance information for the results of data processing, is maintained automatically by the EP as much as possible | | x | x
+| A Consumer can add information about research collections and elements of them relevant to creating research objects, such as ORCID IDs | | | x
+| Resources published in the catalogue contain details of their provenance | | | x
+| A Consumer can create a reusable research object from a research collection, in compliance with (a) research object standard(s) | | | x
+| A reusable research object will be a snapshot of the research collection at the time it was created | | | x
+| A reusable research object may contain result data and/or intermediate data | | | x
+| A Consumer can publish a reusable research object in the catalogue | | | x
+| A Consumer can register a DOI for a research object or any other item he has registered in the catalogue | | | x
+| The EP will ensure that the requirements of the DOI Foundation and DOI Registration Agency are complied with, eg. for long-term availability and immutability of resources published using DOIs | | | x
+| A Consumer can search for published research objects in the catalogue | | | x
+| A Consumer can view research objects found in the catalogue or via DOI | | | x
+| A Consumer can 'unpack' a research object he has access to in to a research collection within his workspace | | | x
+| Where possible, processing described within a research collection can be repeated (and may make use of existing intermediate results) | | x |
+| Where randomness is involved in processing and where supported by the processor, the EP shall record any random seeds used and permit these to be reused when processing is repeated | | x |
+
+|===

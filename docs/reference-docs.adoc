@@ -1,0 +1,22 @@
+
+= Reference Documents
+
+The following is a list of Reference Documents with a direct bearing on the content of this document.
+
+[cols="2,7a,2a"]
+|===
+| Reference | Document Details | Version
+
+| [[EP-UC]][EP-UC]
+| EO Exploitation Platforms - Use Cases, +
+link:resources/docs/ESA-EOPSDP-TN-17-049_1.0_EO_Exploitation_Platforms%2D%2DUse_Cases.pdf[ESA-EOPSDP-TN-17-049^]
+| Issue 1.0, +
+15/12/2017
+
+| [[EP-FM]][EP-FM]
+| Exploitation Platform - Functional Model, +
+link:resources/docs/ESA-EOPSDP-TN-17-050_1.0_Exploitation_Platform%2D%2DFunctional_Model.pdf[ESA-EOPSDP-TN-17-050^]
+| Issue 1.0, +
+30/11/2017
+
+|===

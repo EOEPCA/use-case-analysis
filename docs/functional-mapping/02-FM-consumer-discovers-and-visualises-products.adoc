@@ -1,0 +1,35 @@
+
+= Consumer discovers and visualizes products
+
+Note: to avoid repetition, this section defines some functionality which is shared between Products and other types of Resource, such as Processing Services.
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| The platform catalogues Resources | | | x
+| Products have Resource functionality | | | x
+| Users can search the catalogue for Resources using free text, AoI/time where applicable and facets| | | x
+| The EP provides a browser-based UI for performing searches for Resources and viewing results (but this need not be one single UI for all kinds of Resource) | | | x
+| When showing information about a Resource, a User can view detailed metadata and documentation | | | x
+| The EP can filter or mark Resource search results and information display based on user account data (eg, licences purchased, academic vs commercial user) and Resource access rules / ownership | x | | x
+| The EP can refuse access to some or all aspects of a Resource based on the User and Resource (eg, show summary or search result but not allow data access, documentation access or visualization) | x | | x
+| The catalogue contains, for each data Product, costing data (licence prices, data to estimate data sizes/processing times) | | | x
+| Users can view the T&Cs associated with Resources | | | x
+| The EP permits authorized Users to add and update T&C text and metadata (which may be shared across multiple Resources) | | | x
+| The EP permits authorized Users to update Resource access rules and settings (licences required, descriptions, costing data, etc) | | | x
+| The EP can request, record and display acceptance of identified T&Cs by a User (noting that a User may have to accept T&Cs more than once if he represents multiple organizations) | x | | x
+| The EP can prevent access to Resources when T&C acceptance is required and not completed and can prompt the user to do this (note: this access may happen inside a UI, API or executing processing service) | x | x | x
+| Users have a 'user workspace' and can 'save' Resources in to it | | | x
+| EP can cost proposed access and use of a Product (which may involve estimating data size, processing time and licencing costs) | | x | x
+| A User can view an interactive visualization of Products, considering User parameters (eg, location or band selected) and the dataset (eg, preferred projection, appropriate colouring, key and units, etc) | | x | x
+| An authorized User can specify a Product's default visualization and parameterization that can be available in search results and used to quickly assess the data's relevance to the user | | x | x
+| A User can download visualization images | | x |
+| The EP presents a site map and per-Resource structured data for external search engines (eg Google, Google Dataset), but only for Resources hosted on the platform and not accessible only via federation | | | x
+| A User can download Products/parts of Products, subject to access constraints and configured costs | | | x
+| Use of Resources (including search, metadata display, costing, download and execution, but not modification of resources) still functions in as high-performance and uniform a way as possible even when the Resources are located on other platforms within the federation (and access and ownership rules are still enforced) | x | x | x
+
+
+TODO: Define 'organization'
+
+|===

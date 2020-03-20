@@ -1,0 +1,133 @@
+[[mainFunctionalMapping]]
+= Functional Mapping
+
+*Identification of functional areas and their mapping to domain areas.*
+
+The Exploitation Platform architecture is defined by services that together provide the complete functionality of the platform. Domain Areas are defined as groupings of related services, which provide the building blocks for the system. Dedicated specialist expertise can then be applied to each domain area to ensure the best design and development across the system. Inevitably, there will be some services that stradle the notional divide between domain area - in which case close collaboration is essential between domain area experts to establish a holistic solution.
+
+The identified domain areas are as follows:
+
+User Management (UM)::
+All aspects of user identification, authentication and authorisation in a federated system-of-systems environment.
+
+Processing & Chaining (P&C)::
+Hosting and maintaining an inventory of all processing tasks, analysis tools and interactive applications. Handles and abstracts the low-level complexities of the different underlying compute technologies, and ensures the compute layer is scaled in accordance with current demand. Provides an integrated development environment to facilitate development of new processing algorithms and applications. Facilitating the network of EO resources by providing a federated interface to other processing services within the wider EO network.
+
+Resource Management (RM)::
+Storage and cataloguing of all persistent resources, including data and other supporting material such as documents. Handles and abstracts the low-level complexities of different underlying storage technologies and strategies. Facilitating the network of EO resources by providing a federated interface to other data services within the wider EO network.
+
+In the following subsections we identify functionality that is derived from the use-cases, and then map this onto domain areas.
+
+:leveloffset: +1
+
+include::functional-mapping/01-FM-user-accesses-platform-services.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/02-FM-consumer-discovers-and-visualises-products.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/03-FM-consumer-uploads-data-to-workspace.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/04-FM-consumer-discovers-and-executes-processing.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/05-FM-consumer-discovers-and-executes-interactive-applications.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/06-FM-consumer-analyses-value-added-product.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/07-FM-consumer-executes-bulk-processing.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/08-FM-consumer-executes-systematic-processing.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/09-FM-consumer-performs-open-science.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/10-FM-consumer-access-with-external-application.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/11-FM-expert-builds-new-processing-service.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/12-FM-expert-builds-new-processing-chains.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/13-FM-expert-builds-new-interactive-application.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/14-FM-expert-builds-new-value-added-products.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/15-FM-expert-develops-with-web-dev-env.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/16-FM-expert-performs-training.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/17-FM-user-buys-access-externally.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/18-FM-mediated-billing.adoc[]
+
+'''
+
+<<<
+
+include::functional-mapping/19-FM-clearinghouse-billing.adoc[]
+
+:leveloffset: -1
