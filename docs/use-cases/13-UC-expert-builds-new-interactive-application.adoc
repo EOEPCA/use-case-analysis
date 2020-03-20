@@ -1,0 +1,25 @@
+
+= Expert user builds new interactive application
+
+As an Expert user, I want to integrate my standalone application software into the platform to be exposed as a new interative application. I want to be able to prepare the software in a self-contained package containing all execution dependencies, for loading into the EP. I want to test the package by deploying and executing it in a hosted test environment, with access to platform data for testing. I want to debug the software and inspect the execution logs. Once satisfied, I want to publish the application as a new interative application, supported by anciliary information included metadata and application user manual. The metadata should enable discovery of the application and faciliate its usage with compatible data. Once published, the new interactive application should be discoverable in the EP Catalogue, available for Consumers according to access rights I define.
+
+<<img_buildInteractiveApp>> illustrates packaging of a new interative application, from the Forestry TEP platform. The key point here is that the interactive application must be engineered in such a way as to support the remoting of the application's user interface. Thus, the EP's application package standard must support this approach, and the EP must ensure the network connectivity required to deliver the remote view.
+
+[#img_buildInteractiveApp,reftext='{figure-caption} {counter:figure-num}']
+.Build Interactive Application - Packaging a new application using Docker image - Forestry TEP (https://f-tep.com/app/)
+image::build-interactive-application.png[width=1000,align="center"]
+
+This use-case is largely the same as case <<Expert user builds new processing service>>, the main difference being the nature of the application being deployed, i.e. an application that presents a user interface to the Consumer through their web browser interface. The interactive application may be of the following type:
+
+Interactive Console Application::
+A simple Interactive Application for analysis in which a console interface to a platform-hosted terminal is provided to the user. The console interface can be provided through the user’s browser session or through a remote SSH connection.
+
+Interactive Web Application::
+An Interactive Application for analysis provided as a rich user interface through the user’s web browser.
+
+Interactive Remote Desktop::
+An Interactive Application for analysis provided as a remote desktop session to an OS-session (or directly to a 'native' application) on the exploitation platform. The user will have access to a number of applications within the hosted OS. The remote desktop session is provided through the user’s web browser.
+
+'''
+
+For brevity, the use-case steps are not reproduced here - instead case <<Expert user builds new processing service>> should be referred to, taking into account the deployment of an _Interactive Application_ rather than a _Processing Service_.

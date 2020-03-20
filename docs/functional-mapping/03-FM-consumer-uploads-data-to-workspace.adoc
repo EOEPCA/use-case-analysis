@@ -1,0 +1,19 @@
+
+= Consumer uploads data to their workspace
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| Each User has a 'user workspace' which displays information about previously saved or uploaded data | | | x
+| The EP permits uploaded data to be used like any other data, including combining it with other data | | | x
+| A User can upload data using a browser | | | x
+| A User can upload data using a resumable and scriptable method (eg HTTP PUT or ftp) | | | x
+| The EP restricts uploads based on user rights, including any applicable quotas or budget constraints | | | x
+| The EP provides a means to add metadata to uploaded data (as much metadata as possible should be guessed from the data, eg title, licence, variables, ... from NetCDF) | | | x
+| Uploaded data and workspace-saved data can be visualized, similar to search results | | x | x
+| Uploaded data and its catalogue entries can be published, making it available for use by other users, with a requirement that all necessary metadata for discovery is specified | | | x
+| The EP can hide from public access or remove (and restore) published datasets which are alleged to breach copyright | | | x
+| The EP supports compliance with the Copyright Directive article 17 requirements (eg, via upload and data federation filters to auto-detect copyright violations) | | | x
+
+|===

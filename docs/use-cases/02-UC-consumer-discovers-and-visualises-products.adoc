@@ -1,0 +1,51 @@
+
+= Consumer discovers and visualises products
+
+As a Consumer I want to search for Products of all types by specification of textual and faceted search criteria. I want to be able to incrementally narrow my search with more criteria clauses. The data/products available to the user should not be limited to EO data - it should be possible for the user to augment their processing/analysis with data from other sources such as in-situ sensor data, lidar etc. For each Product in the search result I want to get more detailed information that describes the product, its usage terms and costs, and visualise the data graphically. Having discovered a product of interest I may 'save' it to my Workspace, download it, or use it as input to further exploitation activities.
+
+<<img_productDiscovery>> illustrates discovery of EO data products using the EO Browser system.
+
+[#img_productDiscovery,reftext='{figure-caption} {counter:figure-num}']
+.Product Discovery - EO Browser (http://apps.eocloud.sentinel-hub.com/eo-browser/)
+image::discover-product.png[width=1000,align="center"]
+
+<<img_customVisualisation>> shows custom visualisation of a Sentinel-2 EO data product.
+
+[#img_customVisualisation,reftext='{figure-caption} {counter:figure-num}']
+.Product Visualisation - EO Browser (http://apps.eocloud.sentinel-hub.com/eo-browser/)
+image::visualise-product.png[width=1000,align="center"]
+
+'''
+
+. Consumer logs in on the EP
+. Consumer begins searching for products on the EP. The starting point is the full unfiltered product set that contains commercial/non-commercial EO data, value-added products and additional data such as in-situ sensor measurements
+. Optionally, the resultset is automatically filtered to include only those collections that the Consumer has right to visualise. _It may be the case that the EP chooses to make these 'unavailable collections' visible to the Consumer to publicise their existence_
+. Consumer filters the resultset by any combination of textual search terms, area of interest, time of interest, selection of collection(s) and selection of product facets
+. Consumer incrementally adjusts their search criteria to refine the filtered resultset
+. Consumer selects a product of interest; the EP checks they are authorised to access the product
+. Consumer views detailed metadata for the selected product
+. Consumer views T&Cs for the service and accepts terms if not already done so
+. Optionally, the Consumer 'saves' (a reference to) the product to their workspace
+. Consumer requests the cost for access/usage of the data
+. Optionally, the Consumer visualises the product with a graphical representation. _The Consumer is able to parameterise the visualisation interactively, e.g. specification of layers to view etc._
+. Optionally, the Consumer downloads the visualisation results
+
+[[aflow-arrival-from-google, User Discovers Resources using a General-Purpose Search Engine]]
+.Alternative Flow: User Discovers Resources using a General-Purpose Search Engine
+
+A User, who may be unaware of the platform, may begin searching for products using a search engine such as Google. The User may then follow a link directly to a product-related page.
+
+
+[big]#*Notes*#
+
+[[note-guest-user, Guest User]]
+.Guest User
+NOTE: The use case does not mention the Guest user. It should be taken into account that an EP may choose to allow limited access to a Guest user, such as searching/browsing catalogues, before insisting on user login for exploitation activities. _This approach might be typical in order to allow a potential user discover EP capabilities before signing up_
+
+[[note-seo, Search Engine Indexing]]
+.Search Engine Indexing
+NOTE: To facilitate Users discovering products and the EP as a whole using a search engine it's necessary to allow search engines to effectively index them. This requires Guest access to as much as possible but also extends further to other SEO requirements.
+
+[[note-data-subsetting, Data Sub-setting]]
+.Data Sub-setting
+NOTE: The use case does not consider the case where the Consumer is able to select sub-setting (spatial/temporal) of the data product itself, which might be typical of data accessible through a service such as OPeNDAP. _The extent to which this case should be considered for the EP is TBD_

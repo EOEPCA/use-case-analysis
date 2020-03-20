@@ -1,0 +1,4 @@
+
+= Consumer analyses value-added product
+
+The functionality in 'Consumer discovers and executes Interactive Applications' is sufficient to cover this use-case as well.

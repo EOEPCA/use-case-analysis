@@ -1,0 +1,19 @@
+= User uses commercial data or processing services and pays using his platform account (via clearing house)
+
+Here it is assumed that a clearing house is commercially possible and provided by an external entity, not by a component specified in this document.
+
+TODO: We must determine if there is any possibility of this happening before including this in a final document, determine if we must develop/specify clearing house functionality and, if not, reconcile it with whatever model an external clearing house might use. I have no idea if it's possible to 'buy' clearing house services from a financial institution but I would guess at 'no chance at all'.
+
+This functionality is only active when a clearing-house is in operation.
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+
+| If configured, a platform can direct all inter-platform payment communication and functionality via a clearing-house, treating it as if it were the only other platform except for also specifying the true target platform in the messages. | | | x
+
+|===
+
+
+TODO: Do we direct resource use reports and pricing data via the clearing house as well?

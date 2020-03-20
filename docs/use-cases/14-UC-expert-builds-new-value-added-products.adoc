@@ -1,0 +1,21 @@
+
+= Expert user builds new value-added products
+
+This use-case builds upon cases <<Consumer executes Bulk processing>> and <<Consumer executes Systematic processing>>.
+
+As an Expert user, I want to be able to configure and execute a bulk processing (use-case <<Consumer executes Bulk processing>>) or systematic processing (use-case <<Consumer executes Systematic processing>>), and publish its results automatically as a new value-added product collection into the platform, (or add products to an existing collection). Once published, the new value-added products should be available in the EP Catalogue, for Consumers to discover/visualise (use-case <<Consumer discovers and visualises products>>), according to access rights I define.
+
+<<img_newValueAddedProduct>> shows Sentinel-1 InSAR products systematically produced after each Sentinel-1 acquisition, and published into a platform collection, in the Geohazards TEP.
+
+[#img_newValueAddedProduct,reftext='{figure-caption} {counter:figure-num}']
+.New Value-added Product - Systematic publication of value-added products - Geohazards TEP (https://geohazards-tep.eu/)
+image::new-value-added-product.png[width=1000,align="center"]
+
+'''
+
+. Expert user logs in on the EP
+. Expert defines a product collection, including description of the product, basic metadata and other information. _This data should be sufficient to support discovery of the collection_
+. Expert selects a bulk or systematic processing (defined in use-cases <<Consumer executes Bulk processing>> and <<Consumer executes Systematic processing>>); the EP checks the Expert is authorised to access the selected processing
+. Expert configures the bulk or systematic processing to publish data into the defined product collection, (or an already existing collection); the EP checks the Expert is authorised to add products to the selected collection
+. EP publishes results automatically once processing is over, and includes the new value-added products into the selected collection
+. Optionally, EP notifies Consumers about the new products

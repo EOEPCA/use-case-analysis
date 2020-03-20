@@ -1,0 +1,20 @@
+
+= Expert develops with interactive development environment
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| An Expert User can access interactive development environments published in the catalogue, subject to access permissions | | x | x
+| Development environments suitable for developing in Python and R will be provided at a minimum | | x |
+| It is not specified whether an interactive development environment takes the form of a dedicated VM, a container, a management system like JupyterHub+Kubernetes, uses a remote UI like Hydrogen, etc - this may vary by environment | | x |
+| An Expert User can import and export code in ways most suitable for the particular language and environment, for example through uploads/downloads, git push/pull or integration with GitHub | | x |
+| Facilities, such as libraries or APIs as best suited to the language and environment, are available within each development environment for accessing platform services, such as data and processing | | x |
+| Access to platform facilities (which may include remote platforms) by the code under development will use the user's credentials and be subject to normal access constraints (eg, T&Cs) | x | x |
+| The development environments provided contain by default a suitable set of libraries for EO-domain data manipulation and visualisation | | x |
+| Additional libraries can be specified by the Expert User | | x |
+| An Expert User using a development environment can save the code in to the workspace | | x | x
+| An Expert User using a development environment can save data produced in to the workspace | | x | x
+| Development environments and executions will integrate with research object functionality, for example by allowing editing within a 'research collection' context or importing/exporting code from one, and by recording code, data, workflow and execution provenance | | x |
+
+|===

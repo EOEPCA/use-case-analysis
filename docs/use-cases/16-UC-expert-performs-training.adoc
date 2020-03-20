@@ -1,0 +1,35 @@
+
+= Expert performs training
+
+As an Expert user, I want to provide support to Consumers in the use of platform processing services and interactive applications, by provision of learning aids, including: documentation, tutorials, webinars/lessons/demonstrations (live and on-demand), exercies and tests. I would like to organise these into on-line courses for Consumers to attend. _Note that it might be typical for an Expert to create such training content for their own services/application, but we should not preclude the case to create learning content for other's services/applications. This is in the spirit of creating an EP as a collaborative environment._
+
+As a Consumer, I want to be able to discover/browse the learning content, and attend on-line courses.
+
+<<img_training>> provides an illustration (mock-up) of a possible course list implementation.
+
+[#img_training,reftext='{figure-caption} {counter:figure-num}']
+.Training - Course List example mock-up with images from http://coursera.org/
+image::training.png[width=1000,align="center"]
+
+'''
+
+. *Expert Course Preparation...*
+. Expert user logs in on the EP
+. Expert accesses training environment
+. Expert defines on-line courses; the EP checks the Expert has authorisation to do so
+. Expert identifies processing services and interactive applications as the subject of the on-line course
+. Expert prepares on-demand training content, including: documentation, tutorials, webinars, lessons, demonstrations, exercies and tests +
+_In the simple case, the Expert prepares the content offline (e.g. screencast videos) and uploads to the platform. In the more sophisticated case, the EP provides functions to facilitate the creation of the content_
+. Expert schedules live webinars/lessons/demonstrations
+. Expert broadcasts live (at previously arranged date/time) webinars/lessons/demonstrations, for the live 'attendance' by Consumers
+. *Consumer Course 'Attendance'...*
+. Consumer logs in on the EP
+. Consumer discovers/browses for on-line courses
+. Alternatively, Consumer has selected a processing service or interactive application of interest, and is provided with links to related on-line courses
+. Consumer requests to attend on-line course
+. EP checks the Consumer has enough resources to cover the course costs
+. EP and/or Expert grants authorises Consumer access to the course
+. The Consumer's billing account is updated comensurate with the 'cost' of the on-line course
+. Consumer accesses course content via the training environment defined by the Expert; the EP checks the Consumer is authorised to do so
+. Consumer accesses on-demand course content
+. Consumer 'attends' live course content as delivered by the Expert

@@ -1,0 +1,23 @@
+
+= Consumer executes Systematic processing
+
+Functionality listed for 'Consumer discovers and executes On-demand Processing Service' and 'Consumer executes Bulk processing' is also relevant but is not duplicated here.
+
+Furthermore, functionlity listed for 'Expert user builds new value-added products' is also relevant to automatically publishing the output of systematic processing.
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| A Consumer, having parameterized and specified inputs for a processing service invocation, can select triggering conditions which can cause it to run repeatedly | | x |
+| The EP can cost the proposed systematic processing (which may involve estimating data size, processing time and licencing costs) | | x | x
+| The platform can ensure that the Consumer has sufficient credit to run systematic processing both at submission time and run time | | x |
+| The platform can recognize triggering conditions a run processing, passing information about the trigger to the processors (eg, which new data is available) | | x |
+| The platform can trigger systematic processing according to a schedule | | x |
+| The platform can trigger systematic processing when new data becomes available | | x |
+| The platform can trigger systematic processing when triggered by an external event | | x |
+| The platform can notify the Consumer when systematic processing completes or fails | | x |
+| The Consumer can see status information on systematic processing, such as execution logs, requests running and percent complete | | x |
+| The Consumer can use other functionality targetted at output data (eg visualisation and publishing) with systematic processing outputs | | x | x
+
+|===

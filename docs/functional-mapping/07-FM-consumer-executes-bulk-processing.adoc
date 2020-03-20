@@ -1,0 +1,19 @@
+
+= Consumer executes Bulk processing
+
+Functionality listed for 'Consumer discovers and executes On-demand Processing Service' is also relevant but
+is not duplicated here.
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| Consumers can create a 'bulk data collection' and add multiple data specifications to it (which should be compatible with a chosen target Processing Service) | | x | x
+| Consumers can add data using data search or using workspace saved data | | x | x
+| Consumers can specify an input data collection when parameterizing a processing request (in place of an individual piece of data) | | x |
+| Consumers can specify an output data collection when parameterizing a processing request | | x |
+| Bulk data processing can be split by the platform in to multiple parallel requests | | x |
+| Functionality for on-demand data processing, such as viewing logs and downloading outputs, can be applied to bulk processing and data collections | | x |
+| Consumers can resubmit processing requests after correcting errors - output data for unmodified completed requests will not be regenerated unnecessarily | | x |
+
+|===

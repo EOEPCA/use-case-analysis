@@ -1,0 +1,34 @@
+
+= Expert user builds new processing services chains
+
+As an Expert user, I want to chain multiple processing services, potentially offered by different platforms, in parallel or sequentially. I want to prepare the chain by defining sequencing/relations of the processing services, and the input/output parameterisation of each step in the chain. I would like to publish the processing services chain as a new processing service for me or the Consumer to use, supported by anciliary information including metadata and processor-chain user manual, (see note <<note-reusable-chain-specification>>). The metadata should enable discovery of the service and faciliate its usage with compatible data and in chaining, (see note <<note-nested-chaining>>). Once published, the new processing service should be discoverable in the EP Catalogue, available for Consumers according to access rights I define.
+
+<<img_buildProcessingChain>> illustrates building a processing chain at the Geohazards TEP platform.
+
+[#img_buildProcessingChain,reftext='{figure-caption} {counter:figure-num}']
+.Build Processing Chain - Example taken from the Geohazards TEP (https://geohazards-tep.eu/)
+image::build-processing-chain.png[width=1000,align="center"]
+
+'''
+
+. Expert user logs in on the EP
+. Expert discovers processing services from the platform, in accordance with <<Consumer discovers and executes On-demand Processing Service>>. *This step should include the facility to discover/include processing services from other platforms.*
+. Expert chooses processing services to be chained; the EP checks the Expert is authorised to use those processing services
+. Expert defines all aspects of the chain by specifying the sequencing and relationships of the steps, and the input/output parameters of each step
+. Expert tests the processing-chain, as if it was a new processing service, as described in use case <<Expert user builds new processing service>>; EP ensures the Expert is authorised to do so
+. If necessary the Expert refines the processing-chain defintion and repeats the testing cycle
+. When the processing-chain is stable, Expert publishes the chain as a new processing service; the EP checks the Expert is authorised to publish the processing chain
+.. Expert specifies metadata to describe the processor-chain to make it discoverable, and to facilitate the EP to ensure compatible use of the processing service
+.. Expert provides user manual to aid users of the processing service
+. The EP adds the processing service to the Application Catalogue so that is available to Consumers in their discover/browse searches
+. Optionally, EP notifies Consumers about the new service
+
+[big]#*Notes*#
+
+[[note-reusable-chain-specification, Reusable Chain Specification]]
+.Reusable Chain Specification
+NOTE: In order to publish the processing-chain as a generally reusable processing service, then the specific input data should not be specified in the chain definition. Instead this should be specified at time of an individual execution, in order to ensure the chain is usable as a general resource.
+
+[[note-nested-chaining, Nested Chaining]]
+.Nested Chaining
+NOTE: Once published as a processing service, it should in principle then be possible to regard this processing-chain as a single step in another processing-chain.

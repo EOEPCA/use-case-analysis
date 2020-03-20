@@ -1,0 +1,54 @@
+= User uses commercial services from another platform and pays using his platform account (bilateral clearing)
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| A Licenser can configure pricing for Resources in the catalogue in the 'host' platform, subject to access rules | | | x
+| A User using the 'home' platform (which may be different to the host platform) can request access to such Resources and will be asked to agree to the pricing, estimated (or fixed) costs and terms and conditions | | x | x
+| Pricing may be time-based (for a licence for the whole Resource) or volume/item-based, with different definitions appropriate for different kinds of Resource (eg, by CPU-time or data volume for processing, by satellite scene or grid square, etc) | | | x
+| For volume-based pricing the User will be able to set a limit on the amount he will be billed after which accesses will fail unless the user requests additional access | | x | x
+| A User will not be required to request access and go through payment authorization if the User already has a licence bought using a different platform or directly from the Licenser, providing that no additional payments will be required for use (eg, the licence is time-based) | | | x
+| A User will not be required to request access or authorize payment if the User has already completed this and has not reached any payment limits | | | x
+| The user will only be able to request federated access to licensed Resources if all necessary platform payment clearing agreements are in place and in good standing to permit purchase, otherwise the user will be told which platform he can use for access | | | x
+| If a User cannot request access to a Licensed Resource because payment clearing is not possible or disabled for the resource but a direct purchase via the host platform or Licencer site is possible and would grant access, the home platform provides a link to the host platform or a direct purchase site | | | x
+| If a User follows a link to make a purchase from a host platform then an expedited login/registration and purchase process is provided (the user does not need to search for the resource in the catalogue) | | | x
+| A User can agree to the T&Cs and prices and, if platform payment is fully authorized, will be granted access | x | |
+| On-demand processing, bulk processing, systematic processing where cross-platform access and payments are possible will be automatically planned for execution using knowledge of Resource locations and estimated sizes and costs (eg, a processing service may be moved to another platform to run close to data). A 'plan' includes the locations of data processing, Resources and the data transfers required. This plan will be used when displaying estimates and for subsequence execution. | | x | x
+| A User can refuse to allow federated execution of processing, requiring that all remote data and processing services be transferred to the home platform | | x |
+| A Resource owner can specify that the Resource is not permitted to leave its host platform | | x | x
+| When remote execution or the use of licensed Resources hosted remotely occurs the home platform uses platform payments, described below, to arrange for the User to pay the Resource or EP owner | | x | x
+| Platform payments must be authorized by multiple parties, cleared as debts are incurred and subsequently settled when (net) payments are made between platforms | | x |
+| The home platform can assess the User's creditworthiness and prevent platform payment authorization if it feels necessary | | | x
+| The home platform can 'hold' some of the credit in the User's account following platform payment authorization, if required by its billing model | x | |
+| The home platform can request Resource licensing platform payment authorization from the Resource's host platform using a defined protocol | | | x
+| The home platform can request compute cost platform payment authorization from the compute host platform using the protocol | | x |
+| Each platform maintains a database of platform payments between it and other platforms | | | x
+| The host platform can assess the creditworthiness and outstanding net inter-platform balance with the home platform and accept or reject platform payment authorization | | | x
+| For volume-based pricing, platforms in either role can limit the amount authorized and expire authorization for credit and financial control purposes. Additional authorization can be sought automatically, providing user-defined limits are kept to. | | | x
+| Platforms distinguish the amount authorized from the amount cleared (ie, which is legally owed and for which settlement will be requested). For volume-based Resource licence and compute pricing, settlement of platform payments will only be requested once the resource/compute has been used (and may be 'chunked'). | | | x
+| For time-based (ie, fixed in advance) licence pricing, the User can request a licence and payment will be immediately authorized and cleared. Access can then proceed. | | x | x
+| A home platform can authorize a payment to a compute platform prior to submitting compute jobs on behalf of its user | | x |
+| A compute-host platform can report actual compute consumption to the home platform, which results in payments being partly cleared | | x |
+| A compute-host platform can report authorization exhaustion to the home platform, which may respond requesting additional authorization or may request termination. | | x |
+| A home platform beginning execution involving a remotely hosted volume-pricing based licensed Resource can authorize an initial platform payment in advance | | x |
+| A compute platform, on encountering a need to use a commercially licensed volume-based pricing Resource, can request permission from the resource host first, including full context information (the home platform and user and the payment authorization to use) | | x |
+| A resource host can refuse or permit the use of its resource based on extant payment authorizations | | x |
+| A compute platform which has completed Resource use can report this to the resource host, which results in the resource host clearing payments from the home platform (via messaging directly with the home platform). The resource host calculates the true cost of access for this purpose ((eg, repeated access to a single grid square or satellite image may not cost anything extra). | | x |
+| A compute platform whose Resource use is rejected can report this to the home platform (which may be the same platform) which will then decide whether to seek further payment authorizations or to refuse access | | x |
+| When inter-platform messaging is required to perform Resource use or to submit compute jobs the requesting platform will include an identifier for the payment authorization (and other context information such as user and home platform), and the host platform may refuse access if this is insufficient, expired, etc. | | x | x
+| The host platform (according to the Licenser's requirements) can specify whether access must always be made via inter-platform messaging or whether the home platform can transfer and cache data, processing service containers, etc | | x | x
+| The platforms can credit/debit user accounts as platform payment is cleared | | | x
+| The platforms can reconcile and report inter-platform debts and outstanding authorizations, flagging any disagreements for manual dispute resolution, so that settlement can occur | | | x
+| The platforms can (part-)refund platform payments at the request of the Licenser | | | x
+| The platforms can mark payments as refunded following the outcome of manually conducted dispute resolution (eg, following a User complaining that the resource is not as described or does not work) | | | x
+| The platforms keep a detailed journal of the payment process for dispute resolution | | | x
+| Effective security is applied to inter-platform payment processes to prevent impersonation of platforms and to provide non-repudiation | | | x
+| Account credit given by the host platform to the Licenser will not be reversed if the home platform does not pay; inter-platform payment from the home platform to the host platform will not be reversed if the User does not pay | | | x
+| Platforms can be configured to deduct agreed fees from inter-platform and platform-to-Licenser payments, but this may be invisible to the User | | | x
+| Pricing settings will specify a currency and all inter-platform requests will use this currency, even if it is not the currency in which the User pays his account | | | x
+| The home platform performs currency exchange and calculates and displays the local-currency rates which the User is charged | | | x
+
+TODO: How do we handle organizations and projects which might be licensed as a whole?
+
+|===

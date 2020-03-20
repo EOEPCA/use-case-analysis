@@ -1,0 +1,22 @@
+= User uses federated commercial services which he has contracted for directly
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| A Licenser who has published Resources in the catalogue on a commercial basis can specify an API endpoint which will be contacted to authorize access to those Resources or can specify a list of permitted user IDs | x | | x
+| The platform can restrict use of a Resource based on this API endpoint, including time or volume limits after which access must be re-authorized | x | x | x
+| The platform can report use of resources to their Licensers for billing purposes | | | x
+| A Licenser can specify a URL that prospective users will be shown so that they can buy licences | | | x
+| The Licenser's sales site can use an authentication protocol (such as OpenID Connect) to authenticate buyers using their EP credentials, and also to avoid a need to log in for users already logged in to the EP | x | | x
+| A User submitting on-demand processing, bulk processing, systematic processing can specify a different federated EP on which the processing (or a component of it, for processing chains) should run | | x |
+| A User submitting processing to run on another EP must authorize the home platform to access his host platform account's compute resources (eg using oAuth) | x | |
+| When calculating estimated costs, the home platform can contact the host platform to request the estimated costs for the remote part of the processing | | x |
+| The EP can execute processing on a remote EP using the requesting user's credentials (note: the container to run may come from the remote platform or a third platform) | | x |
+| The EP can manage processing running on remote EPs - eg, it can display the status and terminate processing | | x |
+| An EP can retrieve processing services or data from any federated EP using the requesting user's credentials | | | x
+| When data processing occurs, the inputs and processing services or chains involved can be transferred from other EPs if necessary | | x | x
+| When final outputs are produced by delegated processing run on another EP the User can see them in the local workspace/UI and can choose to transfer them | | x |
+
+
+|===

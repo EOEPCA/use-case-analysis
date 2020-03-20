@@ -1,0 +1,41 @@
+
+= Expert develops with interactive development environment
+
+As an Expert user, I want to access an on-line interactive development environment where I can author and/or upload my code (written according to my preferred programming language) and execute it in total or step-by-step, to analyse input data, value-added products and other ancillary data. In my code implementation, I want to use a general set of libraries to process and visualise EO data (e.g. SNAP python library) together with specific libraries required by my application (e.g. Tensorflow machine learning library) and libraries to access the other services provided by the platform.
+
+This use-case might be seen as a special case of case <<Consumer discovers and executes Interactive Applications>>, since the interactive development environment may be considered to be an interactive application.
+
+<<img_webDevEnv>> shows an example implementation using a Jupyter Notebook - mocked-up with images from Raster Foundry.
+
+[#img_webDevEnv,reftext='{figure-caption} {counter:figure-num}']
+.Web Development Environment - Example mocked-up with images from Raster Foundry (https://www.rasterfoundry.com/)
+image::web-dev-environment.png[width=1000,align="center"]
+
+'''
+
+. Expert user logs in on the EP
+. Expert accesses on-line interactive development environment; the EP checks that the Expert is authorised to do so
+. Expert develops and/or uploads code. Supported programming languages include: python, R, others TBD
+. Within the interactive development environment, Expert is provided with a 'platform' library that provides them access to the platforms resources (data/processing) from their code; according to their user rights in the EP
+. Within the interactive development environemnt, Expert is provided with a standard set of libraries against which to develop their code, for EO data manipulation and visualisation
+. Expert is able to configure additional specific libraries to be imported into their working environment, against which to develop their code, to satisfy specific code needs
+. Expert executes their code in total or step-by-step to perform their analysis; the EP checks they are authorised to access the product(s) used
+. Optionally, Expert saves their development (code) in their platform _Workspace_, for later re-use. +
+_Note that this step may overlap with use-case <<Consumer performs Open Science>>, if the development can be saved within a Reusable Research Object_
+. Optionally, Expert saves their Processing Results in their platform _Workspace_
+. Optionally, Expert downloads their developments (code) and/or saved processing results
+
+[big]#*Notes*#
+
+[[note-overlap-other-use-cases, Overlap with Other Use-cases]]
+.Overlap with Other Use-cases
+[NOTE]
+====
+It is noted that there is some overlap between this use-case and:
+
+<<Consumer discovers and executes Interactive Applications>>::
+Since the interactive development environment may be considered to be an interactive application
+
+<<Consumer performs Open Science>>::
+Since the Expert's saved work might for the basis for a _Reusable Research Object_
+====

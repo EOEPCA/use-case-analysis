@@ -1,0 +1,19 @@
+
+= Expert user builds new processing service
+
+This use-case is linked to 'Expert develops with interactive development environment' and may rely on some of its functionality.
+
+[cols="<.^85,^.^5,^.^5,^.^5"]
+|===
+| Platform Function | UM | P&C | RM
+
+| The EP can accept, use and publish processing services development in supported container formats (eg Docker and/or Singularity) and following any additional requirements (eg, built-in processing service descriptor files) | | x |
+| The interactive development environment can be used to create containers and submit them as processing services to the catalogue | | x | x
+| The UI and API can be used to upload pre-created containers and submit them to the catalogue | | x | x
+| The EP supports container development workflows by providing a convenient way to deploy and test a processing service via UI and API | | x |
+| An Expert User can publish a processing service so that others can find it in the catalogue, providing all metadata requirements have been met | | | x
+| An Expert User can specify processing service documentation and metadata, including information on its inputs and outpus to assist in building processing chains | | | x
+| The platform can perform checks on processing chains being published to ensure that they're valid and comply with platform requirements | | x |
+| The platform can understand processing service versions/releases, present information about releases to users and optionally notify users when a processing service is updated | | | x
+
+|===
