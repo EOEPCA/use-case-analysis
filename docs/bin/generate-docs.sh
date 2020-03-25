@@ -30,6 +30,7 @@ rm -rf output
 mkdir -p output
 cp -r images output
 cp -r stylesheets output
+cp -r resources output
 echo "[done]"
 
 # Docuemnt Generation - using asciidoctor docker image
@@ -40,9 +41,15 @@ docker run ${DOCKER_RM} --user $(id -u):$(id -g) -v $PWD:/documents/ --name asci
 echo "[done]"
 # PDF version
 echo -n "Generating PDF... "
-docker run ${DOCKER_RM} --user $(id -u):$(id -g) -v $PWD:/documents/ --name asciidoc-to-pdf asciidoctor/docker-asciidoctor asciidoctor-pdf -r asciidoctor-diagram -D /documents/output index.adoc
-mv output/index.pdf output/EOEPCA-${GH_REPOS_NAME}.pdf
-echo "[done]"
+# PDF can be (slightly) time consuming so allow to be skipped (useful for local authoring iterations)
+if [ -n "${NOPDF}" ]
+then
+  echo "[skipped]"
+else
+  docker run ${DOCKER_RM} --user $(id -u):$(id -g) -v $PWD:/documents/ --name asciidoc-to-pdf asciidoctor/docker-asciidoctor asciidoctor-pdf -r asciidoctor-diagram -D /documents/output index.adoc
+  mv output/index.pdf output/EOEPCA-${GH_REPOS_NAME}.pdf
+  echo "[done]"
+fi
 
 # Output summary
 echo "Summary of output files generated..."
