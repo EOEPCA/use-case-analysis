@@ -5,9 +5,9 @@ The ESA document <<EP-OP-UC>> provides descriptions of 'real-world' operational 
 
 This section provides a mapping from these 'operational' use cases into the 'functional' use cases presented in this document. A sub-section is included for each use presented in <<EP-OP-UC>> that provides an interpretation and mapping.
 
-The functional use cases in this document are identified as *UC-F#2.x* - referencing the use case described in *section 2.x* of this document.
+The functional use cases in this document are identified as *UCF#2.x* - referencing the use case described in *section 2.x* of this document.
 
-== UC1: Remote Service execution
+== OP-UC1: Remote Service execution
 
 In this use case a consumer (Emily) interacts with her primary platform (OGEO-REP - Oil and Gas Earth Observation Response Portal) via its dashboard. To support Emily's interactions, the OGEO-REP platform in-turn interacts with data sources for  in-situ data, and with another service provider (CLS-Platform) for added-value resources, including a remote processing execution request.
 
@@ -34,7 +34,7 @@ The following functional use cases are identified as being of particular relevan
 * *UCF#2.10* (<<UCF10>>)
 ** step 5 - OGEO-REP acts as External Application exploiting CLS-Platform API
 
-== UC2: Cross platform automatic application deployment and execution
+== OP-UC2: Cross platform automatic application deployment and execution
 
 In this use case a consumer (Alice) interacts with her primary platform (FS-TEP). The FS-TEP publishes a processing algorithm "Biomass Calculation". Alice invokes this processing algorithm on the FS-TEP, providing an associated AOI/TOI to characterise the job. The FS-TEP is federated to the PROBA-V MEP platform and identifies its PROBA-V data to satisfy the job. Thus, the FS-TEP deploys the "Biomass Calculation" process to the PROBA-V MEP for execution close to the data. Alice is presented with the outcome by the FS-TEP.
 
@@ -43,10 +43,10 @@ Note that all of Alice's interactions are with the FS-TEP - the interactions bet
 The following functional use cases are identified as being of particular relevance:
 
 * *UCF#2.4* (<<UCF04>>) +
-This use cases covers all aspects of operational use case UC2. +
-*_Note that since version 1.0 of this document, the use case UCF#2.4 has been updated to meet the needs of UC2 - in particular, the platform->platform federation for deployment and execution of processing 'close-to-the-data'._*
+This use cases covers all aspects of operational use case OP-UC2. +
+*_Note that since version 1.0 of this document, the use case UCF#2.4 has been updated to meet the needs of OP-UC2 - in particular, the platform->platform federation for deployment and execution of processing 'close-to-the-data'._*
 
-== UC3: New Application Deployment
+== OP-UC3: New Application Deployment
 
 In this use case an expert user (Bob) develops and packages an algorthim "Lava Flow Detection" (LVD), designed for deployment to the Charter Processing Platform that supports the International Charter for "Space and Major Disaster". Bob creates a package in accordance with the platform's specifications and includes everything required to execute the application (self contained), metadata describing the application usage/interfaces/constraints in a machine-readable format, and manual/tutorial material to help future users.
 
