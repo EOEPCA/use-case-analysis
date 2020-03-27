@@ -1,4 +1,4 @@
-
+[[UCF11]]
 = Expert user builds new processing service
 
 As an Expert user, I want to integrate my own software into the platform to be exposed as a new processing service. I want to be able to prepare the software in a self-contained package containing all execution dependencies, for loading into the EP. I want to test the package by deploying and executing it in a hosted test environment, with access to platform data for testing. I want to debug the software and inspect the processing logs. Once satisfied, I want to publish the application as a new processing service, supported by anciliary information including metadata and processor user manual. The metadata should enable discovery of the service and faciliate its usage with compatible data and in chaining. Once published, the new processing service should be discoverable in the EP Catalogue, available for Consumers according to access rights I define.
@@ -24,6 +24,7 @@ image::build-processing-service.png[width=1000,align="center"]
 . When the process is stable, Expert publishes the packages as a new processing service; the EP checks the Expert is authorised to do so
 .. Expert specifies metadata to describe the processor to make it discoverable, and to facilitate the EP to ensure compatible use of the processing service (e.g. with compatible input data, and output data for compatible chaining)
 .. Expert provides user manual to aid users of the processing service
+. The Expert manages the sharing of resources under their administration, by authorizing/revoking access by other platform users/groups
 . The EP checks the integrity of the software and that it adheres to the EP terms and conditions
 . The EP adds the processing service to the Application Catalogue so that is available to Consumers in their discover/browse searches
 . Optionally, EP notifies Consumers about the new service

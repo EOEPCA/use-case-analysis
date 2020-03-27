@@ -1,4 +1,4 @@
-
+[[UCF12]]
 = Expert user builds new processing services chains
 
 As an Expert user, I want to chain multiple processing services, potentially offered by different platforms, in parallel or sequentially. I want to prepare the chain by defining sequencing/relations of the processing services, and the input/output parameterisation of each step in the chain. I would like to publish the processing services chain as a new processing service for me or the Consumer to use, supported by anciliary information including metadata and processor-chain user manual, (see note <<note-reusable-chain-specification>>). The metadata should enable discovery of the service and faciliate its usage with compatible data and in chaining, (see note <<note-nested-chaining>>). Once published, the new processing service should be discoverable in the EP Catalogue, available for Consumers according to access rights I define.

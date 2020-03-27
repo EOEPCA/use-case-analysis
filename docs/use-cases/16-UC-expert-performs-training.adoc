@@ -1,4 +1,4 @@
-
+[[UCF16]]
 = Expert performs training
 
 As an Expert user, I want to provide support to Consumers in the use of platform processing services and interactive applications, by provision of learning aids, including: documentation, tutorials, webinars/lessons/demonstrations (live and on-demand), exercies and tests. I would like to organise these into on-line courses for Consumers to attend. _Note that it might be typical for an Expert to create such training content for their own services/application, but we should not preclude the case to create learning content for other's services/applications. This is in the spirit of creating an EP as a collaborative environment._

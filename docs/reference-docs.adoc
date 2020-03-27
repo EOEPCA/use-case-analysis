@@ -19,4 +19,10 @@ link:resources/docs/ESA-EOPSDP-TN-17-050_1.0_Exploitation_Platform%2D%2DFunction
 | Issue 1.0, +
 30/11/2017
 
+| [[EP-OP-UC]][EP-OP-UC]
+| Operational use cases for EO Platforms Interoperability, +
+link:resources/docs/EMSS-EOPS-TN-20-08_Operational_use_cases_for_EO_Platforms_Interoperability_V1.pdf[EMSS-EOPS-TN-20-08^]
+| Issue 1.0, +
+18/03/2020
+
 |===

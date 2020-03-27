@@ -1,4 +1,4 @@
-
+[[UCF06]]
 = Consumer analyses value-added product
 
 This use-case is described in document <<EP-UC>>. However, it is seen as the same as use-case <<Consumer discovers and executes Interactive Applications>>, just with particular emphasis on the inclusion of Value-added Products in the analysis, and perhaps with an associated set of specific tooling in mind (WebGIS, DataCube, etc.).

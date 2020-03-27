@@ -1,4 +1,4 @@
-
+[[UCF01]]
 = User accesses Platform services
 
 As a User, I want to be able to access the services of the system within the context of my user profile. I want to identify myself with the same unique identifier that I use on other platforms (e.g. email address or GitHub ID etc.). I should be directed to register or login if that is required to access the requested resource.

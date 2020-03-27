@@ -1,4 +1,4 @@
-
+[[UCF18]]
 = User uses commercial services from another platform and pays using his platform account (bilateral clearing)
 
 As a User I want to access remote Resources or compute via my home platform and pay via my billing account with this platform. As a Resource Licenser I want to publish my resources via my own platform (the 'host' platform) and receive payment via my billing account with my own platform.

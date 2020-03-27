@@ -1,4 +1,4 @@
-
+[[UCF10]]
 = Consumer accesses EP services with External Application
 
 As a Consumer I want to be able to use and/or develop an external application that uses the services of the EP via programmatic interfaces, (i.e. public API). I want to delegate to the application, authorising it to act on my behalf when interfacing to the EP. Hence, my usage of the external application is made within the context of my EP user profile, workspace, account etc. as if I was interacting with the EP through its 'native' user interface. Examples of external applications include mobile applications, or simply scripts that remotely exploit the data / processing services of the EP.

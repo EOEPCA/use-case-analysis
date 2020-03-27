@@ -13,6 +13,9 @@ Provides a description of each use case.
 Section 3 - <<mainFunctionalMapping>>::
 Derives high-level functionalities from the use-cases and maps these to _Domain Areas_.
 
+Section 4 - <<mainOperationalMapping>>::
+Provides a mapping from 'operational' use cases (ref. <<EP-OP-UC>>) into the 'functional' use cases presented in this document.
+
 include::reference-docs.adoc[leveloffset=+1]
 
 include::terminology.adoc[leveloffset=+1]

@@ -1,0 +1,68 @@
+[[mainOperationalMapping]]
+= Operational Mapping
+
+The ESA document <<EP-OP-UC>> provides descriptions of 'real-world' operational scenarios as use cases.
+
+This section provides a mapping from these 'operational' use cases into the 'functional' use cases presented in this document. A sub-section is included for each use presented in <<EP-OP-UC>> that provides an interpretation and mapping.
+
+The functional use cases in this document are identified as *UC-F#2.x* - referencing the use case described in *section 2.x* of this document.
+
+== UC1: Remote Service execution
+
+In this use case a consumer (Emily) interacts with her primary platform (OGEO-REP - Oil and Gas Earth Observation Response Portal) via its dashboard. To support Emily's interactions, the OGEO-REP platform in-turn interacts with data sources for  in-situ data, and with another service provider (CLS-Platform) for added-value resources, including a remote processing execution request.
+
+To map these interactions into our functional use cases we consider the following roles:
+
+* *OGEO-REP* => Exploitation Platform (presented to Emily), External Application (presentation to CLS-Platform)
+* *CLS-Platform* => Exploitation Platform (presentation to OGEO-REP)
+
+The following functional use cases are identified as being of particular relevance:
+
+* *UCF#2.1* (<<UCF01>>)
+** step 1 - user access to system
+
+* *UCF#2.2* (<<UCF02>>)
+** step 2 - discovery of data according to collection/spatial/temporal criteria
+
+* *UCF#2.8* (<<UCF08>>)
+** step 2 - systematic processing triggered by new data
+
+* *UCF#2.4* (<<UCF04>>)
+** step 5 - remote on-demand processing
+** step 6 - visualisation of processing results
+
+* *UCF#2.10* (<<UCF10>>)
+** step 5 - OGEO-REP acts as External Application exploiting CLS-Platform API
+
+== UC2: Cross platform automatic application deployment and execution
+
+In this use case a consumer (Alice) interacts with her primary platform (FS-TEP). The FS-TEP publishes a processing algorithm "Biomass Calculation". Alice invokes this processing algorithm on the FS-TEP, providing an associated AOI/TOI to characterise the job. The FS-TEP is federated to the PROBA-V MEP platform and identifies its PROBA-V data to satisfy the job. Thus, the FS-TEP deploys the "Biomass Calculation" process to the PROBA-V MEP for execution close to the data. Alice is presented with the outcome by the FS-TEP.
+
+Note that all of Alice's interactions are with the FS-TEP - the interactions between FS-TEP <-> PROBA-V MEP are unseen by Alice. Both FS-TEP and PROBA-V MEP take the role of Exploitation Platform.
+
+The following functional use cases are identified as being of particular relevance:
+
+* *UCF#2.4* (<<UCF04>>) +
+This use cases covers all aspects of operational use case UC2. +
+*_Note that since version 1.0 of this document, the use case UCF#2.4 has been updated to meet the needs of UC2 - in particular, the platform->platform federation for deployment and execution of processing 'close-to-the-data'._*
+
+== UC3: New Application Deployment
+
+In this use case an expert user (Bob) develops and packages an algorthim "Lava Flow Detection" (LVD), designed for deployment to the Charter Processing Platform that supports the International Charter for "Space and Major Disaster". Bob creates a package in accordance with the platform's specifications and includes everything required to execute the application (self contained), metadata describing the application usage/interfaces/constraints in a machine-readable format, and manual/tutorial material to help future users.
+
+Bob submits the LVD application as a package to the Operator of the Charter Processing Platform. Before the package is made available to other users of the platform, the platform Operator takes responsibility to validate the integrity and function of Bob's submission. The Operator submits the package to the platform via its API which performs automated steps to register the application package, and add it to the application catalogue along with its associated documentation (manual/tutorial) - initially for the Operator's own sole consumption.
+
+Using the platform the Operator performs testing/validation, before sharing the application for wider consumption by authorised platform users (described as Project Managers and Value-adders in this scenario).
+
+The following functional use cases are identified as being of particular relevance:
+
+* *UCF#2.1* (<<UCF01>>)
+** All steps - The interactions of the different user roles with the platform resources are authorized by their configured privileges.
+** step 3 - The definition of the Platform's rules of governance are supported by the authorization policies/rules. In this case the Platform Operator ('Admin') has the rights (perhaps to the exclusion of others) to deploy application packages to the platform and then authorize associated access to other users.
+** step 5 - According to their privileges, users can manage the sharing of resources under their administration, by authorizing/revoking access by other platform users/groups
+
+* *UCF#2.11* (<<UCF11>>)
+** step 1 - Expert development of an application package, ready for deployment to the platform +
+_Note that, as far as EOEPCA is concerned, it is not strictly necessary for the application developer to expose the Dockerfile used to create the container - the application package is submitted as a ready prepared (binary) image. Nevertheless, it is helpful to review the Dockerfile that creates the container to support the integrity validation of the image._
+** step 3 - Platform Operator deploys the application to the platform for testing
+_Note that in the description for <<UCF11,UCF#2.11>> this is described as being performed directly by the Expert. However, the Platform Operator role can assume these steps to submit the application package to the platform, with associated checks and catalogue regoistration etc. (all automated by the platform)._

@@ -1,4 +1,4 @@
-
+[[UCF19]]
 = User uses commercial data or processing services and pays using his platform account (via clearing house)
 
 As a User I want to use commercially licensed resources via my home platform and pay via my billing account with this platform. As a Licenser I want to publish my resources via my own platform (the 'host' platform) and receive payment via my billing account with my own platform.

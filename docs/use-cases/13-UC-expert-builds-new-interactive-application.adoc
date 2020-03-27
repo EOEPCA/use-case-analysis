@@ -1,4 +1,4 @@
-
+[[UCF13]]
 = Expert user builds new interactive application
 
 As an Expert user, I want to integrate my standalone application software into the platform to be exposed as a new interative application. I want to be able to prepare the software in a self-contained package containing all execution dependencies, for loading into the EP. I want to test the package by deploying and executing it in a hosted test environment, with access to platform data for testing. I want to debug the software and inspect the execution logs. Once satisfied, I want to publish the application as a new interative application, supported by anciliary information included metadata and application user manual. The metadata should enable discovery of the application and faciliate its usage with compatible data. Once published, the new interactive application should be discoverable in the EP Catalogue, available for Consumers according to access rights I define.

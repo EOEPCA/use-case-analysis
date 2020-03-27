@@ -1,9 +1,11 @@
-
+[[UCF04]]
 = Consumer discovers and executes On-demand Processing Service
 
 As a Consumer I want to list and search for commercial and non-commercial _Processing Services_, by specification of textual and faceted search criteria. I want to be able to incrementally narrow my search with more criteria clauses. For each _Processing Service_ in the search result I want to get more detailed information, including a description and access to its execution manual. If I have not already done so, then any _Terms & Conditions_ associated to usage of the processing service should be made clear to me, with the opportunity for me to accept the T&Cs before I am authorised to execute the processing service.
 
 I want to prepare the _Processing Service_ for execution by specifying input data from within and outside the platform, and define any other parameters and configuration required to fully specify the job. Based upon my inputs I would like to get an estimation of the execution costs and time, before (optionally) initiating execution of the processing service. Having discovered a processing service of interest I may 'save' it to my Workspace, (which acts as a bookmark) - either with or without my parameterisation.
+
+I want my processing job to be executed efficiently such that, where possible, it is executed close to the data. I want the platform to establish federation relationships with other peer platforms to support this principle, including the platform -> platform deployment of processing services on-demand.
 
 Having initiated execution of a _Processing Service_, I would like to monitor its progress (including any errors occurring), and have access to the results output at the successful conclusion. I would like to visualise my Processing Results graphically with custom visualsation parameters, and possibly download the results. Additionally, I would like to (optionally) publish the Processing Results so that it is available to other users, discoverable through the EP catalogue.
 
@@ -42,11 +44,19 @@ image::processing-results.png[width=1000,align="center"]
 . Consumer specifies the input parameters of the _Processing Service_
 . Consumer requests processing execution
 . The EP checks that the Consumer has the authorisation to launch the _Processing Service_ and access the specified data
+. The EP determines the most appropriate platform, including itself and its federated peers, at which the processing should be conducted in order to execute the procesing 'close-tp-the-data'
 . The EP estimates the cost and duration of the processing and checks the Consumer has enough resources to execute the processing
+.. As required the EP establishes the estimated cost with the remote peer selected for the computation
 . Consumer is presented with the cost/duration estimation and confirms the processing
+. In the case of remote execution at a federated peer...
+.. The EP deploys the processing application to the remote peer selected for the computation
+.. The EP initiates the exection at the remote peer
+.. The EP monitors the status of the processing to provide ongoing user feedback
 . Consumer monitors the status of the processing (%completion, execution logs)
 . When the processing completes successfully the _Processing Results_ are made available to the user in their _Workspace_
+.. For remote execution this may include retrieval of the processing results data outputs from the remote peer
 . The Consumer's billing account is updated comensurate with the 'cost' of the processing
+.. As required, the EP reconciles billing with the remote federated peer platform
 . *Exploit Results...*
 . Optionally, the Consumer downloads the results
 . Optionally, the Consumer visualises the processing logs (e.g. for error inspection)

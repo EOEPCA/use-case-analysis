@@ -50,4 +50,8 @@ include::use-cases.adoc[]
 
 include::functional-mapping.adoc[]
 
+<<<
+
+include::operational-mapping.adoc[]
+
 :leveloffset: -1

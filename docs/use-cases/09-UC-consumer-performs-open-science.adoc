@@ -1,4 +1,4 @@
-
+[[UCF09]]
 = Consumer performs Open Science
 
 As a Consumer I want to share my analysis and processing results in such a way that facilitates scientific collaboration. I want to link my results to a scientific publication, and assign a DOI to my results to reference it in my scientific paper. I want to encapsulate my research/analysis as a _Reusable Research Object_, to capture all aspects of my analysis including data used and processing performed etc., so that it can be reproduced, I can re-use my analysis in the future, or share it with others for collaboration. A simple example could be a Jupyter notebook that captures an annotated analysis, identifying input data, executing code to transform the data, and presenting/visualising the output results. This case should then be generalised for execution of more complex analyses using platform data / processing services (local and external).

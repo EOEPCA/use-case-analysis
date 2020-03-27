@@ -1,4 +1,4 @@
-
+[[UCF17]]
 = User uses federated commercial services which he has contracted for directly
 
 As a User I want to buy a licence directly from a provider of data or processing services (not necessarily published on my home platform) and then access this data / service via my home platform. I also wish to directly buy compute capacity from a federated platform and perform part or all of my processing near to the data on this other platform.
