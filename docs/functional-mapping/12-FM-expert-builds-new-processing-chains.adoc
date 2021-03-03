@@ -1,17 +1,17 @@
 
 = Expert user builds new processing services chains
 
-[cols="<.^85,^.^5,^.^5,^.^5"]
+[cols="<.^20,.^62,^.^6,^.^6,^.^6"]
 |===
-| Platform Function | UM | P&C | RM
+| Use Case Code | Platform Function | UM | P&C | RM
 
-| An Expert User can build a processing chain by specifying Processing Services (including other chains, and services on other platforms), data flows, parameters, etc | | x |
-| The EP supports chain development workflows by providing a convenient way to deploy and test a processing chain via UI and API | | x |
-| An Expert User can publish a processing chain as a Processing Service so that others can find it in the catalogue, providing all metadata requirements have been met | | | x
-| An Expert User can specify processing chain documentation and metadata, including information on its inputs and outpus to assist in building new processing chains | | | x
-| The platform can perform checks on processing chains being published to ensure that they're valid and comply with requirements (eg, that all of the Processing Services used are sufficiently accessible to all permitted users of the chain and that T&Cs are complied with) | | x | x
-| The platform can understand processing chain versions/releases, present information about releases to users and optionally notify users when a processing chain is updated | | | x
-| The platform permits the separation of input data and parameters which can be specified by a later chain user from the chain definition and from fixed processing service parameters or data which must not be changed | | x |
-| The EP shall have any necessary support for including processing chain and chain execution provenance information in reusable research objects (for example, using the wfdesc and wfprov ontologies) | | x |
+| EOEPCA-UC-1201 | An Expert User can build a processing chain by specifying Processing Services (including other chains, and services on other platforms), data flows, parameters, etc | | x |
+| EOEPCA-UC-1202 | The EP supports chain development workflows by providing a convenient way to deploy and test a processing chain via UI and API | | x |
+| EOEPCA-UC-1203 | An Expert User can publish a processing chain as a Processing Service so that others can find it in the catalogue, providing all metadata requirements have been met | | | x
+| EOEPCA-UC-1204 | An Expert User can specify processing chain documentation and metadata, including information on its inputs and outpus to assist in building new processing chains | | | x
+| EOEPCA-UC-1205 | The platform can perform checks on processing chains being published to ensure that they're valid and comply with requirements (eg, that all of the Processing Services used are sufficiently accessible to all permitted users of the chain and that T&Cs are complied with) | | x | x
+| EOEPCA-UC-1206 | The platform can understand processing chain versions/releases, present information about releases to users and optionally notify users when a processing chain is updated | | | x
+| EOEPCA-UC-1207 | The platform permits the separation of input data and parameters which can be specified by a later chain user from the chain definition and from fixed processing service parameters or data which must not be changed | | x 
+| EOEPCA-UC-1208 | The EP shall have any necessary support for including processing chain and chain execution provenance information in reusable research objects (for example, using the wfdesc and wfprov ontologies) | | x |
 
 |===

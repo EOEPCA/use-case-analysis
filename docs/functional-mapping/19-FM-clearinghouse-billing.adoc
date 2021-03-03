@@ -6,12 +6,12 @@ TODO: We must determine if there is any possibility of this happening before inc
 
 This functionality is only active when a clearing-house is in operation.
 
-[cols="<.^85,^.^5,^.^5,^.^5"]
+[cols="<.^20,.^62,^.^6,^.^6,^.^6"]
 |===
-| Platform Function | UM | P&C | RM
+| Use Case Code | Platform Function | UM | P&C | RM
 
 
-| If configured, a platform can direct all inter-platform payment communication and functionality via a clearing-house, treating it as if it were the only other platform except for also specifying the true target platform in the messages. | | | x
+| EOEPCA-UC-1901 | If configured, a platform can direct all inter-platform payment communication and functionality via a clearing-house, treating it as if it were the only other platform except for also specifying the true target platform in the messages. | | | x
 
 |===
 
