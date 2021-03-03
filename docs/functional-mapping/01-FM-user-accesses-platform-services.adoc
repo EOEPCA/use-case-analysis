@@ -1,21 +1,21 @@
 
 = User accesses Platform services
 
-[cols="<.^85,^.^5,^.^5,^.^5"]
+[cols="<.^20,.^62,^.^6,^.^6,^.^6"]
 |===
-| Platform Function | UM | P&C | RM
+| Use Case Code | Platform Function | UM | P&C | RM
 
-| Each user uniquely identified | x | | 
-| User identification/authentication using external Identity Provider | x | | 
-| User assigned access privileges to platform resources (data/services) | x | | 
-| Unidentified / unauthorised user is regarded as a Guest with limited access | x | | 
-| EP enforces authorisation when user accesses platform resources (data/services) | x | | 
-| EP accesses resources of other platform on behalf of a user (delegated) | x | | 
-| EP enforces authorisation when an external platform attempts delegated access on behalf of a user | x | |
-| EP customises platform resources based on user identity and data | x | |
-| EP can ban users identified by administrators | x | |
-| User deletes their account and their personal data is removed | x | |
-| User registers | x | |
-| User updates account details | x | |
+| EOEPCA-UC-0101 | Each user uniquely identified | x | | 
+| EOEPCA-UC-0102 | User identification/authentication using external Identity Provider | x | | 
+| EOEPCA-UC-0103 | User assigned access privileges to platform resources (data/services) | x | | 
+| EOEPCA-UC-0104 | Unidentified / unauthorised user is regarded as a Guest with limited access | x | | 
+| EOEPCA-UC-0105 | EP enforces authorisation when user accesses platform resources (data/services) | x | | 
+| EOEPCA-UC-0106 | EP accesses resources of other platform on behalf of a user (delegated) | x | | 
+| EOEPCA-UC-0107 | EP enforces authorisation when an external platform attempts delegated access on behalf of a user | x | |
+| EOEPCA-UC-0108 | EP customises platform resources based on user identity and data | x | |
+| EOEPCA-UC-0109 | EP can ban users identified by administrators | x | |
+| EOEPCA-UC-0110 | User deletes their account and their personal data is removed | x | |
+| EOEPCA-UC-0111 | User registers | x | |
+| EOEPCA-UC-0112 | User updates account details | x | |
  
 |===

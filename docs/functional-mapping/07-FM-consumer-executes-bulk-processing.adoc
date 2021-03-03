@@ -4,16 +4,16 @@
 Functionality listed for 'Consumer discovers and executes On-demand Processing Service' is also relevant but
 is not duplicated here.
 
-[cols="<.^85,^.^5,^.^5,^.^5"]
+[cols="<.^20,.^62,^.^6,^.^6,^.^6"]
 |===
-| Platform Function | UM | P&C | RM
+| Use Case Code | Platform Function | UM | P&C | RM
 
-| Consumers can create a 'bulk data collection' and add multiple data specifications to it (which should be compatible with a chosen target Processing Service) | | x | x
-| Consumers can add data using data search or using workspace saved data | | x | x
-| Consumers can specify an input data collection when parameterizing a processing request (in place of an individual piece of data) | | x |
-| Consumers can specify an output data collection when parameterizing a processing request | | x |
-| Bulk data processing can be split by the platform in to multiple parallel requests | | x |
-| Functionality for on-demand data processing, such as viewing logs and downloading outputs, can be applied to bulk processing and data collections | | x |
-| Consumers can resubmit processing requests after correcting errors - output data for unmodified completed requests will not be regenerated unnecessarily | | x |
+| EOEPCA-UC-0701 | Consumers can create a 'bulk data collection' and add multiple data specifications to it (which should be compatible with a chosen target Processing Service) | | x | x
+| EOEPCA-UC-0702 | Consumers can add data using data search or using workspace saved data | | x | x
+| EOEPCA-UC-0703 | Consumers can specify an input data collection when parameterizing a processing request (in place of an individual piece of data) | | x |
+| EOEPCA-UC-0704 | Consumers can specify an output data collection when parameterizing a processing request | | x |
+| EOEPCA-UC-0705 | Bulk data processing can be split by the platform in to multiple parallel requests | | x |
+| EOEPCA-UC-0706 | Functionality for on-demand data processing, such as viewing logs and downloading outputs, can be applied to bulk processing and data collections | | x |
+| EOEPCA-UC-0707 | Consumers can resubmit processing requests after correcting errors - output data for unmodified completed requests will not be regenerated unnecessarily | | x |
 
 |===

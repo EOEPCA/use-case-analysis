@@ -1,14 +1,14 @@
 
 = Consumer accesses EP services with External Application
 
-[cols="<.^85,^.^5,^.^5,^.^5"]
+[cols="<.^20,.^62,^.^6,^.^6,^.^6"]
 |===
-| Platform Function | UM | P&C | RM
+| Use Case Code | Platform Function | UM | P&C | RM
 
-| The EP provides an API for programmatic access to all suitable platform services except for account management (eg, catalogue search, data download, processing, workspace manipulation, data visualisation, processor and processing chain definition and upload) | | x |
-| The API is programming-language agnostic and accessible to non-professional programmers and scientists | x | x | x
-| API clients are provided for popular programming languages within the EO domain, eg Python | x | x | x
-| An API authentication method suitable for use with external applications (such as mobile apps and web apps) is provided, eg oAuth | x | |
-| An API authentication method suitable for use with scientist-written ad-hoc scripts is provided, eg API keys | x | |
+| EOEPCA-UC-1001 | The EP provides an API for programmatic access to all suitable platform services except for account management (eg, catalogue search, data download, processing, workspace manipulation, data visualisation, processor and processing chain definition and upload) | | x |
+| EOEPCA-UC-1002 | The API is programming-language agnostic and accessible to non-professional programmers and scientists | x | x | x
+| EOEPCA-UC-1003 | API clients are provided for popular programming languages within the EO domain, eg Python | x | x | x
+| EOEPCA-UC-1004 | An API authentication method suitable for use with external applications (such as mobile apps and web apps) is provided, eg oAuth | x | |
+| EOEPCA-UC-1005 | An API authentication method suitable for use with scientist-written ad-hoc scripts is provided, eg API keys | x | |
 
 |===

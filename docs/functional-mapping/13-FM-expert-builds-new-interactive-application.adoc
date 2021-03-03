@@ -1,12 +1,12 @@
 
 = Expert user builds new interactive application
 
-[cols="<.^85,^.^5,^.^5,^.^5"]
+[cols="<.^20,.^62,^.^6,^.^6,^.^6"]
 |===
-| Platform Function | UM | P&C | RM
+| Use Case Code | Platform Function | UM | P&C | RM
 
-| An Expert User can create Interactive Applications which include containers (eg Docker or Singularity images) which must be running through the application session and use the UI or API to add them to the catalogue | | x | x
-| An Expert User can create Interactive Applications which include or consist of static files (particularly JavaScript, CSS and HTML) which will be served directly by the platform without the need for dedicated resources like VMs or running containers | | x | x
-| An Expert User can create Interactive Applications which are implemented using server-side infastructure which is not managed as dedicated resources within an application session - for example, an Interactive Development Environment consisting of JupyterHub and Kubernetes cluster all shared between all users. The application will still be able to use delegated credentials for data access. | x | x |
+| EOEPCA-UC-1301 | An Expert User can create Interactive Applications which include containers (eg Docker or Singularity images) which must be running through the application session and use the UI or API to add them to the catalogue | | x | x
+| EOEPCA-UC-1302 | An Expert User can create Interactive Applications which include or consist of static files (particularly JavaScript, CSS and HTML) which will be served directly by the platform without the need for dedicated resources like VMs or running containers | | x | x
+| EOEPCA-UC-1303 | An Expert User can create Interactive Applications which are implemented using server-side infastructure which is not managed as dedicated resources within an application session - for example, an Interactive Development Environment consisting of JupyterHub and Kubernetes cluster all shared between all users. The application will still be able to use delegated credentials for data access. | x | x |
 
 |===

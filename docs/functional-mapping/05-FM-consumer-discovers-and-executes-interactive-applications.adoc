@@ -1,28 +1,28 @@
 
 = Consumer discovers and executes Interactive Applications
 
-[cols="<.^85,^.^5,^.^5,^.^5"]
+[cols="<.^20,.^62,^.^6,^.^6,^.^6"]
 |===
-| Platform Function | UM | P&C | RM
+| Use Case Code | Platform Function | UM | P&C | RM
 
-| Interactive Applications have Resource functionality | | | x
-| An Interactive Application may require a dedicated VM (or multiple VMs) or other cloud resources which run for the length of an Interactive Application session | | x |
-| If an Interactive Application uses a dedicated VM then it can include a GUI environment (eg X Windows) which the user interacts with remotely (eg using remote desktop or VNC) | | x |
-| An Interactive Application can provide or consist entirely of a web app (which may be a one-page JavaScript app+API, may be server-side generated or may require no server-side resources at all except for static files and access to the platform API) | | x | x
-| If the application has a web app then the platform UI will facilitate the display of this app (eg by providing a link and/or allowing it to be used embedded in the portal UI)| | x | x
-| An interactive application may open ports (eg, an ssh or HTTP port) so that a user can interact with it using a CLI/console-like interface or using a client application | | x |
-| An interactive application can access the platform APIs (eg to run Processing Services) under the delegated credentials of the Consumer | x | x |
-| The catalogue contains costing data for Interactive Applications (eg, licence costs, size of dedicated VMs required) | | | x
-| The EP can cost interactive application use, if possible and appropriate to the application (eg, price per hour) | | x | x
-| The EP can stop applications if quotas, budgets or credit-control constraints are reached | | x |
-| A Consumer can use a data search to find compatible input data for an interactive application, if required by the application | | | x
-| A Consumer can use their workspace saved data to specify data for an interactive application | | | x
-| An interactive application can request data and/or processing as required by its functionality | | x |
-| A Consumer can save screenshots and other outputs from an application to the workspace as appropriate to the application | | x | x
-| A Consumer can download screenshots and other outputs from an application | | x |
-| A Consumer's billing account is updated as the application is used | | x |
-| A Consumer can publish application output data to the catalogue just as any other data from the workspace can be published as a Product | | x | x
-| A Consumer can resume an earlier interactive application 'session' by choosing it from a list | | x | x
-| A Consumer can terminate an Interactive Application session | | x |
+| EOEPCA-UC-0501 | Interactive Applications have Resource functionality | | | x
+| EOEPCA-UC-0502 | An Interactive Application may require a dedicated VM (or multiple VMs) or other cloud resources which run for the length of an Interactive Application session | | x |
+| EOEPCA-UC-0503 | If an Interactive Application uses a dedicated VM then it can include a GUI environment (eg X Windows) which the user interacts with remotely (eg using remote desktop or VNC) | | x |
+| EOEPCA-UC-0504 | An Interactive Application can provide or consist entirely of a web app (which may be a one-page JavaScript app+API, may be server-side generated or may require no server-side resources at all except for static files and access to the platform API) | | x | x
+| EOEPCA-UC-0505 | If the application has a web app then the platform UI will facilitate the display of this app (eg by providing a link and/or allowing it to be used embedded in the portal UI)| | x | x
+| EOEPCA-UC-0506 | An interactive application may open ports (eg, an ssh or HTTP port) so that a user can interact with it using a CLI/console-like interface or using a client application | | x |
+| EOEPCA-UC-0507 | An interactive application can access the platform APIs (eg to run Processing Services) under the delegated credentials of the Consumer | x | x |
+| EOEPCA-UC-0508 | The catalogue contains costing data for Interactive Applications (eg, licence costs, size of dedicated VMs required) | | | x
+| EOEPCA-UC-0509 | The EP can cost interactive application use, if possible and appropriate to the application (eg, price per hour) | | x | x
+| EOEPCA-UC-0510 | The EP can stop applications if quotas, budgets or credit-control constraints are reached | | x |
+| EOEPCA-UC-0511 | A Consumer can use a data search to find compatible input data for an interactive application, if required by the application | | | x
+| EOEPCA-UC-0512 | A Consumer can use their workspace saved data to specify data for an interactive application | | | x
+| EOEPCA-UC-0513 | An interactive application can request data and/or processing as required by its functionality | | x |
+| EOEPCA-UC-0514 | A Consumer can save screenshots and other outputs from an application to the workspace as appropriate to the application | | x | x
+| EOEPCA-UC-0515 | A Consumer can download screenshots and other outputs from an application | | x |
+| EOEPCA-UC-0516 | A Consumer's billing account is updated as the application is used | | x |
+| EOEPCA-UC-0517 | A Consumer can publish application output data to the catalogue just as any other data from the workspace can be published as a Product | | x | x
+| EOEPCA-UC-0518 | A Consumer can resume an earlier interactive application 'session' by choosing it from a list | | x | x
+| EOEPCA-UC-0519 | A Consumer can terminate an Interactive Application session | | x |
 
 |===

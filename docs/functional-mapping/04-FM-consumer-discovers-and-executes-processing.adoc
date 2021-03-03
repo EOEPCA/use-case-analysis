@@ -1,29 +1,29 @@
 
 = Consumer discovers and executes On-demand Processing Service
 
-[cols="<.^85,^.^5,^.^5,^.^5"]
+[cols="<.^20,.^62,^.^6,^.^6,^.^6"]
 |===
-| Platform Function | UM | P&C | RM
+| Use Case Code | Platform Function | UM | P&C | RM
 
-| Processing Services have Resource functionality (search, T&Cs, etc) | | | x
-| The catalogue contains costing data for Processing Services (eg, licence costs, data to estimate data sizes/processing times, special requirements such as GPUs) | | | x
-| A User can parameterize processing by entering required parameters and selecting compatible input data using the catalogue search | | | x
-| A User viewing Products can search for / select applicable Processing Services, in which case input data will be pre-specified when arriving at the parameterization | | | x
-| The EP can establish federation with remote peer platforms for the purpose of invoking processing platform->platform | x | x |
-| The EP can cost proposed processing requests (which may involve estimating data size, processing time and licencing costs) | | x | x
-| The EP can obtain cost estimates from remote federated peer platforms for intended processing jobs | | x | x
-| Users can initiate processing once all required parameters and inputs are specified | | x |
-| The EP can delegate processing to another federated peer platform in the interests of processing 'close-to-the-data' | | x |
-| The EP can reject processing if quotas, budgets or credit-control constraints are reached (as appropriate to its pricing model) | | x |
-| The EP can deploy a processing service on-demand to another federated peer platform | | x | x
-| A User can save parameterizations of a Processing Service in the user workspace, not just a reference to the service  | | | x
-| A User can view information about submitted processing requests (eg, start time, cost incurred, errors encountered, log output, proportion completed if available, result information and link(s)) | | x |
-| The EP can monitor remote execution of a processing request it made to a federated peer platform | | x |
-| Processing service outputs can be published (as a Product), subject to compliance with licensing by the owners of the data used and the entry of required catalogue information | | | x
-| The EP ensures all processing results are made available to the requesting User (including for steps executed on remote federated peer platforms) | | x |
-| Users' billing accounts are updated as processing continues and completes | | x |
-| Users can download output data | | x |
-| Users can visualise the output data (and download visualisations) similarly to other data within the platform | | x |
+| EOEPCA-UC-0401 | Processing Services have Resource functionality (search, T&Cs, etc) | | | x
+| EOEPCA-UC-0402 | The catalogue contains costing data for Processing Services (eg, licence costs, data to estimate data sizes/processing times, special requirements such as GPUs) | | | x
+| EOEPCA-UC-0403 | A User can parameterize processing by entering required parameters and selecting compatible input data using the catalogue search | | | x
+| EOEPCA-UC-0404 | A User viewing Products can search for / select applicable Processing Services, in which case input data will be pre-specified when arriving at the parameterization | | | x
+| EOEPCA-UC-0405 | The EP can establish federation with remote peer platforms for the purpose of invoking processing platform->platform | x | x |
+| EOEPCA-UC-0406 | The EP can cost proposed processing requests (which may involve estimating data size, processing time and licencing costs) | | x | x
+| EOEPCA-UC-0407 | The EP can obtain cost estimates from remote federated peer platforms for intended processing jobs | | x | x
+| EOEPCA-UC-0408 | Users can initiate processing once all required parameters and inputs are specified | | x |
+| EOEPCA-UC-0409 | The EP can delegate processing to another federated peer platform in the interests of processing 'close-to-the-data' | | x |
+| EOEPCA-UC-0410 | The EP can reject processing if quotas, budgets or credit-control constraints are reached (as appropriate to its pricing model) | | x |
+| EOEPCA-UC-0411 | The EP can deploy a processing service on-demand to another federated peer platform | | x | x
+| EOEPCA-UC-0412 | A User can save parameterizations of a Processing Service in the user workspace, not just a reference to the service  | | | x
+| EOEPCA-UC-0413 | A User can view information about submitted processing requests (eg, start time, cost incurred, errors encountered, log output, proportion completed if available, result information and link(s)) | | x |
+| EOEPCA-UC-0414 | The EP can monitor remote execution of a processing request it made to a federated peer platform | | x |
+| EOEPCA-UC-0415 | Processing service outputs can be published (as a Product), subject to compliance with licensing by the owners of the data used and the entry of required catalogue information | | | x
+| EOEPCA-UC-0416 | The EP ensures all processing results are made available to the requesting User (including for steps executed on remote federated peer platforms) | | x |
+| EOEPCA-UC-0417 | Users' billing accounts are updated as processing continues and completes | | x |
+| EOEPCA-UC-0418 | Users can download output data | | x |
+| EOEPCA-UC-0419 | Users can visualise the output data (and download visualisations) similarly to other data within the platform | | x |
 
 |===
 
